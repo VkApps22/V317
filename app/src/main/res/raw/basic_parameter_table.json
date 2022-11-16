@@ -1,0 +1,67 @@
+[
+  {
+    "id": "C000",
+    "shortName": "Inom",
+    "address": 310,
+    "minVal": 1,
+    "maxVal": 100,
+    "minWrite": 1,
+    "maxWrite": 100,
+    "minWriteAdvanced": 1,
+    "maxWriteAdvanced": 100,
+    "unit": "%A",
+    "ratio": 1,
+    "logicalBlocks": -1,
+    "defaultVal40": 43,
+    "defaultVal70": 90
+  },
+  {
+    "id": "P128",
+    "shortName": "AnIn1Gain",
+    "address": 158,
+    "minVal": -800,
+    "maxVal": 800,
+    "minWrite": 0,
+    "maxWrite": 100,
+    "minWriteAdvanced": 0,
+    "maxWriteAdvanced": 100,
+    "unit": "%A",
+    "ratio": 10,
+    "logicalBlocks": -1,
+    "defaultVal40": 8.5,
+    "defaultVal70": 18
+  },
+  {
+    "id": "P171",
+    "shortName": "MDO1OnDelay",
+    "address": 191,
+    "minVal": 0,
+    "maxVal": 600,
+    "minWrite": 0.2,
+    "maxWrite": 1.5,
+    "minWriteAdvanced": 0.2,
+    "maxWriteAdvanced": 5.0,
+    "unit": "s",
+    "ratio": 50,
+    "logicalBlocks": -1,
+    "defaultVal40": 0.7,
+    "defaultVal70": 0.7
+  },
+  {
+    "id": "P177",
+    "shortName": "MDO2OnDelay",
+    "address": 197,
+    "minVal": 0,
+    "maxVal": 600,
+    "minWrite": 0.5,
+    "maxWrite": 3.5,
+    "minWriteAdvanced": 0.5,
+    "maxWriteAdvanced": 3.5,
+    "unit": "s",
+    "ratio": 50,
+    "logicalBlocks": -1,
+    "defaultVal40": 1.0,
+    "defaultVal70": 1.0
+  }
+]
+

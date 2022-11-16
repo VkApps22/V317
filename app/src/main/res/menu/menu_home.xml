@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/edit_graph_action"
+        android:icon="@drawable/ic_insert_chart_outline_white"
+        android:title="Edit on Graph"
+        app:showAsAction="always"/>
+
+    <item
+        android:id="@+id/help_action"
+        android:icon="@drawable/ic_help_outline_white"
+        android:title="Help"
+        app:showAsAction="always"/>
+
+    <item
+        android:id="@+id/edit_name_action"
+        android:icon="@drawable/ic_create"
+        android:title="@string/edit_name_action_label"
+        app:showAsAction="ifRoom"/>
+
+    <item
+        android:id="@+id/advanced_action"
+        android:title="@string/advanced_action_title"
+        app:showAsAction="never"/>
+
+</menu>

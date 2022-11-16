@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/baud_1200"
+        android:title="1200 bps"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/baud_2400"
+        android:title="2400 bps"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/baud_4800"
+        android:title="4800 bps"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/baud_9600"
+        android:title="9600 bps"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/baud_19200"
+        android:title="19200 bps"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/baud_38400"
+        android:title="38400 bps"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/baud_57600"
+        android:title="57600 bps"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/baud_128000"
+        android:title="128000 bps"
+        app:showAsAction="never"/>
+
+</menu>

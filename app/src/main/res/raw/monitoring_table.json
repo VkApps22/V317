@@ -1,0 +1,84 @@
+[
+  {
+    "id": "M003",
+    "shortName": "CoilCurrRef",
+    "address": 13,
+    "minVal": -150,
+    "maxVal": 150,
+    "unit": "%",
+    "ratio": 5.11
+  },
+  {
+    "id": "M004",
+    "shortName": "CoilCurrent",
+    "address": 14,
+    "minVal": -5250,
+    "maxVal": 5250,
+    "unit": "A",
+    "ratio": 15
+  },
+  {
+    "id": "M006",
+    "shortName": "OutDCVolt",
+    "address": 16,
+    "minVal": -1000,
+    "maxVal": 1000,
+    "unit": "V",
+    "ratio": 1
+  },
+  {
+    "id": "M008",
+    "shortName": "MainsFreq",
+    "address": 18,
+    "minVal": 40,
+    "maxVal": 70,
+    "unit": "Hz",
+    "ratio": 10
+  },
+  {
+    "id": "M009",
+    "shortName": "MainsV",
+    "address": 19,
+    "minVal": 0,
+    "maxVal": 1000,
+    "unit": "V",
+    "ratio": 1
+  },
+  {
+    "id": "M021",
+    "shortName": "ES123456",
+    "address": 31,
+    "minVal": 0,
+    "maxVal": 255,
+    "unit": "8bit",
+    "ratio": 1
+  },
+  {
+    "id": "M022",
+    "shortName": "12345",
+    "address": 32,
+    "minVal": 0,
+    "maxVal": 255,
+    "unit": "6bit",
+    "ratio": 1
+  },
+  {
+    "id": "M027",
+    "shortName": "DriveLife",
+    "address": 468,
+    "minVal": 0,
+    "maxVal": 235926000,
+    "unit": "time",
+    "ratio": 1
+  },
+  {
+    "id": "M028",
+    "shortName": "PhaseSeq",
+    "address": 38,
+    "minVal": 0,
+    "maxVal": 1,
+    "unit": "phaseSeq",
+    "ratio": 1
+  }
+]
+

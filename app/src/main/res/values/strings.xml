@@ -1,0 +1,271 @@
+<resources>
+    <string name="app_name" translatable="false">Vulkan Connect v317</string>
+    <string name="hello_world">Hello World!</string>
+    <string name="logo_description" translatable="false">app logo</string>
+    <string name="bye_world">Bye World!</string>
+    <string name="text_content">Device given name</string>
+    <string name="pairing_button">Find devices</string>
+    <string name="scan_button">Scan QR</string>
+    <string name="monitoring_bottom">Monitoring</string>
+    <string name="home_bottom">Parameters</string>
+    <string name="alerts_bottom">Alarms</string>
+    <string name="login_dialog_positive">OK</string>
+    <string name="dialog_cancel">Cancel</string>
+    <string name="login_dialog_text">Login?</string>
+    <string name="model_name_default">Model name</string>
+    <string name="status_card">Status</string>
+    <string name="voltage_card">Input Voltage</string>
+    <string name="frequency_card">Input Frequency</string>
+    <string name="save_button">Save</string>
+    <string name="refresh_checkbox">Refresh all measures</string>
+    <string name="automatic_switch">Automatic</string>
+    <string name="manual_switch">Manual</string>
+    <string name="password_text">Password</string>
+    <string name="home_fragment_label">Parameters</string>
+    <string name="alarm_fragment_label">Alarms</string>
+    <string name="monitoring_fragment_label">Monitoring</string>
+    <string name="activity_edit_on_graph_label">Edit on Graph</string>
+    <string name="graph_edit_button">Edit</string>
+    <string name="edit_on_graph_xAxis_label">Time</string>
+    <string name="edit_on_graph_yAxis_label">Brake Coil Current</string>
+    <string name="c000_label">Call current</string>
+    <string name="c001_label">Average Current in Full Cycle</string>
+    <string name="c002_label">Thermal Protection Time Constant</string>
+    <string name="c090_label">AlarmAutoReset Number</string>
+    <string name="c091_label">ResetTime of Autoreset Number</string>
+    <string name="c092_label">Power on Reset</string>
+    <string name="c093_label">Autoreset After Mains Failure</string>
+    <string name="c094_label">StartSafety</string>
+    <string name="c101_label">Power ON Delay</string>
+    <string name="c141_label">Alarm A016/017 Trip Delay</string>
+    <string name="c153_label">Alarm A006 Trip Disabling</string>
+    <string name="c154_label">Alarm A007 Trip Disabling</string>
+    <string name="c157_label">Alarm A016/017 Trip Disabling</string>
+    <string name="c160_label">V317 power supply Address for Serial Communication</string>
+    <string name="c161_label">Serial Connection Transmission Speed</string>
+    <string name="c162_label">Serial Connection Parity Control</string>
+    <string name="c163_label">Master Data Area Base Address</string>
+    <string name="c164_label">Serial Timeout</string>
+    <string name="c165_label">Serial Response Delay</string>
+    <string name="p002_label">Parameter Copy Command</string>
+    <string name="p100_label">Current Loop Proportional Gain</string>
+    <string name="p101_label">Current Loop Integral Time with Discontinuous Current Conduction</string>
+    <string name="p102_label">Current Loop Integral Time with Continuous Current Conduction</string>
+    <string name="p128_label">Economy current</string>
+    <string name="p150_label">Analog out signal 1</string>
+    <string name="p171_label">Call current time</string>
+    <string name="p177_label">Brake Opening Confirmation Time</string>
+    <string name="p230_label">Min. Firing Angle</string>
+    <string name="p231_label">Max. Firing Angle</string>
+    <string name="m001_label">Voltage Feedback</string>
+    <string name="m002_label">Voltage Reference</string>
+    <string name="m003_label">Brake Coil Current Reference</string>
+    <string name="m004_label">Brake Coil DC Current</string>
+    <string name="m005_label">Thyristor Firing Delay Angle</string>
+    <string name="m006_label">Brake Coil DC Voltage</string>
+    <string name="m008_label">Mains Frequency</string>
+    <string name="m009_label">Mains Voltage</string>
+    <string name="m021_label">Final Internal State of Digital Inputs</string>
+    <string name="m022_label">Digital Output State</string>
+    <string name="m027_label">Drive Life</string>
+    <string name="m028_label">Phase Sequence</string>
+    <string name="m029_label">Digital Input State from Terminal Board</string>
+    <string name="program_button">Test</string>
+    <string name="program_failed">Test operation failed! Check connection</string>
+    <string name="save_failed">Save operation failed! Check connection</string>
+    <string name="value_error" translatable="false">---</string>
+    <string name="read_failed">Read operation failed! Check connection</string>
+    <string name="config_title">Settings</string>
+    <string name="config_button">Settings</string>
+    <string name="config_host_text">ModBus host</string>
+    <string name="config_port_text">ModBus port</string>
+    <string name="warning_title">Warning!</string>
+    <string name="reconfig_settings_message">Connection failed! Please check network settings below.</string>
+    <string name="retry_button">Retry</string>
+    <string name="login_button">Login</string>
+    <string name="warning_wifi_off">WiFi off!</string>
+    <string name="status_running">Running</string>
+    <string name="advanced_action_title">Advanced mode</string>
+    <string name="basic_action_title">Basic mode</string>
+    <string name="offline_mode_label">Offline mode</string>
+    <string name="dialog_ok">OK</string>
+    <string name="online_mode_message">Activate online mode?</string>
+    <string name="rt_graph_pause_message">Reading paused!</string>
+    <string name="rt_graph_play_message">Reading continued!</string>
+    <string name="parameter_yes_option">1: Yes</string>
+    <string name="parameter_no_option">0: No</string>
+    <string name="parameter_included_option">0: Included</string>
+    <string name="parameter_excluded_option">1: Excluded</string>
+    <string name="parameter_parity_none_option">0: None</string>
+    <string name="parameter_parity_even_option">1: Even</string>
+    <string name="parameter_parity_odd_option">2: Odd</string>
+    <string name="alarm_generic_description">Please contact VULKAN DRIVE TECH.</string>
+    <string name="a001_label">Field failure</string>
+    <string name="a002_label">Heatsink Overtemperature</string>
+    <string name="a003_label">Output DC Over Current</string>
+    <string name="a004_label">Output Load Loss</string>
+    <string name="a005_label">Unnamed alarm</string>
+    <string name="a006_label">Unstable Mains Frequency</string>
+    <string name="a007_label">Mains Failure</string>
+    <string name="a008_label">Speed Feedback Failure</string>
+    <string name="a009_label">Field OverCurrent</string>
+    <string name="a010_label">Brake Coil OverVoltage</string>
+    <string name="a011_label">L out of Range</string>
+    <string name="a012_label">Frequency out of Range</string>
+    <string name="a013_label">Missing Synchronization</string>
+    <string name="a014_label">R out of Range</string>
+    <string name="a015_label">AutoTune Error</string>
+    <string name="a016_label">Mains OverVoltage</string>
+    <string name="a017_label">Mains UnderVoltage</string>
+    <string name="a018_label">AutoTune Interrupted</string>
+    <string name="a019_label">AutoTune Limitation</string>
+    <string name="a020_label">External Failure 1 (Brake opening fault)</string>
+    <string name="a021_label">Brake I2t Trip</string>
+    <string name="a022_label">Drive It Trip</string>
+    <string name="a023_label">Ifld UnderLimited</string>
+    <string name="a024_label">Missing or blank EEPROM</string>
+    <string name="a025_label">EEPROM WorkArea Failure</string>
+    <string name="a026_label">EEPROM BackupArea Failure</string>
+    <string name="a027_label">Serial Link Failure</string>
+    <string name="a028_label">FieldBus Failure</string>
+    <string name="a029_label">External Failure 2 (Brake Worn Pads)</string>
+    <string name="a030_label">External Failure 3</string>
+    <string name="a031_label">Internal EEPROM Failure</string>
+    <string name="a032_label">Microcontroller Reset</string>
+    <string name="a033_label">Unknown Failure</string>
+    <string name="w001_label">Unnamed warning</string>
+    <string name="w002_label">Speed FeedBack switched to Varm</string>
+    <string name="w003_label"><![CDATA[Hardware Limit Current < 100%]]></string>
+    <string name="w004_label">Open-Close ENABLE to run</string>
+    <string name="w005_label">Open-Close START to run</string>
+    <string name="w006_label">Backup Values Stored in RAM</string>
+    <string name="w007_label">Default Values Stored in RAM</string>
+    <string name="w008_label">EEPROM WorkArea Failure</string>
+    <string name="w009_label">EEPROM BackupArea Failure</string>
+    <string name="wXXX_label">Alarm/warning out of range</string>
+    <string name="a002_description">The contact relating to the thermo switch assembled in the size (V317) heatsink is open, thus signalling that the max. allowable temperature has been exceeded.
+\n\n
+NOTE!
+\n
+	\n\tControl environmental conditions of the installation.
+	\n\tControl the working cycle.</string>
+    <string name="a003_description">The instantaneous value (peak value) of the output current M004 (Iout) has exceeded 200 % of the V317 power supply maximum current. NOTE! Control coil resistance Control output cable integrity.</string>
+    <string name="a006_description"><![CDATA[The frequency of the grid varies more than the max. allowable value, equal to 500 μs between two mains periods. This alarm may occur only when the V317 power supply is enabled. This alarm may be disabled using parameter C153 and continuous autoreset using parameter C093.\n\nNOTE!\n\n\tMake sure that voltage and frequency of the grid are in the allowed range. See V317 power supply ratings (4.4 - Ratings).]]></string>
+    <string name="a007_description">Failure of one of the three mains phases, or more than one. This alarm may occur only when the V317 power supply is enabled. This alarm may be disabled using parameter C154 and continuous autoreset using parameter C093.\n\nNOTE!\n\n\tMake sure that voltage and frequency of the grid are in the allowed range. See V317 power supply ratings (4.4 - Ratings).</string>
+    <string name="a012_description">Frequency M008 (MFreq) of the mains is over 70 Hz or is under 40 Hz. This alarm may occur only when the V317 power supply is enabled. Set continuous autoreset using parameter C093.\n\nNOTE!\n\n\tMake sure that voltage and frequency of the grid are in the allowed range. See V317 power supply ratings (4.4 - Ratings).</string>
+    <string name="a013_description">Failure of the circuits supplying the synchronizing signals of the mains three-phase voltage. This alarm may trip only when the ENABLE digital input is active. Set continuous autoreset using parameter C093.\n\nNOTE!\n\n\tMake sure that voltage and frequency of the grid are in the allowed range. See V317 power supply ratings (4.4 - Ratings).</string>
+    <string name="a016_description"><![CDATA[The grid voltage (Vmains) has exceeded the 15% of 480 VAC. This alarm may trip only when the ENABLE digital input is active. It may be delayed using parameter C141 and disabled using parameter C157.\n\nNOTE!\n\n\tMake sure that voltage and frequency of the grid are in the allowed range. See V317 power supply ratings (4.4 - Ratings).]]></string>
+    <string name="a017_description"><![CDATA[Value M009 of power section mains voltage (Vmains) is 15% under 220 VAC in case of drives which can regenerate mains energy (2nd and/or 4th quadrant enabled). This alarm may occur only when the ENABLE digital input is active. It may be delayed using parameter C141 and disabled using parameter C157. Set continuous autoreset using parameter C093.\n\tThe alarm delay set through par. C141 is active only if the supply voltage is not under 140 VAC and if the V317 power supply is working on the 1st quadrant, otherwise the alarm will immediately trip.\n\nNOTE!\n\n\tMake sure that voltage and frequency of the grid are in the allowed range. See V317 power supply ratings (4.4 - Ratings).]]></string>
+    <string name="a020_description">The brake doesn’t open with the V317 power supply enabled\n\nNOTE!\n\n\tCheck the brake.\n\tCheck power and control wires between V317 power supply and brake microswitch.\n\tCheck the adjustment of the microswitch that signals the opening of the brake.\n\tCheck the programming of call (C000) and economic current (P128).\n\tCheck the programming of brake opening time confirmation P177.</string>
+    <string name="a021_description">Brake overtemperature. The brake I2t trip depends on the value programmed in parameters C001 (current for thermal protection) and C002 (Time Constant for Thermal Protection).\n\nNOTE!\n\n\tAfter this alarm is trigged, wait for some minutes before resetting.\n\tCheck the programming of call, economic current and the setting of the protection (see programming guide).\n\tCheck the temperature of the coil.</string>
+    <string name="a024_description">At the size power on, the alarm trips:\n\ta. If EEPROM is missing.\n\tb. If EEPROM is not programmed.\n\nWARNING!\n\n\tThis alarm cannot be deleted. Please contact VULKAN DRIVE TECH.</string>
+    <string name="a025_description">The content of some part in EEPROM work area has been changed.\n\nWARNING!\n\n\tTry to reset. If the error persists, contact VULKAN DRIVE TECH.</string>
+    <string name="a029_description">Worn pads\n\nNOTE!\n\n\tIf the CDPG 24V that monitors pad wear is installed, change the brake pads.\n\tIf the CDPG 24V is not installed, make sure that the C3 terminal is connected to C2.</string>
+    <string name="a031_description">Changes to the EEPROM data detected when turning the equipment ON. This data cannot be accessed by the user.\n\nNOTE!\n\n\tThis alarm cannot be deleted. Please contact VULKAN DRIVE TECH.</string>
+    <string name="a032_description">Reset of the microcontroller.\n\nWARNING!\n\n\tProbably the alarm was caused by an electromagnetic disturbance, try to reset it. If the alarm persists, contact VULKAN DRIVE TECH.</string>
+    <string name="a033_description">An unknown alarm has been stored. In that case, you just need to reset the alarm.</string>
+    <string name="m021_enable_label">Brake Enable (C2)</string>
+    <string name="m021_start_label">Brake Opening</string>
+    <string name="m021_mdi1_label">Brake Reset</string>
+    <string name="m021_mdi2_label">In Logical State 2</string>
+    <string name="m021_mdi3_label">In Logical State 3</string>
+    <string name="m021_mdi4_label">In Logical State 4</string>
+    <string name="m021_mdi5_label">Brake Status (C3)</string>
+    <string name="m021_mdi6_label">Worn Pads (C4)</string>
+    <string name="m022_mdo1_label">Out Logical State 1</string>
+    <string name="m022_mdo2_label">Out Logical State 2</string>
+    <string name="m022_mdo3_label">Running (C7 - C8)</string>
+    <string name="m022_mdo4_label">Out Logical State 4</string>
+    <string name="m022_mdo5_label">Out Logical State 5</string>
+    <string name="open_id_label">Last opening time</string>
+    <string name="close_id_label">Last closing time</string>
+    <string name="analog_config_label0">0: 0 Volt</string>
+    <string name="analog_config_label1">1: Ramped Vref</string>
+    <string name="analog_config_label2">2: Speed Error</string>
+    <string name="analog_config_label3">3: Speed Loop OUT</string>
+    <string name="analog_config_label4">4: Current Ref</string>
+    <string name="analog_config_label5">5: BackEMF</string>
+    <string name="analog_config_label6">6: Output Power</string>
+    <string name="analog_config_label7">7: Alpha</string>
+    <string name="analog_config_label8">8: Output Voltage</string>
+    <string name="analog_config_label9">9: ArmatureCurr</string>
+    <string name="analog_config_label10">10: FieldCurrent</string>
+    <string name="analog_config_label11">11: Motor Torque</string>
+    <string name="analog_config_label12">12: FieldBus1</string>
+    <string name="analog_config_label13">13: FieldBus2</string>
+    <string name="edit_name_action_label">Edit device name</string>
+    <string name="device_name_placeholder">Device name</string>
+    <string name="unnamed_device">Unnamed</string>
+    <string name="model_number_default">Model Number</string>
+    <string name="dialog_edit_name_title">Enter new device name</string>
+    <string name="dialog_yes">Yes</string>
+    <string name="dialog_no">No</string>
+    <string name="dialog_help_title">Help</string>
+    <string name="dialog_advanced_title">Advanced mode</string>
+    <string name="card_blink_alarm_text">Alarm!</string>
+    <string name="toast_connection_failed">Connection failed!</string>
+    <string name="dialog_unlock_title">Enter Write Enable password</string>
+    <string name="active_alarms_header">Active Alarms</string>
+    <string name="inactive_alarms_header">Inactive Alarms</string>
+    <string name="basic_parameters_header">Basic Parameters</string>
+    <string name="advanced_parameters_header">Advanced Parameters</string>
+    <string name="device_net_title">Connected network</string>
+    <string name="change_button">Change</string>
+    <string name="offline_status">Offline</string>
+    <string name="online_status">Online</string>
+    <string name="connected_status">Connected</string>
+    <string name="dialog_home_help_text1">All P and C parameters are shown here. You can change their value on the parameter cards, by the following means:</string>
+    <string name="dialog_home_help_graph">: Press to open Graph Edit Mode (for parameters P128, P171 and C000)</string>
+    <string name="dialog_home_help_edit">: Type to edit parameter</string>
+    <string name="dialog_home_help_program">After modifying parameters, you can program them to test functionality by pressing the button by the end of the screen:</string>
+    <string name="dialog_home_help_save">After testing parameters, you can save them definitely to drive EEPROM by pressing the button by the end of the screen:</string>
+    <string name="lang_en" translatable="false">EN</string>
+    <string name="lang_es" translatable="false">ES</string>
+    <string name="lang_pt" translatable="false">PT</string>
+    <string name="select_language">Select language</string>
+    <string name="language_text">Language</string>
+
+    <plurals name="mains_label">
+        <item quantity="other">Input voltage: %.1f V Input frequency: %.1f Hz</item>
+    </plurals>
+    <plurals name="parameter_card_default_float_template">
+        <item quantity="other">Default: %.2f %s</item>
+    </plurals>
+    <plurals name="parameter_card_default_int_template">
+        <item quantity="other">Default: %d %s</item>
+    </plurals>
+    <plurals name="parameter_card_default_string_template">
+        <item quantity="other">Default: %s</item>
+    </plurals>
+    <plurals name="monitoring_baud_rate_message">
+        <item quantity="other">The baud rate could be higher! Try setting it to %d bps to get a better experience</item>
+    </plurals>
+    <plurals name="parameter_card_times_unit">
+        <item quantity="other">times</item>
+        <item quantity="one">time</item>
+        <item quantity="zero">times</item>
+    </plurals>
+
+    <plurals name="dialog_offline_message">
+        <item quantity="other">Device access point %s is currently offline. Do you wish to enter offline mode?</item>
+    </plurals>
+    <plurals name="dialog_password_message">
+        <item quantity="other">Current Write Enable password is %d. Do you wish to change it?</item>
+    </plurals>
+
+    <plurals name="toast_please_connect">
+        <item quantity="other">Please connect to %s</item>
+    </plurals>
+    <plurals name="toast_connection_failed">
+        <item quantity="other">Connection to %s failed! Try again</item>
+    </plurals>
+    <plurals name="toast_connection_timeout">
+        <item quantity="other">%s took too long to respond!</item>
+    </plurals>
+    <plurals name="toast_connection_attempt">
+        <item quantity="other">Attempting connection to %s…</item>
+    </plurals>
+    <plurals name="toast_rt_graph_reading_failed">
+        <item quantity="other">Reading failed at %.2f s!</item>
+    </plurals>
+</resources>

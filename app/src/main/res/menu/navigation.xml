@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/monitoringFragment"
+        android:icon="@drawable/ic_monitoring_bottom"
+        android:title="@string/monitoring_bottom"/>
+
+    <item
+        android:id="@+id/homeFragment"
+        android:icon="@drawable/ic_build"
+        android:title="@string/home_bottom" />
+
+    <item
+        android:id="@+id/alarmFragment"
+        android:icon="@drawable/ic_alerts_bottom"
+        android:title="@string/alerts_bottom"/>
+
+</menu>

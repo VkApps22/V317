@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="br.com.kascosys.vulkanconnectv317.fragments.HomeFragment"
+        android:label="@string/home_fragment_label">
+        <action
+            android:id="@+id/action_homeFragment_to_alarmFragment"
+            app:destination="@id/alarmFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/alarmFragment"
+        android:name="br.com.kascosys.vulkanconnectv317.fragments.AlarmFragment"
+        android:label="@string/alarm_fragment_label" />
+    <fragment
+        android:id="@+id/monitoringFragment"
+        android:name="br.com.kascosys.vulkanconnectv317.fragments.MonitoringFragment"
+        android:label="@string/monitoring_fragment_label">
+        <action
+            android:id="@+id/action_monitoringFragment_to_alarmFragment"
+            app:destination="@id/alarmFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
+</navigation>

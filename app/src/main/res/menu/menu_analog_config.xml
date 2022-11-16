@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/analog_config_item0"
+        android:title="@string/analog_config_label0"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/analog_config_item1"
+        android:title="@string/analog_config_label1"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/analog_config_item2"
+        android:title="@string/analog_config_label2"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/analog_config_item3"
+        android:title="@string/analog_config_label3"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/analog_config_item4"
+        android:title="@string/analog_config_label4"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/analog_config_item5"
+        android:title="@string/analog_config_label5"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/analog_config_item6"
+        android:title="@string/analog_config_label6"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/analog_config_item7"
+        android:title="@string/analog_config_label7"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/analog_config_item8"
+        android:title="@string/analog_config_label8"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/analog_config_item9"
+        android:title="@string/analog_config_label9"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/analog_config_item10"
+        android:title="@string/analog_config_label10"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/analog_config_item11"
+        android:title="@string/analog_config_label11"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/analog_config_item12"
+        android:title="@string/analog_config_label12"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/analog_config_item13"
+        android:title="@string/analog_config_label13"
+        app:showAsAction="never"/>
+
+</menu>

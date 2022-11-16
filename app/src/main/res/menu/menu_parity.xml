@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/none_item"
+        android:title="@string/parameter_parity_none_option"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/even_item"
+        android:title="@string/parameter_parity_even_option"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/odd_item"
+        android:title="@string/parameter_parity_odd_option"
+        app:showAsAction="never"/>
+
+</menu>

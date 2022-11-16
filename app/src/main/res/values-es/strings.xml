@@ -1,0 +1,278 @@
+<resources>
+    <string name="hello_world">¡Hola Mundo!</string>
+    <string name="edit_on_graph_xAxis_label">Tiempo</string>
+    <string name="a001_label">Falla en Campo</string>
+    <string name="a002_label">Temperatura Excesiva en el Disipador de Calor</string>
+    <string name="a005_label">Alarma no nombrada</string>
+    <string name="a003_label">Sobrecorriente de Salida CC</string>
+    <string name="a004_label">Perdida de Carga de Salida</string>
+    <string name="a006_label">Frecuencia de Red Eléctrica Inestable</string>
+    <string name="a007_label">Falla de la Red Eléctrica</string>
+    <string name="a008_label">Falla de Retroalimentación de Velocidad</string>
+    <string name="a009_label">Sobrecorriente de Campo</string>
+    <string name="a010_label">Sobretensión en la Bobina del Freno</string>
+    <string name="a011_label">Inductancia L fuera de rango</string>
+    <string name="a012_label">Frecuencia de Red Eléctrica fuera de rango</string>
+    <string name="a013_label">Falta de Sincronización</string>
+    <string name="a014_label">Resistencia R Fuera de rango </string>
+    <string name="a015_label">Error en \"AutoTune\"</string>
+    <string name="a016_label">Sobretensión de la red eléctrica</string>
+    <string name="a017_label">Tensión de red eléctrica insuficiente</string>
+    <string name="a018_label">Interrupcion en AutoTune</string>
+    <string name="a019_label">Límite en AutoTune</string>
+    <string name="a020_label">Falla Externa 1 - Falla de Apertura del Freno</string>
+    <string name="a021_label">Disparo de I2t del freno</string>
+    <string name="a023_label">Corriente de Campo Inferior al Límite</string>
+    <string name="a024_label">EEPROM Ausente o en Blanco</string>
+    <string name="a025_label">Falla en Área de Trabajo de la EEPROM</string>
+    <string name="a029_label">Falla Externa 2 (Pastillas Gastadas en el Freno)</string>
+    <string name="a031_label">Falla Interna de la EEPROM</string>
+    <string name="a032_label">Microcontrolador Reiniciado</string>
+    <string name="a033_label">Falla desconocida</string>
+    <string name="active_alarms_header">Alarmas Activas</string>
+    <string name="activity_edit_on_graph_label">Editar en Gráfico</string>
+    <string name="advanced_action_title">Modo avanzado</string>
+    <string name="advanced_parameters_header">Parámetros Avanzados</string>
+    <string name="alarm_fragment_label">Alarmas</string>
+    <string name="alarm_generic_description">Por favor entre en contacto con VULKAN DRIVE TECH.</string>
+    <string name="alerts_bottom">Alarmas</string>
+    <string name="analog_config_label0">0: 0 Volt</string>
+    <string name="analog_config_label10">10: Corriente de Campo</string>
+    <string name="analog_config_label11">11: Torque de Motor</string>
+    <string name="analog_config_label12">12: FieldBus1</string>
+    <string name="analog_config_label13">13: FieldBus2</string>
+    <string name="analog_config_label2">2: Error de Velocidad</string>
+    <string name="analog_config_label4">4: Referencia de Corriente</string>
+    <string name="analog_config_label5">5: Fuerza Contraelectromotriz</string>
+    <string name="analog_config_label6">6: Potencia de salida</string>
+    <string name="analog_config_label7">7: Alfa</string>
+    <string name="analog_config_label8">8: Salida de Tensión</string>
+    <string name="analog_config_label9">9: Corriente de Armadura</string>
+    <string name="automatic_switch">Automático</string>
+    <string name="basic_action_title">Modo básico</string>
+    <string name="basic_parameters_header">Parámetros Básicos</string>
+    <string name="c000_label">Corriente de Llamada</string>
+    <string name="c001_label">Corriente Promedio en el Ciclo Total</string>
+    <string name="c002_label">Constante de Tiempo de Protección Térmica</string>
+    <string name="c090_label">Número de Reinicios Automáticos de Alarma</string>
+    <string name="c091_label">Tiempo de reinicio para el número de reinicios automáticos</string>
+    <string name="c092_label">Reinicio al encender</string>
+    <string name="c093_label">Auto Reinicio Después de Falla de Red eléctrica</string>
+    <string name="c094_label">Seguridad de Arranque</string>
+    <string name="c101_label">Atraso para Encender</string>
+    <string name="c141_label">Atraso de Disparo de Alarma A016/017</string>
+    <string name="c153_label">Desactivación de Alarma A006</string>
+    <string name="c154_label">Desactivación de Alarma A007</string>
+    <string name="c157_label">Desactivación del Disparo de Alarma A016/017</string>
+    <string name="c160_label">Dirección de Conversor V317 para Comunicación Serial</string>
+    <string name="c161_label">Velocidad de Transmisión de Conexión Serial</string>
+    <string name="c162_label">Control de Paridad de Conexión Serial</string>
+    <string name="c163_label">Dirección Base de Área de Datos Maestros</string>
+    <string name="c164_label">Tiempo Límite Serial</string>
+    <string name="c165_label">Atraso de Respuesta Serial</string>
+    <string name="m001_label">Realimentación de Tensión</string>
+    <string name="m002_label">Referencia de Tensión</string>
+    <string name="m003_label">Referencia de Corriente de la Bobina de Freno</string>
+    <string name="m004_label">"Corriente CC de Bobina de Freno "</string>
+    <string name="m005_label">Ángulo de Atraso de Disparo de Tiristor</string>
+    <string name="m006_label">Tensión CC de Bobina de Freno (Tensión de Armadura)</string>
+    <string name="m008_label">Frecuencia de Red Eléctrica</string>
+    <string name="m009_label">Tensión de Red Eléctrica</string>
+    <string name="m021_label">Estado Interno Final de Entradas Digitales</string>
+    <string name="m022_label">Estado de Salidas Digitales</string>
+    <string name="m027_label">Vida Útil de Accionamiento</string>
+    <string name="m028_label">Secuencia de Fases</string>
+    <string name="m029_label">Estado de Entradas Digitales de Placa de Terminales</string>
+    <string name="p002_label">Comando de Copia de Parámetros</string>
+    <string name="p100_label">Aumento Proporcional de Lazo de Corriente</string>
+    <string name="p101_label">Tiempo Integral de Lazo de Corriente con Conducción de Corriente Discontinua</string>
+    <string name="p102_label">Tiempo integral del Lazo de Corriente con Conducción de Corriente Continua</string>
+    <string name="p128_label">Referencia de Corriente de Economía</string>
+    <string name="p150_label">Señal de Salida Analógica 1</string>
+    <string name="p171_label">Tiempo de Corriente de Llamada</string>
+    <string name="p177_label">Tiempo de Confirmación de Apertura de Freno</string>
+    <string name="p230_label">Ángulo mín. de Disparo</string>
+    <string name="p231_label">Ángulo máx. de Disparo</string>
+    <string name="pairing_button">Buscar</string>
+    <string name="parameter_excluded_option">1: Excluido</string>
+    <string name="parameter_included_option">1: Incluido</string>
+    <string name="parameter_no_option">0: No</string>
+    <string name="parameter_parity_even_option">1: Par</string>
+    <string name="parameter_parity_none_option">0: Ninguno</string>
+    <string name="parameter_parity_odd_option">2: Impar</string>
+    <string name="parameter_yes_option">1: Si</string>
+    <string name="password_text">Contraseña</string>
+    <string name="program_button">Probar</string>
+    <string name="retry_button">Intentar de nuevo</string>
+    <string name="save_button">Guardar</string>
+    <string name="unnamed_device">No nombrado</string>
+    <string name="toast_connection_failed">La conexión ha fallado!</string>
+    <string name="voltage_card">Tensión de Entrada</string>
+    <string name="w001_label">Alerta no nombrado</string>
+    <string name="warning_title">¡Atención!</string>
+    <string name="warning_wifi_off">¡Wifi apagado!</string>
+    <string name="wXXX_label">Alarma/alerta fuera de rango</string>
+    <string name="config_button">Ajustes</string>
+    <string name="dialog_no">No</string>
+    <string name="dialog_yes">Si</string>
+    <string name="config_title">Ajustes</string>
+    <string name="config_host_text">Host Modbus</string>
+    <string name="config_port_text">Puerta Modbus</string>
+    <string name="change_button">Cambiar</string>
+    <string name="close_id_label">Último tiempo de cierre</string>
+    <string name="connected_status">Conectado</string>
+    <string name="device_name_placeholder">Nombre de dispositivo</string>
+    <string name="device_net_title">Red conectada</string>
+    <string name="dialog_advanced_title">Modo avanzado</string>
+    <string name="dialog_cancel">Cancelar</string>
+    <string name="dialog_edit_name_title">Digite el nuevo nombre de dispositivo</string>
+    <string name="dialog_help_title">Ayuda</string>
+    <string name="dialog_home_help_edit">: Digite para editar el parámetro</string>
+    <string name="manual_switch">Manual</string>
+    <string name="model_name_default">Nombre</string>
+    <string name="model_number_default">Modelo</string>
+    <string name="monitoring_bottom">Monitoreo</string>
+    <string name="monitoring_fragment_label">Monitoreo</string>
+    <string name="offline_mode_label">Modo offline</string>
+    <string name="offline_status">Offline</string>
+    <string name="online_mode_message">¿Activar modo Online?</string>
+    <string name="online_status">Online</string>
+    <string name="open_id_label">Último tiempo de cierre</string>
+    <string name="program_failed">¡La operación de prueba ha fallado! Verifique la conexión</string>
+    <string name="card_blink_alarm_text">¡Alarma!</string>
+    <string name="dialog_ok">OK</string>
+    <string name="home_bottom">Parámetros</string>
+    <string name="home_fragment_label">Parámetros</string>
+    <string name="inactive_alarms_header">Alarmas Inactivas</string>
+    <string name="a026_label">Falla en EEPROM BackupArea</string>
+    <string name="a027_label">Falla en Comunicación Serial</string>
+    <string name="a028_label">Falla en FieldBus</string>
+    <string name="a030_label">Alarma Externa 3</string>
+    <string name="frequency_card">Frecuencia de Entrada</string>
+    <string name="edit_on_graph_yAxis_label">Corriente de Bobina de Freno</string>
+
+    <string name="a002_description">El contacto asociado al interruptor térmico montado en el disipador de calor del conversor V317 está abierto, señalizando que la temperatura máxima permitida fue excedida.
+\n\n
+ ¡Observación!
+\n
+	\n\tControle las condiciones ambientales de la instalación.
+	\n\tControle el ciclo de trabajo.
+    \n\tDespués del disparo de esta alarma, espere algunos minutos para reiniciar.
+    </string>
+    <string name="a003_description">El valor instantáneo (valor pico) de la corriente de salida M004 (Iout) excedió 200% de la corriente máxima del conversor V317.\n\n¡Observación!\n\n\tControle la resistencia de bobina.\n\tControle la integridad del cable de salida.</string>
+    <string name="a006_description"><![CDATA[La frecuencia de la red eléctrica varía más que el valor máximo permitido, que es igual a 500 μs entre dos períodos de la red eléctrica. Esa alarma puede ocurrir solamente cuando el conversor V317 esté activado. Desactive esa alarma usando el parámetro C153 y el reinicio continuo usando el parámetro C093.\n\n ¡Observación!\n\n\tGarantice que la tensión y la frecuencia de la reja estén dentro del intervalo permitido. Consulte los valores nominales del conversor V317. (4.4 Valores nominales).]]></string>
+    <string name="a007_description">Falla de una o más de las tres fases de la red eléctrica. Esa alarma puede ocurrir solamente cuando el conversor V317 esté activado. Desactive esa alarma usando el parámetro C154 y el reinicio continuo usando el parámetro C093.\n\n¡Observación!\n\n\tGarantice que la tensión y la frecuencia de la reja estén dentro del rango permitido. Consulte los valores nominales del conversor V317. (4.4 Valores nominales).</string>
+    <string name="a012_description">La frecuencia M008 (MFreq) de la red eléctrica está por encima de 70 Hz o por debajo de 40 Hz. Esa alarma puede ocurrir solamente cuando el conversor V317 esté activado. Defina el reinicio automático usando el parámetro C093.\n\n¡Observación!\n\n\tGarantice que la tensión y la frecuencia de la reja estén dentro del rango permitido. Consulte los valores nominales del conversor V317. (4.4 Valores nominales).</string>
+    <string name="a013_description">Falla de los circuitos que proveen las señales de sincronización de la tensión trifásica de la red eléctrica. Esa alarma puede disparar solamente cuando la entrada digital ENABLE esté activa. Defina el reinicio automático usando el parámetro C093.\n\n ¡Observación!\n\n\tGarantice que la tensión y la frecuencia de la reja estén dentro del rango permitido. Consulte los valores nominales del conversor V317. (4.4 Valores nominales).</string>
+    <string name="a016_description"><![CDATA[La tensión de la red eléctrica (Vmains) excedió 15% de 480 VAC. Esa alarma puede disparar solamente cuando la entrada digital ENABLE esté activa. Atrase esa alarma usando el parámetro C141 y desactívela usando el parámetro C157.\n\n ¡Observación!\n\n\tGarantice que la tensión y la frecuencia de la reja estén dentro del rango permitido. Consulte los valores nominales del conversor V317. (4.4 Valores nominales).]]></string>
+    <string name="a017_description"><![CDATA[\tEl valor M009 de la tensión de la red eléctrica de la sección de potencia (Vmains) está 15% por debajo de 220 VAC en el caso de accionamientos con capacidad para regeneración de la energía de la red eléctrica (2° y/o 4° cuadrante activado). Esa alarma puede ocurrir solamente cuando la entrada digital ENABLE esté activa. Atrase esa alarma usando el parámetro C141 y desactívela usando el parámetro C157. Defina el reinicio automático usando el parámetro C093.\n\tEl atraso de la alarma definido en el parámetro C141 queda activo solamente si la tensión de alimentación no fuere inferior a 140 VCA y si el conversor V317 estuviere trabajando en el 1° cuadrante; caso contrario, la alarma será disparada inmediatamente.\n\n ¡Observación!\n\n\tGarantice que la tensión y la frecuencia de la reja estén dentro del rango permitido. Consulte los valores nominales del conversor V317. (4.4 Valores nominales).]]></string>
+    <string name="a020_description">El freno no abre cuando el conversor V317 está activado.\n\n ¡Observación!\n\n\tVerifique el freno.\n\tVerifique los cables de alimentación y control entre el conversor V317 y la microllave del freno.\n\tVerifique la regulación de la microllave que señaliza la apertura del freno.\n\tVerifique la programación de las corrientes de llamada (C000) y economía (P128).\n\tVerifique la programación de tiempo para confirmación de apertura del freno P177.</string>
+    <string name="a021_description">Temperatura del freno excesivamente alta. El disparo de I2t de freno depende de los valores programados en los parámetros C001 (Corriente para protección térmica) y C002 (Constante de tiempo para protección térmica).\n\n ¡Observación!\n\n\tDespués del disparo de esta alarma, espere algunos minutos para reiniciar.\n\tVerifique la programación de las corrientes de llamada y economía y el ajuste de protección (consulte la sección de programación).\n\tVerifique la temperatura de bobina.</string>
+    <string name="a024_description">Al encender, la alarma dispara:\n\ta. Si la EEPROM está ausente.\n\tb. Si la EEPROM no está programada.\n\n¡ADVERTENCIA!\n\n\tEsa alarma no puede ser excluida. Entre en contacto con VULKAN DRIVE TECH.</string>
+    <string name="a025_description">El contenido de parte del área de trabajo de la EEPROM fue alterado.\n\n¡ADVERTENCIA!\n\n\tTrate de reiniciar. Si la alarma persiste, entre en contacto con VULKAN DRIVE TECH.</string>
+    <string name="a029_description">Desgaste de las pastillas\n\n ¡Observación!\n\n\tSi el CDPG 24 V que monitoriza el desgaste de las pastillas está instalado, verifique las pastillas del freno.\n\tSi no lo está, verifique si el terminal C3 está conectado a C2.</string>
+    <string name="a031_description">Fueron detectadas alteraciones en los datos de la EEPROM al encender el equipamiento. El usuario no tiene acceso a esos datos.\n\n ¡Observación!\n\n\tEsa alarma no puede ser excluida. Entre en contacto con VULKAN DRIVE TECH.</string>
+    <string name="a032_description">Reinicio del microcontrolador.\n\n¡ADVERTENCIA!\n\n\tProbablemente, la alarma fue causada por una perturbación electromagnética. Trate de reiniciar. Si la alarma persiste, entre en contacto con VULKAN DRIVE TECH.</string>
+    <string name="a033_description">Una alarma desconocida fue almacenada. En ese caso, basta reiniciar la alarma.</string>
+    <string name="edit_name_action_label">Editar el nombre de dispositivo</string>
+    <string name="graph_edit_button">Editar</string>
+    <string name="login_button">Login</string>
+    <string name="login_dialog_positive">OK</string>
+    <string name="login_dialog_text">¿Login?</string>
+    <string name="m021_enable_label">Freno Habilitado (C2)</string>
+    <string name="m021_mdi1_label">Reinicio de Freno</string>
+    <string name="m021_mdi2_label">Estado Lógico de Entrada 2</string>
+    <string name="m021_mdi3_label">Estado Lógico de Entrada 3</string>
+    <string name="m021_mdi4_label">Estado Lógico de Entrada 4</string>
+    <string name="m021_mdi5_label">Status de Freno (C3)</string>
+    <string name="m021_mdi6_label">Pastillas Desgastadas (C4)</string>
+    <string name="m021_start_label">Apertura de Freno</string>
+    <string name="m022_mdo1_label">Estado Lógico de Salida 1</string>
+    <string name="m022_mdo2_label">Estado Lógico de Salida 2</string>
+    <string name="m022_mdo3_label">En Funcionamiento (C7 - C8)</string>
+    <string name="m022_mdo4_label">Estado Lógico de Salida 4</string>
+    <string name="m022_mdo5_label">Estado Lógico de Salida 5</string>
+    <string name="read_failed">¡La operación de lectura ha fallado! Verifique la conexión</string>
+    <string name="text_content">Nombre dado a dispositivo</string>
+    <string name="analog_config_label3">3: Salida del Lazo de Velocidad</string>
+    <string name="dialog_home_help_graph">": Presione para abrir grafico de edición"</string>
+    <string name="dialog_home_help_text1">Todos los parámetros P y C aparecen aquí. Es posible cambiar su valor en los cards de parámetros, de las seguientes maneras:</string>
+    <string name="dialog_home_help_program">Después de modificar los parámetros, es posible programarlos para probar su funcionamento presionando el botón en el fín de la pantalla:</string>
+    <string name="dialog_home_help_save">Después de probar los parámetros, es posible salvarlos definitivamente en la EEPROM del conversor presionando el botón en el fín de la pantalla:</string>
+    <string name="dialog_unlock_title">Digite la contraseña para Habilitación de Escrita</string>
+    <string name="w002_label">Retroalimentación de Velocidad Commutada para Tensión de Armadura</string>
+    <string name="w003_label">Limite de Corriente de Hardware</string>
+    <string name="w006_label">Valores de Backup almacenados en la RAM</string>
+    <string name="w007_label">Valores originales almacenados en la RAM</string>
+    <string name="w008_label">Falla en EEPROM WorkArea</string>
+    <string name="w009_label">Falla en EEPROM BackupArea</string>
+    <string name="reconfig_settings_message">¡La conexión ha fallado! Por favor verificar los ajustes de red a continuación</string>
+
+    <plurals name="mains_label">
+        <item quantity="other">Tensíon de entrada: %.1f V Frecuencia de entrada: %.1f Hz</item>
+        <item quantity="one">Tensión de entrada: %.1f V Frecuencia de entrada: %.1f Hz</item>
+    </plurals>
+    <plurals name="parameter_card_default_float_template">
+        <item quantity="other">Estándar: %.2f %s</item>
+        <item quantity="one">Estándar: %.2f %s</item>
+    </plurals>
+    <plurals name="parameter_card_default_int_template">
+        <item quantity="other">Estándar: %d %s</item>
+        <item quantity="one">Estándar: %d %s</item>
+    </plurals>
+    <plurals name="parameter_card_default_string_template">
+        <item quantity="other">Estándar: %s</item>
+        <item quantity="one">Estándar: %s</item>
+    </plurals>
+    <plurals name="monitoring_baud_rate_message">
+        <item quantity="other">¡La tasa de bits podría ser más alta! Intente configurarla para %d bps para obtener una mejor experiencia.</item>
+        <item quantity="one">¡La tasa de bits podria ser más alta! Intente configurarla para %d bps para obtener una mejor experiencia.</item>
+    </plurals>
+    <plurals name="parameter_card_times_unit">
+        <item quantity="one">vez</item>
+        <item quantity="other">veces</item>
+    </plurals>
+
+    <plurals name="dialog_offline_message">
+        <item quantity="other">El punto de aceso del dispositivo %s esta offline en este momento. ¿Desea entrar en modo offline?</item>
+        <item quantity="one">El punto de aceso del dispositivo %s esta offline en este momento. ¿Desea entrar en modo offline?</item>
+    </plurals>
+    <plurals name="dialog_password_message">
+        <item quantity="other">La actual contraseña para habilitación de escrita es %d. ¿Desea cambiarla?</item>
+        <item quantity="one">La actual contraseña para habilitación de escrita es %d. ¿Desea cambiarla?</item>
+    </plurals>
+
+    <plurals name="toast_please_connect">
+        <item quantity="other">Por favor conectarse a %s</item>
+        <item quantity="one">Por favor conectarse a %s</item>
+    </plurals>
+    <plurals name="toast_connection_failed">
+        <item quantity="other">¡La conexión a %s ha fallado! Intente de nuevo</item>
+        <item quantity="one">¡La conexión a %s ha fallado! Intente de nuevo</item>
+    </plurals>
+    <plurals name="toast_connection_timeout">
+        <item quantity="other">¡%s demoró demasiado para responder!</item>
+        <item quantity="one">¡%s demoró demasiado para responder!</item>
+    </plurals>
+    <plurals name="toast_connection_attempt">
+        <item quantity="other">Intentando conectarse a %s…</item>
+        <item quantity="one">Intentando conectarse a %s…</item>
+    </plurals>
+    <plurals name="toast_rt_graph_reading_failed">
+        <item quantity="other">La lectura falló en el instante %.2f s!</item>
+        <item quantity="one">La lectura falló en el instante %.2f s!</item>
+    </plurals>
+    <string name="status_running">Funcionando</string>
+    <string name="scan_button">Escanear QR</string>
+    <string name="rt_graph_pause_message">Lectura pausada</string>
+    <string name="rt_graph_play_message">Lectura reanudada</string>
+    <string name="bye_world">Adiós Mundo!</string>
+    <string name="select_language">Seleccionar idioma</string>
+    <string name="language_text">Idioma</string>
+    <string name="w005_label">Start de Encender-Apagar para aplicar freno</string>
+    <string name="w004_label">Enable de Encender-Apagar para aplicar freno</string>
+    <string name="status_card">Status</string>
+    <string name="save_failed">¡La operación de guardar ha fallado! Verifique la conexión</string>
+    <string name="analog_config_label1">1: Tensión de Referencia en Rampa</string>
+
+</resources>

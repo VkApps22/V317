@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="0dp"
+    android:orientation="vertical"
+    android:padding="0dp"
+    android:paddingHorizontal="10dp"
+    android:paddingVertical="20dp"
+    android:paddingStart="8dp"
+    android:paddingEnd="8dp"
+    android:weightSum="1.0">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.5"
+        android:text="@string/password_text"
+        android:textColor="@color/colorTextLight" />
+
+    <EditText
+        android:id="@+id/password_edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.5"
+        android:maxLength="3"
+        android:inputType="numberPassword"
+        android:textColor="@color/colorAccent" />
+
+</LinearLayout>
