@@ -263,6 +263,7 @@ class HomeFragment : Fragment(), OnSlide, GraphClickListener {
                     )
                     ParameterState.EDITED -> onProgramClick()
                     ParameterState.UNSAVED -> onSaveClick()
+                    else -> {}
                 }
 
 //                progressBar.visibility = View.GONE
@@ -1777,6 +1778,7 @@ class HomeFragment : Fragment(), OnSlide, GraphClickListener {
                 button.visibility = View.VISIBLE
                 button.setText(R.string.save_button)
             }
+            else -> {}
         }
     }
 

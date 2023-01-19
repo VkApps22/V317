@@ -10,14 +10,17 @@ import com.github.mikephil.charting.data.Entry
 
 @Entity(tableName = "device_data_table")
 data class DeviceMinimalData(
+    @PrimaryKey(autoGenerate = true)
+    var id: Long = 0L,
+
     @ColumnInfo(name = "device_ssid")
-    val deviceSsId: String = "Device SSID",
+    var deviceSsId: String = "Device SSID",
 
     @ColumnInfo(name = "device_size")
-    val deviceSize: Int = 0,
+    var deviceSize: Int = 0,
 
     @ColumnInfo(name = "device_nick")
-    val deviceNickname: String = "Device nickname",
+    var deviceNickname: String = "Device nickname",
 
     @ColumnInfo(name = "last_active")
     var lastActiveTime: Long = 0L
