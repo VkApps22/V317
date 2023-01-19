@@ -6,9 +6,10 @@ apply plugin: 'kotlin-android-extensions'
 
 apply plugin: 'kotlin-kapt'
 
+apply plugin: 'com.google.gms.google-services'
+
 android {
     compileSdkVersion 29
-    buildToolsVersion "29.0.1"
     defaultConfig {
         applicationId "br.com.kascosys.vulkanconnectv317"
         minSdkVersion 21
@@ -102,4 +103,12 @@ dependencies {
 
     // Lingver - library for managing language
     implementation "com.github.YarikSOffice:lingver:1.2.0"
+
+    // Import the BoM for the Firebase platform
+    implementation platform('com.google.firebase:firebase-bom:31.1.0')
+
+    // Add the dependency for the Realtime Database library
+    // When using the BoM, you don't specify versions in Firebase library dependencies
+    implementation 'com.google.firebase:firebase-database-ktx:20.0.4'
+    implementation 'com.google.firebase:firebase-analytics-ktx'
 }

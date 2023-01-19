@@ -19,10 +19,10 @@ interface DeviceDataDao {
     @Query("SELECT * from device_data_table ORDER BY last_active DESC")
     fun getAll(): List<DeviceData>
 
-    @Query("SELECT device_ssid, device_nick, device_size, last_active from device_data_table ORDER BY last_active DESC")
+    @Query("SELECT id, device_ssid, device_nick, device_size, last_active from device_data_table ORDER BY last_active DESC")
     fun getAllMinimal(): MutableList<DeviceMinimalData>
 
-    @Query("SELECT device_ssid, device_nick, device_size, last_active from device_data_table WHERE device_ssid = :ssId ORDER BY last_active DESC")
+    @Query("SELECT id, device_ssid, device_nick, device_size, last_active from device_data_table WHERE device_ssid = :ssId ORDER BY last_active DESC")
     fun getMinimalBySsId(ssId: String): MutableList<DeviceMinimalData>
 
     @Query("SELECT * from device_data_table WHERE device_ssid = :ssId ORDER BY last_active DESC")

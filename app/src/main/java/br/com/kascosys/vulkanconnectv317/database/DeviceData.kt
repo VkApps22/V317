@@ -18,7 +18,7 @@ data class DeviceData(
     var deviceSsId: String = "Device SSID",
 
     @ColumnInfo(name = "device_size")
-    val deviceSize: Int = 0,
+    var deviceSize: Int = 0,
 
     @ColumnInfo(name = "device_nick")
     var deviceNickname: String = "Device nickname",
@@ -27,16 +27,16 @@ data class DeviceData(
     var lastActiveTime: Long = Date().time,
 
     @ColumnInfo(name = "parameter_list")
-    val parameterList: MutableList<NewParameterModel> = mutableListOf(),
+    var parameterList: MutableList<NewParameterModel> = mutableListOf(),
 
     @ColumnInfo(name = "monitoring_list")
-    val monitoringList: MutableList<NewMonitoringModel> = mutableListOf(),
+    var monitoringList: MutableList<NewMonitoringModel> = mutableListOf(),
 
     @ColumnInfo(name = "last_alarm_id")
     var lastActiveAlarm: String = "Last alarm ID",
 
     @ColumnInfo(name = "last_graph_data")
-    val lastGeneratedGraph: MutableList<Entry> = mutableListOf(),
+    var lastGeneratedGraph: MutableList<Entry> = mutableListOf(),
 
     @ColumnInfo(name = "last_graph_id")
     var lastGraphId: String = "Last graph ID"
