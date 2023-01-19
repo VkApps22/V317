@@ -25,6 +25,7 @@ import androidx.lifecycle.MutableLiveData
 import br.com.kascosys.vulkanconnectv317.R
 import br.com.kascosys.vulkanconnectv317.adapters.AlarmAdapter
 import br.com.kascosys.vulkanconnectv317.constants.*
+import br.com.kascosys.vulkanconnectv317.database.AlertsFirebase
 import br.com.kascosys.vulkanconnectv317.interfaces.AlarmListItem
 import br.com.kascosys.vulkanconnectv317.interfaces.OnHeaderClick
 import br.com.kascosys.vulkanconnectv317.managers.AlarmManager
@@ -38,6 +39,8 @@ import br.com.kascosys.vulkanconnectv317.utils.modbus.ModBusUtils
 import com.shuhart.stickyheader.StickyHeaderItemDecorator
 import com.yariksoffice.lingver.Lingver
 import kotlinx.android.synthetic.main.fragment_alarms.view.*
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.runBlocking
 import java.util.*
 
 class AlarmFragment : Fragment(), OnHeaderClick {
@@ -88,6 +91,14 @@ class AlarmFragment : Fragment(), OnHeaderClick {
 
         wifiManager =
             activity!!.applicationContext.getSystemService(Context.WIFI_SERVICE) as WifiManager
+
+
+        runBlocking {
+            launch {
+                val data = AlertsFirebase().getData()
+                Log.i("Firebase","Result list alerts: $data")
+            }
+        }
 
         val myAlarmsDataSet: MutableList<AlarmModel> =
             mutableListOf( //TODO: REMOVE HARDCODE
@@ -323,7 +334,6 @@ class AlarmFragment : Fragment(), OnHeaderClick {
                 inactiveSection
             )
         )
-
 
         myAlarmsDataSet.forEachIndexed { i, item ->
             val itemPos = 2 + i
