@@ -1,6 +1,7 @@
 package br.com.kascosys.vulkanconnectv317.database
 
 import android.util.Log
+import br.com.kascosys.vulkanconnectv317.models.AlertsFirebaseModel
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.ValueEventListener
@@ -9,15 +10,19 @@ import com.google.firebase.ktx.Firebase
 import kotlinx.coroutines.tasks.await
 
 class AlertsFirebase  {
-    var result: Map<String, Any> = mutableMapOf<String, Any>()
-    val database = Firebase.database
-    private val myRef = database.getReference("alerts")
-
+    private val database = Firebase.database
+    private var myRef = database.getReference("alerts")
+    private var resultList: List<List<AlertsFirebaseModel>> = mutableListOf()
     constructor(){
         myRef.addValueEventListener(object : ValueEventListener {
-            override fun onDataChange(dataSnapshot: DataSnapshot) {
+            override fun onDataChange(snapshot: DataSnapshot) {
                 //este método é chamado na primeira vez e sempre que os dados são atualizados
-                result = dataSnapshot.getValue() as Map<String, Any>
+
+                resultList = snapshot.children.map { dataSnapshot ->
+                    dataSnapshot.children.map { doc ->
+                        doc.getValue(AlertsFirebaseModel::class.java)!!.copy(language = dataSnapshot.key!!, id = doc.key!!)
+                    }
+                }
             }
 
             override fun onCancelled(error: DatabaseError) {
@@ -27,12 +32,16 @@ class AlertsFirebase  {
         })
     }
 
-    suspend fun getData() : Map<String, Any> {
-        val value = myRef.get().await().value
-        if (value != null){
-            @Suppress("UNCHECKED_CAST")
-            result = value as Map<String, Any>
+    suspend fun getData() : List<List<AlertsFirebaseModel>> {
+        val value = myRef.get().await().children.map { dataSnapshot ->
+            dataSnapshot.children.map { doc ->
+                doc.getValue(AlertsFirebaseModel::class.java)!!.copy(language = dataSnapshot.key!!, id = doc.key!!)
+            }
         }
-        return result
+
+        if(value != null){
+            resultList = value
+        }
+        return resultList
     }
 }
