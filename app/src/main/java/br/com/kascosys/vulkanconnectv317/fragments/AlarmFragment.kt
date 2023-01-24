@@ -25,7 +25,7 @@ import androidx.lifecycle.MutableLiveData
 import br.com.kascosys.vulkanconnectv317.R
 import br.com.kascosys.vulkanconnectv317.adapters.AlarmAdapter
 import br.com.kascosys.vulkanconnectv317.constants.*
-import br.com.kascosys.vulkanconnectv317.database.AlertsFirebase
+import br.com.kascosys.vulkanconnectv317.database.firebase.AlertsFirebaseRepository
 import br.com.kascosys.vulkanconnectv317.interfaces.AlarmListItem
 import br.com.kascosys.vulkanconnectv317.interfaces.OnHeaderClick
 import br.com.kascosys.vulkanconnectv317.managers.AlarmManager
@@ -95,7 +95,7 @@ class AlarmFragment : Fragment(), OnHeaderClick {
 
         runBlocking {
             launch {
-                val data = AlertsFirebase().getData()
+                val data = AlertsFirebaseRepository().getData()
                 Log.i("Firebase","Result list alerts: $data")
             }
         }

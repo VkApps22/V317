@@ -1,6 +1,7 @@
-package br.com.kascosys.vulkanconnectv317.database
+package br.com.kascosys.vulkanconnectv317.database.firebase
 
 import android.util.Log
+import androidx.lifecycle.MutableLiveData
 import br.com.kascosys.vulkanconnectv317.models.AlertsFirebaseModel
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
@@ -9,11 +10,11 @@ import com.google.firebase.database.ktx.database
 import com.google.firebase.ktx.Firebase
 import kotlinx.coroutines.tasks.await
 
-class AlertsFirebase  {
+class AlertsFirebaseRepository  {
     private val database = Firebase.database
     private var myRef = database.getReference("alerts")
     private var resultList: List<List<AlertsFirebaseModel>> = mutableListOf()
-    constructor(){
+    fun fetchAlerts(liveData: MutableLiveData<List<List<AlertsFirebaseModel>>>){
         myRef.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
                 //este método é chamado na primeira vez e sempre que os dados são atualizados
@@ -23,6 +24,8 @@ class AlertsFirebase  {
                         doc.getValue(AlertsFirebaseModel::class.java)!!.copy(language = dataSnapshot.key!!, id = doc.key!!)
                     }
                 }
+
+                liveData.postValue(resultList)
             }
 
             override fun onCancelled(error: DatabaseError) {
