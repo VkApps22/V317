@@ -22,10 +22,11 @@ import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.widget.SearchView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.ViewModelProvider
 import br.com.kascosys.vulkanconnectv317.R
 import br.com.kascosys.vulkanconnectv317.adapters.AlarmAdapter
 import br.com.kascosys.vulkanconnectv317.constants.*
-import br.com.kascosys.vulkanconnectv317.database.AlertsFirebase
+import br.com.kascosys.vulkanconnectv317.database.firebase.AlertsFirebaseRepository
 import br.com.kascosys.vulkanconnectv317.interfaces.AlarmListItem
 import br.com.kascosys.vulkanconnectv317.interfaces.OnHeaderClick
 import br.com.kascosys.vulkanconnectv317.managers.AlarmManager
@@ -33,6 +34,7 @@ import br.com.kascosys.vulkanconnectv317.managers.OnlineManager
 import br.com.kascosys.vulkanconnectv317.models.AlarmHeader
 import br.com.kascosys.vulkanconnectv317.models.AlarmItem
 import br.com.kascosys.vulkanconnectv317.models.AlarmModel
+import br.com.kascosys.vulkanconnectv317.models.AlertModel
 import br.com.kascosys.vulkanconnectv317.utils.ConnectionUtils
 import br.com.kascosys.vulkanconnectv317.utils.Util
 import br.com.kascosys.vulkanconnectv317.utils.modbus.ModBusUtils
@@ -92,11 +94,15 @@ class AlarmFragment : Fragment(), OnHeaderClick {
         wifiManager =
             activity!!.applicationContext.getSystemService(Context.WIFI_SERVICE) as WifiManager
 
-
         runBlocking {
             launch {
-                val data = AlertsFirebase().getData()
-                Log.i("Firebase","Result list alerts: $data")
+                val data = AlertsFirebaseRepository().fetchAlertsSync()
+                data.forEach(){ it ->
+                    Log.i("Firebase","Result list: ${it.language}")
+                    it.alerts.forEach(){ alert ->
+                        Log.i("Firebase","Result list alerts: ${alert.toString()}")
+                    }
+                }
             }
         }
 
