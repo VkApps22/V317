@@ -96,7 +96,7 @@ class AlarmFragment : Fragment(), OnHeaderClick {
 
         runBlocking {
             launch {
-                val data = AlertsFirebaseRepository().fetchAlertSync()
+                val data = AlertsFirebaseRepository().fetchAlertsSync()
                 data.forEach(){ it ->
                     Log.i("Firebase","Result list: ${it.language}")
                     it.alerts.forEach(){ alert ->

@@ -39,7 +39,7 @@ class AlertsFirebaseRepository  {
         })
     }
 
-    suspend fun fetchAlertSync(): MutableList<AlertsFirebaseModel> {
+    suspend fun fetchAlertsSync(): MutableList<AlertsFirebaseModel> {
         myRef.get().await().children.forEach() { dataSnapshot ->
             val alertObject = AlertsFirebaseModel()
             alertObject.language = dataSnapshot.key
