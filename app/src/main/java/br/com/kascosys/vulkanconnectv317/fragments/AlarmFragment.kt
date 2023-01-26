@@ -38,6 +38,8 @@ import br.com.kascosys.vulkanconnectv317.models.AlertModel
 import br.com.kascosys.vulkanconnectv317.utils.ConnectionUtils
 import br.com.kascosys.vulkanconnectv317.utils.Util
 import br.com.kascosys.vulkanconnectv317.utils.modbus.ModBusUtils
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.FirebaseDatabase
 import com.shuhart.stickyheader.StickyHeaderItemDecorator
 import com.yariksoffice.lingver.Lingver
 import kotlinx.android.synthetic.main.fragment_alarms.view.*
@@ -94,13 +96,24 @@ class AlarmFragment : Fragment(), OnHeaderClick {
         wifiManager =
             activity!!.applicationContext.getSystemService(Context.WIFI_SERVICE) as WifiManager
 
+        val myAlarmsData: MutableList<AlarmModel> = mutableListOf()
+
         runBlocking {
             launch {
                 val data = AlertsFirebaseRepository().fetchAlertsSync()
-                data.forEach(){ it ->
+                val languageValue = Locale.getDefault()
+
+                val dataFilter = data.filter{ dataFilterList -> dataFilterList.language == languageValue.language}
+                dataFilter.forEach(){ it ->
                     Log.i("Firebase","Result list: ${it.language}")
                     it.alerts.forEach(){ alert ->
                         Log.i("Firebase","Result list alerts: ${alert.toString()}")
+
+                        myAlarmsData.add(AlarmModel(
+                            alert.label,
+                            alert.id,
+                            alert.description
+                        ))
                     }
                 }
             }
@@ -341,7 +354,7 @@ class AlarmFragment : Fragment(), OnHeaderClick {
             )
         )
 
-        myAlarmsDataSet.forEachIndexed { i, item ->
+        myAlarmsData.forEachIndexed { i, item ->
             val itemPos = 2 + i
             alarmList.add(itemPos, AlarmItem(item, inactiveSection))
         }
