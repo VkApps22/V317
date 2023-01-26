@@ -1,16 +1,20 @@
 package br.com.kascosys.vulkanconnectv317.database.firebase
 
 import android.util.Log
+import br.com.kascosys.vulkanconnectv317.R
+import br.com.kascosys.vulkanconnectv317.constants.languageList
 import br.com.kascosys.vulkanconnectv317.models.AlertModel
 import br.com.kascosys.vulkanconnectv317.models.AlertsFirebaseModel
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 import com.google.firebase.database.ktx.database
 import com.google.firebase.ktx.Firebase
 import kotlinx.coroutines.tasks.await
 
-class AlertsFirebaseRepository  {
+class AlertsFirebaseRepository {
     private val database = Firebase.database
     private var myRef = database.getReference("alerts")
     private var resultList: MutableList<AlertsFirebaseModel> = mutableListOf()
@@ -22,13 +26,19 @@ class AlertsFirebaseRepository  {
                 snapshot.children.forEach() { dataSnapshot ->
                     val alertObject = AlertsFirebaseModel()
                     alertObject.language = dataSnapshot.key
-                    val alertList: MutableList<AlertModel> = mutableListOf()
 
                     dataSnapshot.children.forEach() { doc ->
                         val alert = doc.getValue(AlertModel::class.java)!!.copy(id = doc.key!!)
-                        alertList.add(alert)
+                        alertObject.alerts.add(alert)
                     }
                     resultList.add(alertObject)
+                }
+
+                resultList.forEach(){ data ->
+                    Log.i("Firebase","Result list: ${data.language}")
+                    data.alerts.forEach(){ alert ->
+                        Log.i("Firebase","Result list alerts: ${alert.toString()}")
+                    }
                 }
             }
 
