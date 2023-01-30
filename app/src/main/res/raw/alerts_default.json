@@ -1,5 +1,5 @@
 {
-    "es_ES": {
+    "es": {
       "a001": {
         "label": "Falla en Campo"
       },
@@ -146,7 +146,7 @@
         "label": "Alarma/alerta fuera de rango"
       }
     },
-    "pt_BR": {
+    "pt": {
       "a001": {
         "label": "Falha no Campo churros"
       },
@@ -293,7 +293,7 @@
         "label": "Alarme/alerta fora da faixa"
       }
     },
-    "en_US": {
+    "en": {
       "a001": {
         "label": "Field failure"
       },
