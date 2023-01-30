@@ -141,7 +141,7 @@ class AlarmAdapter(
 
                         filtering = true
                         filteredAlarms = alarms.filter {
-                            it.data.name.toLowerCase().contains(queryString) || it.data.idNumber.toLowerCase().contains(
+                            it.data.name!!.toLowerCase().contains(queryString) || it.data.idNumber.toLowerCase().contains(
                                 queryString
                             )
                         }.toMutableList()
