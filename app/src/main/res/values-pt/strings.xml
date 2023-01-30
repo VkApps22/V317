@@ -1,47 +1,5 @@
 <resources>
     <string name="hello_world">Olá Mundo!</string>
-    <string name="a001_label">Falha no Campo</string>
-    <string name="a002_label">Temperatura excessiva no dissipador de calor</string>
-    <string name="a003_label">Sobrecorrente de saída CC</string>
-    <string name="a004_label">Perda da carga ou terminais Potencia de saída CC sem carga</string>
-    <string name="a005_label">Alarme não nomeado</string>
-    <string name="a006_label">Frequência da rede elétrica instável</string>
-    <string name="a007_label">Falha de fase da rede elétrica</string>
-    <string name="a008_label">Falha no Feedback de velocidade</string>
-    <string name="a009_label">Sobre-corrente de campo</string>
-    <string name="a010_label">Sobre-tensão na bobina do Freio</string>
-    <string name="a011_label">Indutância L fora da faixa</string>
-    <string name="a012_label">Frequência da rede elétrica fora da faixa</string>
-    <string name="a013_label">Falha de sincronização</string>
-    <string name="a014_label">Resistência R fora da faixa</string>
-    <string name="a015_label">Erro no \"AutoTune\"</string>
-    <string name="a016_label">Sobre-tensão da rede elétrica</string>
-    <string name="a017_label">Tensão da rede elétrica insuficiente</string>
-    <string name="a018_label">\"AutoTune\" interrompido</string>
-    <string name="a019_label">Limite no \"AutoTune\"</string>
-    <string name="a020_label">Alarme externo 1 - Falha de abertura do Freio</string>
-    <string name="a021_label">Disparo de I2t do freio</string>
-    <string name="a023_label">Corrente de campo abaixo do limite</string>
-    <string name="a024_label">EEPROM ausente ou em branco</string>
-    <string name="a025_label">Parâmetros incorretos na área de trabalho da EEPROM</string>
-    <string name="a026_label">Falha com o  Backup de área na EEPROM</string>
-    <string name="a027_label">Falha na comunicação serial</string>
-    <string name="a028_label">Falha com o FieldBus</string>
-    <string name="a029_label">Alarme externo 2 (Pastilhas gastas no Freio)</string>
-    <string name="a030_label">Alarme externo 3</string>
-    <string name="a031_label">Falha interna da EEPROM</string>
-    <string name="a032_label">Reinicialização do Microcontrolador</string>
-    <string name="a033_label">Falha desconhecida</string>
-    <string name="w001_label">Alerta não nomeado</string>
-    <string name="w002_label">Feedback de velocidade chaveado para Vout (bobina)</string>
-    <string name="w003_label"><![CDATA[Limite da corrente do Hardware < 100%]]></string>
-    <string name="w004_label">Habilitação de Desliga-Liga para acionar Freio</string>
-    <string name="w005_label">" Start de Desliga-Liga para acionar Freio"</string>
-    <string name="w006_label">Valores de Backup armazenados na RAM</string>
-    <string name="w007_label">Valores originais armazenados na RAM</string>
-    <string name="w008_label">Falha na EEPROM na área de trabalho</string>
-    <string name="w009_label">Falha na EEPROM na área de Backup</string>
-    <string name="wXXX_label">Alarme/alerta fora da faixa</string>
     <string name="warning_title">Atenção!</string>
     <string name="warning_wifi_off">Wifi desligado!</string>
     <string name="voltage_card">Tensão de entrada</string>
@@ -53,7 +11,6 @@
     <string name="activity_edit_on_graph_label">Editar em Gráfico</string>
     <string name="advanced_action_title">Modo avançado</string>
     <string name="alarm_fragment_label">Alarmes</string>
-    <string name="alarm_generic_description">Favor entrar em contato com a VULKAN DriveTech.</string>
     <string name="alerts_bottom">Alarmes</string>
     <string name="automatic_switch">Automático</string>
     <string name="program_button">Testar</string>
@@ -183,27 +140,6 @@
     <string name="analog_config_label11">11: Torque do Motor</string>
     <string name="analog_config_label10">10: Corrente de Campo</string>
     <string name="analog_config_label0">0: 0 Volt</string>
-    <string name="a002_description">O contato associado ao interruptor térmico montado no dissipador de calor do conversor V317 está aberto, sinalizando que a temperatura máxima permitida foi excedida.
-\n\n
-Observação!
-\n
-	\n\tControle as condições ambientais da instalação.
-	\n\tControle o ciclo de trabalho.</string>
-    <string name="a003_description">O valor instantâneo (valor de pico) da corrente de saída M004 (Iout) excedeu 200 % da corrente máxima do conversor V317. \n\nObservação! \n\tControle a resistência da bobina.\n\tControle a integridade do cabo de saída.</string>
-    <string name="a006_description"><![CDATA[A frequência da rede elétrica varia mais do que o valor máximo permitido, que é igual a 500 μs entre dois períodos da rede elétrica. Esse alarme pode ocorrer somente quando o conversor V317 estiver ativado. Desative esse alarme usando o parâmetro C153 e a reinicialização contínua usando o parâmetro C093.\n\nObservação!\n\n\tGaranta que a tensão e a frequência da grade estejam dentro da faixa permitida. Consulte os valores nominais do conversor V317 (4.4 Valores Nominais).]]></string>
-    <string name="a007_description">Falha de uma ou mais das três fases da rede elétrica. Esse alarme pode ocorrer somente quando o conversor V317. estiver ativada. Desative esse alarme usando o parâmetro C154 e a reinicialização contínua usando o parâmetro C093.\n\nObservação!\n\n\tGaranta que a tensão e a frequência da grade estejam dentro da faixa permitida. Consulte os valores nominais do conversor V317 (4.4 Valores Nominais).</string>
-    <string name="a012_description">A frequência M008 (MFreq) da rede elétrica está acima de 70 Hz ou abaixo de 40 Hz.. Esse alarme pode ocorrer somente quando o conversor V317 estiver ativada. Defina a reinicialização automática usando o parâmetro C093.\n\nObservação!\n\n\tGaranta que a tensão e a frequência da grade estejam dentro da faixa permitida. Consulte os valores nominais do conversor V317 (4.4 Valores Nominais).</string>
-    <string name="a013_description">Falha dos circuitos que fornecem os sinais de sincronização da tensão trifásica da rede elétrica. Esse alarme pode disparar somente quando a entrada digital ENABLE estiver ativa. Defina a reinicialização automática usando o parâmetro C093.\n\nObservação!\n\n\tGaranta que a tensão e a frequência da grade estejam dentro da faixa permitida. Consulte os valores nominais do conversor V317 (4.4 Valores Nominais).</string>
-    <string name="a016_description"><![CDATA[A tensão da rede elétrica (Vmains) excedeu 15% de 480 VAC. Esse alarme pode disparar somente quando a entrada digital ENABLE estiver ativa. Atrase esse alarme usando o parâmetro C141 e desative-o usando o parâmetro C157.\n\nObservação!\n\n\tGaranta que a tensão e a frequência da grade estejam dentro da faixa permitida. Consulte os valores nominais do conversor V317 (4.4 Valores Nominais).]]></string>
-    <string name="a017_description"><![CDATA[O valor M009 da tensão da rede elétrica da seção de potência (Vmains) está 15% abaixo de 220 VAC no caso de acionamentos com capacidade para regeneração da energia da rede elétrica (2° e/ou 4° quadrante ativado). Esse alarme pode ocorrer somente quando a entrada digital ENABLE estiver ativa. Atrase esse alarme usando o parâmetro C141 e desative-o usando o parâmetro C157. Defina a reinicialização automática usando o parâmetro C093.\n\tO atraso do alarme definido no parâmetro C141 fica ativo somente se a tensão de alimentação não for inferior a 140 VCA e se o conversor V317 estiver trabalhando no 1° quadrante; caso contrário, o alarme será disparado imediatamente.\n\nObservação!\n\n\tGaranta que a tensão e a frequência da grade estejam dentro da faixa permitida. Consulte os valores nominais do conversor V317 (4.4 Valores Nominais).]]></string>
-    <string name="a020_description">O freio não abre quando o conversor V317 está ativado.\n\nObservação!\n\n\tVerifique o freio.\n\tVerifique os fios de alimentação e controle entre o conversor V317 e a micro-chave do freio.\n\tVerifique a regulagem da micro-chave que sinaliza a abertura do freio.\n\tVerifique a programação das correntes de chamada (C000) e economia (P128).\n\tVerifique a programação do tempo para confirmação de abertura do freio P177.</string>
-    <string name="a021_description">Temperatura do freio excessivamente alta. O disparo de I2t do freio depende dos valores programados nos parâmetros C001 (Corrente para proteção térmica) e C002 (Constante de tempo para proteção térmica).\n\nObservação!\n\n\tDepois do disparo deste alarme, espere alguns minutos para reiniciar.\n\tVerifique a programação das correntes de chamada e economia e o ajuste da proteção (consulte a seção de programação).Verifique a temperatura da bobina.</string>
-    <string name="a024_description">Ao ligar, o alarme dispara:\n\ta. Se a EEPROM estiver ausente.\n\tb. Se a EEPROM não estiver programada.\n\nAdvertência!\n\n\tEsse alarme não pode ser excluído. Entre em contato com a VULKAN DRIVE TECH.</string>
-    <string name="a025_description">O conteúdo de parte da área de trabalho da EEPROM foi alterado.\n\nAdvertência!\n\n\tTente reinicializar. Se o alarme persistir, entre em contato com a VULKAN DRIVE TECH.</string>
-    <string name="a029_description">Desgaste das pastilhas\n\nObservação!\n\n\tSe o CDPG 24 V que monitora o desgaste das pastilhas estiver instalado, verifique as pastilhas do freio.\n\tSe não estiver, verifique se o terminal C3 está conectado a C2.</string>
-    <string name="a031_description">Foram detectadas alterações nos dados da EEPROM ao ligar o equipamento. O usuário não tem acesso a esses dados.\n\nObservação!\n\n\tEsse alarme não pode ser excluído. Entre em contato com a VULKAN DRIVE TECH.</string>
-    <string name="a032_description">Reinicialização do microcontrolador.\n\nAdvertência!\n\n\tProvavelmente, o alarme foi causado por uma perturbação eletromagnética. Tente reinicializar. Se o alarme persistir, entre em contato com a VULKAN DRIVE TECH.</string>
-    <string name="a033_description">Um alarme desconhecido foi armazenado. Nesse caso, basta reinicializar o alarme.</string>
 
     <plurals name="mains_label">
         <item quantity="other">Tensão de entrada: %.1f V Frequência de entrada: %.1f Hz</item>
