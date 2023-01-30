@@ -43,6 +43,8 @@ import br.com.kascosys.vulkanconnectv317.utils.ConnectionUtils
 import br.com.kascosys.vulkanconnectv317.utils.Util
 import br.com.kascosys.vulkanconnectv317.viewModels.PairingViewModel
 import com.yariksoffice.lingver.Lingver
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.runBlocking
 import java.util.*
 
 class PairingActivity : AppCompatActivity(), OnDeviceClick, DeviceContainerActivity {
@@ -132,7 +134,6 @@ class PairingActivity : AppCompatActivity(), OnDeviceClick, DeviceContainerActiv
 //        DatabaseGetMinimalAsync(this).execute()
 
 //        ConnectionUtils.getIpPrefix(wifiManager)
-
     }
 
 
@@ -588,9 +589,8 @@ class PairingActivity : AppCompatActivity(), OnDeviceClick, DeviceContainerActiv
 
     override fun onResume() {
         super.onResume()
-
+        AlertsFirebaseRepository.fetchAlertsAsync()
         Log.i("PairingActivity", "onResume called")
-        AlertsFirebaseRepository().fetchAlertsAsync()
         DatabaseGetMinimalAsync(this).execute()
     }
 

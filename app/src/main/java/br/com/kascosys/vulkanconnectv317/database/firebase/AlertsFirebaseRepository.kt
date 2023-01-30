@@ -8,33 +8,29 @@ import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.ValueEventListener
 import com.google.firebase.database.ktx.database
 import com.google.firebase.ktx.Firebase
-import kotlinx.coroutines.tasks.await
 
-class AlertsFirebaseRepository {
+object AlertsFirebaseRepository {
     private val database = Firebase.database
-    private var myRef = database.getReference("alerts")
-    var resultList: MutableList<AlertsFirebaseModel> = mutableListOf()
-
+    val resultList: MutableList<AlertsFirebaseModel> = mutableListOf()
+    private const val validateFirebaseCache:Boolean = false
+    init {
+        if (!validateFirebaseCache){
+            Firebase.database.setPersistenceEnabled(true)
+        }
+    }
+    var myRef = database.getReference("alerts")
     fun fetchAlertsAsync(){
         myRef.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
                 //este método é chamado na primeira vez e sempre que os dados são atualizados
-
                 snapshot.children.forEach() { dataSnapshot ->
                     val alertObject = AlertsFirebaseModel()
                     alertObject.language = dataSnapshot.key
-
                     dataSnapshot.children.forEach() { doc ->
                         val alert = doc.getValue(AlertModel::class.java)!!.copy(id = doc.key!!)
                         alertObject.alerts.add(alert)
                     }
                     resultList.add(alertObject)
-                }
-                resultList.forEach(){ data ->
-                    Log.i("Firebase","Result list: ${data.language}")
-                    data.alerts.forEach(){ alert ->
-                        Log.i("Firebase","Result list alerts: ${alert.toString()}")
-                    }
                 }
             }
 
@@ -43,19 +39,7 @@ class AlertsFirebaseRepository {
                 Log.v("firebase", "Failed to read value.", error.toException())
             }
         })
-    }
 
-    suspend fun fetchAlertsSync(): MutableList<AlertsFirebaseModel> {
-        myRef.get().await().children.forEach() { dataSnapshot ->
-            val alertObject = AlertsFirebaseModel()
-            alertObject.language = dataSnapshot.key
-
-            dataSnapshot.children.forEach() { doc ->
-                val alert = doc.getValue(AlertModel::class.java)!!.copy(id = doc.key!!)
-                alertObject.alerts.add(alert)
-            }
-            resultList.add(alertObject)
-        }
-        return resultList
+        myRef.keepSynced(true)
     }
 }
