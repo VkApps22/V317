@@ -94,237 +94,28 @@ class AlarmFragment : Fragment(), OnHeaderClick {
         wifiManager =
             activity!!.applicationContext.getSystemService(Context.WIFI_SERVICE) as WifiManager
 
+
+        val myAlarmsDataSet = mutableListOf<AlarmModel>()
+
         runBlocking {
             launch {
                 val data = AlertsFirebaseRepository().fetchAlertsSync()
-                data.forEach(){ it ->
-                    Log.i("Firebase","Result list: ${it.language}")
-                    it.alerts.forEach(){ alert ->
-                        Log.i("Firebase","Result list alerts: ${alert.toString()}")
+                val filteredData = data.find { it.language == Locale.getDefault().toString() }
+                if (filteredData != null && !filteredData.isEmpty()){
+                    filteredData.alerts.forEach(){ alert ->
+                        myAlarmsDataSet.add(AlarmModel(alert.label, alert.id, alert.description))
+                    }
+                }else {
+                    val json = AlertsFirebaseRepository().getJsonDataFromAsset(context!!, R.raw.alerts_default)
+                    if (json != null && json.isNotEmpty()){
+                        val jsonFilteredData = json.find { it.language ==  Locale.getDefault().toString()}
+                        jsonFilteredData?.alerts?.forEach(){ alert ->
+                            myAlarmsDataSet.add(AlarmModel(alert.label, alert.id, alert.description))
+                        }
                     }
                 }
             }
         }
-
-        val myAlarmsDataSet: MutableList<AlarmModel> =
-            mutableListOf( //TODO: REMOVE HARDCODE
-                AlarmModel(
-                    getString(R.string.a001_label),
-                    "A001",
-                    getString(R.string.alarm_generic_description)
-                ),
-                AlarmModel(
-                    getString(R.string.a002_label),
-                    "A002",
-                    getString(R.string.a002_description)
-                ),
-                AlarmModel(
-                    getString(R.string.a003_label),
-                    "A003",
-                    getString(R.string.a003_description)
-                ),
-                AlarmModel(
-                    getString(R.string.a004_label),
-                    "A004",
-                    getString(R.string.alarm_generic_description)
-                ),
-                AlarmModel(
-                    getString(R.string.a005_label),
-                    "A005",
-                    getString(R.string.alarm_generic_description)
-                ),
-                AlarmModel(
-                    getString(R.string.a006_label),
-                    "A006",
-                    getString(R.string.a006_description)
-                ),
-                AlarmModel(
-                    getString(R.string.a007_label),
-                    "A007",
-                    getString(R.string.a007_description)
-                ),
-                AlarmModel(
-                    getString(R.string.a008_label),
-                    "A008",
-                    getString(R.string.alarm_generic_description)
-                ),
-                AlarmModel(
-                    getString(R.string.a009_label),
-                    "A009",
-                    getString(R.string.alarm_generic_description)
-                ),
-                AlarmModel(
-                    getString(R.string.a010_label),
-                    "A010",
-                    getString(R.string.alarm_generic_description)
-                ), AlarmModel(
-                    getString(R.string.a011_label),
-                    "A011",
-                    getString(R.string.alarm_generic_description)
-                ),
-                AlarmModel(
-                    getString(R.string.a012_label),
-                    "A012",
-                    getString(R.string.a012_description)
-                ),
-                AlarmModel(
-                    getString(R.string.a013_label),
-                    "A013",
-                    getString(R.string.a013_description)
-                ),
-                AlarmModel(
-                    getString(R.string.a014_label),
-                    "A014",
-                    getString(R.string.alarm_generic_description)
-                ),
-                AlarmModel(
-                    getString(R.string.a015_label),
-                    "A015",
-                    getString(R.string.alarm_generic_description)
-                ),
-                AlarmModel(
-                    getString(R.string.a016_label),
-                    "A016",
-                    getString(R.string.a016_description)
-                ),
-                AlarmModel(
-                    getString(R.string.a017_label),
-                    "A017",
-                    getString(R.string.a017_description)
-                ),
-                AlarmModel(
-                    getString(R.string.a018_label),
-                    "A018",
-                    getString(R.string.alarm_generic_description)
-                ),
-                AlarmModel(
-                    getString(R.string.a019_label),
-                    "A019",
-                    getString(R.string.alarm_generic_description)
-                ),
-                AlarmModel(
-                    getString(R.string.a020_label),
-                    "A020",
-                    getString(R.string.a020_description)
-                ),
-                AlarmModel(
-                    getString(R.string.a021_label),
-                    "A021",
-                    getString(R.string.a021_description)
-                ),
-                AlarmModel(
-                    getString(R.string.a022_label),
-                    "A022",
-                    getString(R.string.alarm_generic_description)
-                ),
-                AlarmModel(
-                    getString(R.string.a023_label),
-                    "A023",
-                    getString(R.string.alarm_generic_description)
-                ),
-                AlarmModel(
-                    getString(R.string.a024_label),
-                    "A024",
-                    getString(R.string.a024_description)
-                ),
-                AlarmModel(
-                    getString(R.string.a025_label),
-                    "A025",
-                    getString(R.string.a025_description)
-                ),
-                AlarmModel(
-                    getString(R.string.a026_label),
-                    "A026",
-                    getString(R.string.alarm_generic_description)
-                ),
-                AlarmModel(
-                    getString(R.string.a027_label),
-                    "A027",
-                    getString(R.string.alarm_generic_description)
-                ),
-                AlarmModel(
-                    getString(R.string.a028_label),
-                    "A028",
-                    getString(R.string.alarm_generic_description)
-                ),
-                AlarmModel(
-                    getString(R.string.a029_label),
-                    "A029",
-                    getString(R.string.a029_description)
-                ),
-                AlarmModel(
-                    getString(R.string.a030_label),
-                    "A030",
-                    getString(R.string.alarm_generic_description)
-                ),
-                AlarmModel(
-                    getString(R.string.a031_label),
-                    "A031",
-                    getString(R.string.a031_description)
-                ),
-                AlarmModel(
-                    getString(R.string.a032_label),
-                    "A032",
-                    getString(R.string.a032_description)
-                ),
-                AlarmModel(
-                    getString(R.string.a033_label),
-                    "A033",
-                    getString(R.string.a033_description)
-                ),
-                AlarmModel(
-                    getString(R.string.w001_label),
-                    "W001",
-                    getString(R.string.alarm_generic_description)
-                ),
-                AlarmModel(
-                    getString(R.string.w002_label),
-                    "W002",
-                    getString(R.string.alarm_generic_description)
-                ),
-                AlarmModel(
-                    getString(R.string.w003_label),
-                    "W003",
-                    getString(R.string.alarm_generic_description)
-                ),
-                AlarmModel(
-                    getString(R.string.w004_label),
-                    "W004",
-                    getString(R.string.alarm_generic_description)
-                ),
-                AlarmModel(
-                    getString(R.string.w005_label),
-                    "W005",
-                    getString(R.string.alarm_generic_description)
-                ),
-                AlarmModel(
-                    getString(R.string.w006_label),
-                    "W006",
-                    getString(R.string.alarm_generic_description)
-                ),
-                AlarmModel(
-                    getString(R.string.w007_label),
-                    "W007",
-                    getString(R.string.alarm_generic_description)
-                ),
-                AlarmModel(
-                    getString(R.string.w008_label),
-                    "W008",
-                    getString(R.string.alarm_generic_description)
-                ),
-                AlarmModel(
-                    getString(R.string.w009_label),
-                    "W009",
-                    getString(R.string.alarm_generic_description)
-                ),
-                AlarmModel(
-                    getString(R.string.wXXX_label),
-                    "WXXX",
-                    getString(R.string.alarm_generic_description)
-                )
-            )
-
-
 
         alarmList.add(
             AlarmHeader(

@@ -30,6 +30,7 @@ import br.com.kascosys.vulkanconnectv317.adapters.LanguageAdapter
 import br.com.kascosys.vulkanconnectv317.constants.*
 import br.com.kascosys.vulkanconnectv317.database.DeviceDatabase
 import br.com.kascosys.vulkanconnectv317.database.DeviceMinimalData
+import br.com.kascosys.vulkanconnectv317.database.firebase.AlertsFirebaseRepository
 import br.com.kascosys.vulkanconnectv317.databinding.ActivityPairingBinding
 import br.com.kascosys.vulkanconnectv317.enums.DeviceState
 import br.com.kascosys.vulkanconnectv317.interfaces.DeviceContainerActivity
@@ -118,6 +119,7 @@ class PairingActivity : AppCompatActivity(), OnDeviceClick, DeviceContainerActiv
         val locale = Locale.getDefault()
         Log.i("PairingActivity", "onCreate locale ${locale.language}")
 
+
 //        binding.langButton.setImageResource(
 //            when (locale.language) {
 //                LANGUAGE_EN -> R.drawable.ic_gb
@@ -155,7 +157,6 @@ class PairingActivity : AppCompatActivity(), OnDeviceClick, DeviceContainerActiv
                     "PairingActivity",
                     "inflateLangDialog listener.onLanguageClicked $pos ${languageList[pos]}"
                 )
-
                 Lingver.getInstance().setLocale(context, languageList[pos])
 
                 dialog.dismiss()
@@ -589,7 +590,7 @@ class PairingActivity : AppCompatActivity(), OnDeviceClick, DeviceContainerActiv
         super.onResume()
 
         Log.i("PairingActivity", "onResume called")
-
+        AlertsFirebaseRepository().fetchAlertsAsync()
         DatabaseGetMinimalAsync(this).execute()
     }
 
