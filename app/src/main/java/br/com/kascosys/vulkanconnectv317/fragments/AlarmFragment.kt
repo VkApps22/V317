@@ -100,7 +100,7 @@ class AlarmFragment : Fragment(), OnHeaderClick {
         runBlocking {
             launch {
                 val data = AlertsFirebaseRepository().fetchAlertsSync()
-                val filteredData = data.find { it.language == Locale.getDefault().toString() }
+                val filteredData = data.find { Locale.getDefault().toString().contains(it.language.toString()) }
                 if (filteredData != null && !filteredData.isEmpty()){
                     filteredData.alerts.forEach(){ alert ->
                         myAlarmsDataSet.add(AlarmModel(alert.label, alert.id, alert.description))
