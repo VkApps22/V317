@@ -148,7 +148,7 @@
     },
     "pt": {
       "a001": {
-        "label": "Falha no Campo churros"
+        "label": "Falha no Campo"
       },
       "a002": {
         "description": "O contato associado ao interruptor térmico montado no dissipador de calor do conversor V317 está aberto, sinalizando que a temperatura máxima permitida foi excedida.\n\nObservação!\n\n\tControle as condições ambientais da instalação.\n\tControle o ciclo de trabalho.",

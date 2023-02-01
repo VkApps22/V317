@@ -14,10 +14,14 @@ import com.google.gson.Gson
 import kotlinx.coroutines.tasks.await
 import java.io.IOException
 
-class AlertsFirebaseRepository {
+object AlertsFirebaseRepository {
     private val database = Firebase.database
     private var myRef = database.getReference("alerts")
-    private var resultList: MutableList<AlertsFirebaseModel> = mutableListOf()
+    var resultList: MutableList<AlertsFirebaseModel> = mutableListOf()
+
+    init {
+        myRef.keepSynced(true)
+    }
 
     fun fetchAlertsAsync(){
         myRef.addValueEventListener(object : ValueEventListener {
