@@ -10,6 +10,6 @@ class AlertsFirebaseModel {
 }
 data class AlertModel(
     var id: String = "",
-    var description: String? = "",
-    var label: String? = ""
+    var description: String = "",
+    var label: String = ""
 )

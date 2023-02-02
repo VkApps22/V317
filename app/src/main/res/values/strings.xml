@@ -159,6 +159,8 @@
     <string name="lang_pt" translatable="false">PT</string>
     <string name="select_language">Select language</string>
     <string name="language_text">Language</string>
+    <string name="dialog_alarm_title">Alarms Update</string>
+    <string name="dialog_alarm_description">You need to update the alarms, please close the application, connect the device on the internet and open again.</string>
 
     <plurals name="mains_label">
         <item quantity="other">Input voltage: %.1f V Input frequency: %.1f Hz</item>

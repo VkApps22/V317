@@ -109,6 +109,15 @@ class AlarmFragment : Fragment(), OnHeaderClick {
                         myAlarmsDataSet.add(AlarmModel(alert.label, alert.id, alert.description))
                     }
                 }catch (error : java.lang.Exception){
+
+                    val builder = AlertDialog.Builder(context!!)
+                    builder.setTitle(R.string.dialog_alarm_title)
+                    builder.setMessage(R.string.dialog_alarm_description)
+                    builder.setPositiveButton(android.R.string.ok) { dialog, _ ->
+                        dialog.dismiss()
+                    }
+                    builder.show()
+
                     val json = AlertsFirebaseRepository.getJsonDataFromAsset(context!!, R.raw.alerts_default)
                     if (json != null && json.isNotEmpty()){
                         val jsonFilteredData = json.find { Locale.getDefault().toString().contains(it.language.toString())}

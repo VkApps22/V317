@@ -2,7 +2,9 @@ package br.com.kascosys.vulkanconnectv317.adapters
 
 import android.content.Context
 import android.graphics.Color
+import android.graphics.text.LineBreaker
 import android.os.Build
+import androidx.core.text.HtmlCompat
 import android.text.Layout
 import android.util.Log
 import android.view.LayoutInflater
@@ -265,9 +267,9 @@ class AlarmAdapter(
         private var isShowing: Boolean = false
 
         internal fun bind(item: AlarmListItem) {
-            alarmName.text = (item as AlarmItem).data.name
+            alarmName.text = HtmlCompat.fromHtml((item as AlarmItem).data.name, HtmlCompat.FROM_HTML_MODE_LEGACY)
             alarmNumberName.text = item.data.idNumber
-            alarmDescription.text = item.data.alarmDescription
+            alarmDescription.text = HtmlCompat.fromHtml(item.data.alarmDescription, HtmlCompat.FROM_HTML_MODE_LEGACY)
 
             alarmDescription.visibility = View.GONE
 
@@ -308,7 +310,7 @@ class AlarmAdapter(
                     .inflate(R.layout.alarm_card, parent, false)
 
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O)
-                    itemView.findViewById<TextView>(R.id.alarm_detail_text).justificationMode = Layout.JUSTIFICATION_MODE_INTER_WORD
+                    itemView.findViewById<TextView>(R.id.alarm_detail_text).justificationMode = LineBreaker.JUSTIFICATION_MODE_INTER_WORD
 
                 return ItemViewHolder(itemView)
             }

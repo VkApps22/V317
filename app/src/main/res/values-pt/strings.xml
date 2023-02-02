@@ -207,5 +207,8 @@
     <string name="select_language">Selecionar idioma</string>
     <string name="language_text">Idioma</string>
     <string name="analog_config_label1">1: Tensão de Referência em Rampa</string>
+    <string name="dialog_alarm_title">Atualização dos alarmes</string>
+    <string name="dialog_alarm_description">Você precisa atualizar os alarmes, por favor feche o aplicativo, conecte-se a internet e abra-o novamente.</string>
+
 
 </resources>

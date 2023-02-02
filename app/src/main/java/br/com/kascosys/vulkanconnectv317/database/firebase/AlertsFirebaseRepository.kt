@@ -79,8 +79,8 @@ object AlertsFirebaseRepository {
                     val element = doc.value as Map<String, String>
                     val id = doc.key
                     val values = doc.value as Map<String, String>
-                    val label = values["label"]
-                    val description = values["description"]
+                    val label = values["label"] ?: ""
+                    val description = values["description"] ?: ""
                     alertObject.alerts.add(AlertModel(id, description, label))
 
                 }
