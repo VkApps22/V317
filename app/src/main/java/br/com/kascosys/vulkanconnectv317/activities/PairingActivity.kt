@@ -590,7 +590,7 @@ class PairingActivity : AppCompatActivity(), OnDeviceClick, DeviceContainerActiv
         super.onResume()
 
         Log.i("PairingActivity", "onResume called")
-        AlertsFirebaseRepository().fetchAlertsAsync()
+        AlertsFirebaseRepository.fetchAlertsAsync()
         DatabaseGetMinimalAsync(this).execute()
     }
 

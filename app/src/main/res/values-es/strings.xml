@@ -207,5 +207,6 @@
     <string name="status_card">Status</string>
     <string name="save_failed">¡La operación de guardar ha fallado! Verifique la conexión</string>
     <string name="analog_config_label1">1: Tensión de Referencia en Rampa</string>
-
+    <string name="dialog_alarm_title">Actualización de alarmas</string>
+    <string name="dialog_alarm_description">Debe actualizar las alarmas, cierre la aplicación, conéctese a Internet y vuelva a abrirla.</string>
 </resources>

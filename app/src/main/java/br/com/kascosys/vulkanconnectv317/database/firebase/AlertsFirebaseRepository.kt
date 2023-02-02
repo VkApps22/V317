@@ -14,23 +14,31 @@ import com.google.gson.Gson
 import kotlinx.coroutines.tasks.await
 import java.io.IOException
 
-class AlertsFirebaseRepository {
+object AlertsFirebaseRepository {
     private val database = Firebase.database
     private var myRef = database.getReference("alerts")
-    private var resultList: MutableList<AlertsFirebaseModel> = mutableListOf()
+    var resultList: MutableList<AlertsFirebaseModel> = mutableListOf()
+
+    init {
+        myRef.keepSynced(true)
+    }
 
     fun fetchAlertsAsync(){
         myRef.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
-                snapshot.children.forEach() { dataSnapshot ->
-                    val alertObject = AlertsFirebaseModel()
-                    alertObject.language = dataSnapshot.key
+                try{
+                    snapshot.children.forEach() { dataSnapshot ->
+                        val alertObject = AlertsFirebaseModel()
+                        alertObject.language = dataSnapshot.key
 
-                    dataSnapshot.children.forEach() { doc ->
-                        val alert = doc.getValue(AlertModel::class.java)!!.copy(id = doc.key!!)
-                        alertObject.alerts.add(alert)
+                        dataSnapshot.children.forEach() { doc ->
+                            val alert = doc.getValue(AlertModel::class.java)!!.copy(id = doc.key!!)
+                            alertObject.alerts.add(alert)
+                        }
+                        resultList.add(alertObject)
                     }
-                    resultList.add(alertObject)
+                }catch (error: Exception){
+                    Log.i(AlertsFirebaseRepository.toString(), error.message);
                 }
             }
 
@@ -71,8 +79,8 @@ class AlertsFirebaseRepository {
                     val element = doc.value as Map<String, String>
                     val id = doc.key
                     val values = doc.value as Map<String, String>
-                    val label = values["label"]
-                    val description = values["description"]
+                    val label = values["label"] ?: ""
+                    val description = values["description"] ?: ""
                     alertObject.alerts.add(AlertModel(id, description, label))
 
                 }
