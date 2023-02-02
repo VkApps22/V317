@@ -26,15 +26,19 @@ object AlertsFirebaseRepository {
     fun fetchAlertsAsync(){
         myRef.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
-                snapshot.children.forEach() { dataSnapshot ->
-                    val alertObject = AlertsFirebaseModel()
-                    alertObject.language = dataSnapshot.key
+                try{
+                    snapshot.children.forEach() { dataSnapshot ->
+                        val alertObject = AlertsFirebaseModel()
+                        alertObject.language = dataSnapshot.key
 
-                    dataSnapshot.children.forEach() { doc ->
-                        val alert = doc.getValue(AlertModel::class.java)!!.copy(id = doc.key!!)
-                        alertObject.alerts.add(alert)
+                        dataSnapshot.children.forEach() { doc ->
+                            val alert = doc.getValue(AlertModel::class.java)!!.copy(id = doc.key!!)
+                            alertObject.alerts.add(alert)
+                        }
+                        resultList.add(alertObject)
                     }
-                    resultList.add(alertObject)
+                }catch (error: Exception){
+                    Log.i(AlertsFirebaseRepository.toString(), error.message);
                 }
             }
 

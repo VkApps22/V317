@@ -99,13 +99,16 @@ class AlarmFragment : Fragment(), OnHeaderClick {
 
         runBlocking {
             launch {
-                val data = AlertsFirebaseRepository.resultList
-                val filteredData = data.find { Locale.getDefault().toString().contains(it.language.toString()) }
-                if (filteredData != null && !filteredData.isEmpty()){
-                    filteredData.alerts.forEach(){ alert ->
+                try{
+                    val data = AlertsFirebaseRepository.resultList
+                    val filteredData = data.find { Locale.getDefault().toString().contains(it.language.toString()) }
+                    if (filteredData == null || filteredData.isEmpty()) {
+                        throw Exception()
+                    }
+                    filteredData.alerts.forEach() { alert ->
                         myAlarmsDataSet.add(AlarmModel(alert.label, alert.id, alert.description))
                     }
-                }else {
+                }catch (error : java.lang.Exception){
                     val json = AlertsFirebaseRepository.getJsonDataFromAsset(context!!, R.raw.alerts_default)
                     if (json != null && json.isNotEmpty()){
                         val jsonFilteredData = json.find { Locale.getDefault().toString().contains(it.language.toString())}
