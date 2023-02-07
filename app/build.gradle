@@ -9,7 +9,7 @@ apply plugin: 'kotlin-kapt'
 apply plugin: 'com.google.gms.google-services'
 
 android {
-    compileSdkVersion 29
+    compileSdk 29
     defaultConfig {
         applicationId "br.com.kascosys.vulkanconnectv317"
         minSdkVersion 21
