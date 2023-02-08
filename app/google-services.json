@@ -1,34 +1,34 @@
 {
   "project_info": {
-    "project_number": "955939346409",
-    "firebase_url": "https://vulkan-connect-v317-default-rtdb.firebaseio.com",
-    "project_id": "vulkan-connect-v317",
-    "storage_bucket": "vulkan-connect-v317.appspot.com"
+    "project_number": "473625302505",
+    "firebase_url": "https://vulkan-connect-v317-403de-default-rtdb.firebaseio.com",
+    "project_id": "vulkan-connect-v317-403de",
+    "storage_bucket": "vulkan-connect-v317-403de.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:955939346409:android:73e3b78476057622b31d78",
+        "mobilesdk_app_id": "1:473625302505:android:1fcecd598ac13901662778",
         "android_client_info": {
           "package_name": "br.com.kascosys.vulkanconnectv317"
         }
       },
       "oauth_client": [
         {
-          "client_id": "955939346409-p0dm4q2kf6s82mqjd1jo2p6ig3dmv4qf.apps.googleusercontent.com",
+          "client_id": "473625302505-uh0fffie66rc9jl8oc9uml94ln99pm5a.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyBL6sPfyKkNShH9kNvYBVcWMMWNFYUR1fM"
+          "current_key": "AIzaSyBk6HLyY41wXsNy9U5_Ci8m7jI35LWWDCE"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "955939346409-p0dm4q2kf6s82mqjd1jo2p6ig3dmv4qf.apps.googleusercontent.com",
+              "client_id": "473625302505-uh0fffie66rc9jl8oc9uml94ln99pm5a.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
