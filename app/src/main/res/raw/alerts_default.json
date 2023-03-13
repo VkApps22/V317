@@ -1,442 +1,442 @@
 {
     "es": {
-      "a001": {
+      "A001": {
         "label": "Falla en Campo"
       },
-      "a002": {
+      "A002": {
         "description": "El contacto asociado al interruptor térmico montado en el disipador de calor del conversor V317 está abierto, señalizando que la temperatura máxima permitida fue excedida.\n\n¡Observación!\n\n\tControle las condiciones ambientales de la instalación.\n\tControle el ciclo de trabajo.\n\tDespués del disparo de esta alarma, espere algunos minutos para reiniciar.",
         "label": "Temperatura Excesiva en el Disipador de Calor"
       },
-      "a003": {
+      "A003": {
         "description": "El valor instantáneo (valor pico) de la corriente de salida M004 (Iout) excedió 200% de la corriente máxima del conversor V317.\n\n¡Observación!\n\n\tControle la resistencia de bobina.\n\tControle la integridad del cable de salida.",
         "label": "Sobrecorriente de Salida CC"
       },
-      "a004": {
+      "A004": {
         "label": "Perdida de Carga de Salida"
       },
-      "a005": {
+      "A005": {
         "label": "Alarma no nombrada"
       },
-      "a006": {
+      "A006": {
         "description": "<![CDATA[La frecuencia de la red eléctrica varía más que el valor máximo permitido, que es igual a 500 μs entre dos períodos de la red eléctrica. Esa alarma puede ocurrir solamente cuando el conversor V317 esté activado. Desactive esa alarma usando el parámetro C153 y el reinicio continuo usando el parámetro C093.\n\n ¡Observación!\n\n\tGarantice que la tensión y la frecuencia de la reja estén dentro del intervalo permitido. Consulte los valores nominales del conversor V317. (4.4 Valores nominales).]]>",
         "label": "Frecuencia de Red Eléctrica Inestable"
       },
-      "a007": {
+      "A007": {
         "description": "Falla de una o más de las tres fases de la red eléctrica. Esa alarma puede ocurrir solamente cuando el conversor V317 esté activado. Desactive esa alarma usando el parámetro C154 y el reinicio continuo usando el parámetro C093.\n\n¡Observación!\n\n\tGarantice que la tensión y la frecuencia de la reja estén dentro del rango permitido. Consulte los valores nominales del conversor V317. (4.4 Valores nominales).",
         "label": "Falla de la Red Eléctrica"
       },
-      "a008": {
+      "A008": {
         "label": "Falla de Retroalimentación de Velocidad"
       },
-      "a009": {
+      "A009": {
         "label": "Sobrecorriente de Campo"
       },
-      "a010": {
+      "A010": {
         "label": "Sobretensión en la Bobina del Freno"
       },
-      "a011": {
+      "A011": {
         "label": "Inductancia L fuera de rango"
       },
-      "a012": {
+      "A012": {
         "description": "La frecuencia M008 (MFreq) de la red eléctrica está por encima de 70 Hz o por debajo de 40 Hz. Esa alarma puede ocurrir solamente cuando el conversor V317 esté activado. Defina el reinicio automático usando el parámetro C093.\n\n¡Observación!\n\n\tGarantice que la tensión y la frecuencia de la reja estén dentro del rango permitido. Consulte los valores nominales del conversor V317. (4.4 Valores nominales).",
         "label": "Frecuencia de Red Eléctrica fuera de rango"
       },
-      "a013": {
+      "A013": {
         "description": "Falla de los circuitos que proveen las señales de sincronización de la tensión trifásica de la red eléctrica. Esa alarma puede disparar solamente cuando la entrada digital ENABLE esté activa. Defina el reinicio automático usando el parámetro C093.\n\n ¡Observación!\n\n\tGarantice que la tensión y la frecuencia de la reja estén dentro del rango permitido. Consulte los valores nominales del conversor V317. (4.4 Valores nominales).",
         "label": "Falta de Sincronización"
       },
-      "a014": {
+      "A014": {
         "label": "Resistencia R Fuera de rango"
       },
-      "a015": {
+      "A015": {
         "label": "Error en \"AutoTune\""
       },
-      "a016": {
+      "A016": {
         "description": "<![CDATA[La tensión de la red eléctrica (Vmains) excedió 15% de 480 VAC. Esa alarma puede disparar solamente cuando la entrada digital ENABLE esté activa. Atrase esa alarma usando el parámetro C141 y desactívela usando el parámetro C157.\n\n ¡Observación!\n\n\tGarantice que la tensión y la frecuencia de la reja estén dentro del rango permitido. Consulte los valores nominales del conversor V317. (4.4 Valores nominales).]]>",
         "label": "Sobretensión de la red eléctrica"
       },
-      "a017": {
+      "A017": {
         "description": "<![CDATA[\tEl valor M009 de la tensión de la red eléctrica de la sección de potencia (Vmains) está 15% por debajo de 220 VAC en el caso de accionamientos con capacidad para regeneración de la energía de la red eléctrica (2° y/o 4° cuadrante activado). Esa alarma puede ocurrir solamente cuando la entrada digital ENABLE esté activa. Atrase esa alarma usando el parámetro C141 y desactívela usando el parámetro C157. Defina el reinicio automático usando el parámetro C093.\n\tEl atraso de la alarma definido en el parámetro C141 queda activo solamente si la tensión de alimentación no fuere inferior a 140 VCA y si el conversor V317 estuviere trabajando en el 1° cuadrante; caso contrario, la alarma será disparada inmediatamente.\n\n ¡Observación!\n\n\tGarantice que la tensión y la frecuencia de la reja estén dentro del rango permitido. Consulte los valores nominales del conversor V317. (4.4 Valores nominales).]]>",
         "label": "Tensión de red eléctrica insuficiente"
       },
-      "a018": {
+      "A018": {
         "label": "Interrupcion en AutoTune"
       },
-      "a019": {
+      "A019": {
         "label": "Límite en AutoTune"
       },
-      "a020": {
+      "A020": {
         "description": "El freno no abre cuando el conversor V317 está activado.\n\n ¡Observación!\n\n\tVerifique el freno.\n\tVerifique los cables de alimentación y control entre el conversor V317 y la microllave del freno.\n\tVerifique la regulación de la microllave que señaliza la apertura del freno.\n\tVerifique la programación de las corrientes de llamada (C000) y economía (P128).\n\tVerifique la programación de tiempo para confirmación de apertura del freno P177.",
         "label": "Falla Externa 1 - Falla de Apertura del Freno"
       },
-      "a021": {
+      "A021": {
         "description": "Temperatura del freno excesivamente alta. El disparo de I2t de freno depende de los valores programados en los parámetros C001 (Corriente para protección térmica) y C002 (Constante de tiempo para protección térmica).\n\n ¡Observación!\n\n\tDespués del disparo de esta alarma, espere algunos minutos para reiniciar.\n\tVerifique la programación de las corrientes de llamada y economía y el ajuste de protección (consulte la sección de programación).\n\tVerifique la temperatura de bobina.",
         "label": "Disparo de I2t del freno"
       },
-      "a022": {
+      "A022": {
         "label": ""
       },
-      "a023": {
+      "A023": {
         "label": "Corriente de Campo Inferior al Límite"
       },
-      "a024": {
+      "A024": {
         "description": "EEPROM Ausente o en Blanco",
         "label": "EEPROM Ausente o en Blanco"
       },
-      "a025": {
+      "A025": {
         "description": "El contenido de parte del área de trabajo de la EEPROM fue alterado.\n\n¡ADVERTENCIA!\n\n\tTrate de reiniciar. Si la alarma persiste, entre en contacto con VULKAN DRIVE TECH.",
         "label": "Falla en Área de Trabajo de la EEPROM"
       },
-      "a026": {
+      "A026": {
         "label": "Falla en EEPROM BackupArea"
       },
-      "a027": {
+      "A027": {
         "label": "Falla en Comunicación Serial"
       },
-      "a028": {
+      "A028": {
         "label": "Falla en FieldBus"
       },
-      "a029": {
+      "A029": {
         "description": "Desgaste de las pastillas\n\n ¡Observación!\n\n\tSi el CDPG 24 V que monitoriza el desgaste de las pastillas está instalado, verifique las pastillas del freno.\n\tSi no lo está, verifique si el terminal C3 está conectado a C2.",
         "label": "Falla Externa 2 (Pastillas Gastadas en el Freno)"
       },
-      "a030": {
+      "A030": {
         "label": "Alarma Externa 3"
       },
-      "a031": {
+      "A031": {
         "description": "Falla Interna de la EEPROM",
         "label": "Falla Interna de la EEPROM"
       },
-      "a032": {
+      "A032": {
         "description": "Reinicio del microcontrolador.\n\n¡ADVERTENCIA!\n\n\tProbablemente, la alarma fue causada por una perturbación electromagnética. Trate de reiniciar. Si la alarma persiste, entre en contacto con VULKAN DRIVE TECH.",
         "label": "Microcontrolador Reiniciado"
       },
-      "a033": {
+      "A033": {
         "description": "Una alarma desconocida fue almacenada. En ese caso, basta reiniciar la alarma.",
         "label": "Falla desconocida"
       },
-      "w001": {
+      "W001": {
         "label": "Alerta no nombrado"
       },
-      "w002": {
+      "W002": {
         "label": "Retroalimentación de Velocidad Commutada para Tensión de Armadura"
       },
-      "w003": {
+      "W003": {
         "label": "Limite de Corriente de Hardware"
       },
-      "w004": {
+      "W004": {
         "label": "Enable de Encender-Apagar para aplicar freno"
       },
-      "w005": {
+      "W005": {
         "label": "Start de Encender-Apagar para aplicar freno"
       },
-      "w006": {
+      "W006": {
         "label": "Valores de Backup almacenados en la RAM"
       },
-      "w007": {
+      "W007": {
         "label": "Valores originales almacenados en la RAM"
       },
-      "w008": {
+      "W008": {
         "label": "Falla en EEPROM WorkArea"
       },
-      "w009": {
+      "W009": {
         "label": "Falla en EEPROM BackupArea"
       },
-      "wXXX": {
+      "WXXX": {
         "label": "Alarma/alerta fuera de rango"
       }
     },
     "pt": {
-      "a001": {
+      "A001": {
         "label": "Falha no Campo"
       },
-      "a002": {
+      "A002": {
         "description": "O contato associado ao interruptor térmico montado no dissipador de calor do conversor V317 está aberto, sinalizando que a temperatura máxima permitida foi excedida.\n\nObservação!\n\n\tControle as condições ambientais da instalação.\n\tControle o ciclo de trabalho.",
         "label": "Temperatura excessiva no dissipador de calor"
       },
-      "a003": {
+      "A003": {
         "description": "O valor instantâneo (valor de pico) da corrente de saída M004 (Iout) excedeu 200 % da corrente máxima do conversor V317. \n\nObservação! \n\tControle a resistência da bobina.\n\tControle a integridade do cabo de saída.",
         "label": "Sobrecorrente de saída CC"
       },
-      "a004": {
+      "A004": {
         "label": "Perda da carga ou terminais Potencia de saída CC sem carga"
       },
-      "a005": {
+      "A005": {
         "label": "Alarme não nomeado"
       },
-      "a006": {
+      "A006": {
         "description": "<![CDATA[A frequência da rede elétrica varia mais do que o valor máximo permitido, que é igual a 500 μs entre dois períodos da rede elétrica. Esse alarme pode ocorrer somente quando o conversor V317 estiver ativado. Desative esse alarme usando o parâmetro C153 e a reinicialização contínua usando o parâmetro C093.\n\nObservação!\n\n\tGaranta que a tensão e a frequência da grade estejam dentro da faixa permitida. Consulte os valores nominais do conversor V317 (4.4 Valores Nominais).]]>",
         "label": "Frequência da rede elétrica instável"
       },
-      "a007": {
+      "A007": {
         "description": "Falha de uma ou mais das três fases da rede elétrica. Esse alarme pode ocorrer somente quando o conversor V317. estiver ativada. Desative esse alarme usando o parâmetro C154 e a reinicialização contínua usando o parâmetro C093.\n\nObservação!\n\n\tGaranta que a tensão e a frequência da grade estejam dentro da faixa permitida. Consulte os valores nominais do conversor V317 (4.4 Valores Nominais).",
         "label": "Falha de fase da rede elétrica"
       },
-      "a008": {
+      "A008": {
         "label": "Falha no Feedback de velocidade"
       },
-      "a009": {
+      "A009": {
         "label": "Sobre-corrente de campo"
       },
-      "a010": {
+      "A010": {
         "label": "Sobre-tensão na bobina do Freio"
       },
-      "a011": {
+      "A011": {
         "label": "Indutância L fora da faixa"
       },
-      "a012": {
+      "A012": {
         "description": "A frequência M008 (MFreq) da rede elétrica está acima de 70 Hz ou abaixo de 40 Hz.. Esse alarme pode ocorrer somente quando o conversor V317 estiver ativada. Defina a reinicialização automática usando o parâmetro C093.\n\nObservação!\n\n\tGaranta que a tensão e a frequência da grade estejam dentro da faixa permitida. Consulte os valores nominais do conversor V317 (4.4 Valores Nominais).",
         "label": "Frequência da rede elétrica fora da faixa"
       },
-      "a013": {
+      "A013": {
         "description": "Falha dos circuitos que fornecem os sinais de sincronização da tensão trifásica da rede elétrica. Esse alarme pode disparar somente quando a entrada digital ENABLE estiver ativa. Defina a reinicialização automática usando o parâmetro C093.\n\nObservação!\n\n\tGaranta que a tensão e a frequência da grade estejam dentro da faixa permitida. Consulte os valores nominais do conversor V317 (4.4 Valores Nominais).",
         "label": "Falha de sincronização"
       },
-      "a014": {
+      "A014": {
         "label": "Resistência R fora da faixa"
       },
-      "a015": {
+      "A015": {
         "label": "Erro no \"AutoTune\""
       },
-      "a016": {
+      "A016": {
         "description": "<![CDATA[A tensão da rede elétrica (Vmains) excedeu 15% de 480 VAC. Esse alarme pode disparar somente quando a entrada digital ENABLE estiver ativa. Atrase esse alarme usando o parâmetro C141 e desative-o usando o parâmetro C157.\n\nObservação!\n\n\tGaranta que a tensão e a frequência da grade estejam dentro da faixa permitida. Consulte os valores nominais do conversor V317 (4.4 Valores Nominais).]]>",
         "label": "Sobre-tensão da rede elétrica"
       },
-      "a017": {
+      "A017": {
         "description": "<![CDATA[O valor M009 da tensão da rede elétrica da seção de potência (Vmains) está 15% abaixo de 220 VAC no caso de acionamentos com capacidade para regeneração da energia da rede elétrica (2° e/ou 4° quadrante ativado). Esse alarme pode ocorrer somente quando a entrada digital ENABLE estiver ativa. Atrase esse alarme usando o parâmetro C141 e desative-o usando o parâmetro C157. Defina a reinicialização automática usando o parâmetro C093.\n\tO atraso do alarme definido no parâmetro C141 fica ativo somente se a tensão de alimentação não for inferior a 140 VCA e se o conversor V317 estiver trabalhando no 1° quadrante; caso contrário, o alarme será disparado imediatamente.\n\nObservação!\n\n\tGaranta que a tensão e a frequência da grade estejam dentro da faixa permitida. Consulte os valores nominais do conversor V317 (4.4 Valores Nominais).]]>",
         "label": "Tensão da rede elétrica insuficiente"
       },
-      "a018": {
+      "A018": {
         "label": "\"AutoTune\" interrompido"
       },
-      "a019": {
+      "A019": {
         "label": "Limite no \"AutoTune\""
       },
-      "a020": {
+      "A020": {
         "description": "O freio não abre quando o conversor V317 está ativado.\n\nObservação!\n\n\tVerifique o freio.\n\tVerifique os fios de alimentação e controle entre o conversor V317 e a micro-chave do freio.\n\tVerifique a regulagem da micro-chave que sinaliza a abertura do freio.\n\tVerifique a programação das correntes de chamada (C000) e economia (P128).\n\tVerifique a programação do tempo para confirmação de abertura do freio P177.",
         "label": "Alarme externo 1 - Falha de abertura do Freio"
       },
-      "a021": {
+      "A021": {
         "description": "Temperatura do freio excessivamente alta. O disparo de I2t do freio depende dos valores programados nos parâmetros C001 (Corrente para proteção térmica) e C002 (Constante de tempo para proteção térmica).\n\nObservação!\n\n\tDepois do disparo deste alarme, espere alguns minutos para reiniciar.\n\tVerifique a programação das correntes de chamada e economia e o ajuste da proteção (consulte a seção de programação).Verifique a temperatura da bobina.",
         "label": "Disparo de I2t do freio"
       },
-      "a022": {
+      "A022": {
         "label": ""
       },
-      "a023": {
+      "A023": {
         "label": "Corrente de campo abaixo do limite"
       },
-      "a024": {
+      "A024": {
         "description": "Ao ligar, o alarme dispara:\n\ta. Se a EEPROM estiver ausente.\n\tb. Se a EEPROM não estiver programada.\n\nAdvertência!\n\n\tEsse alarme não pode ser excluído. Entre em contato com a VULKAN DRIVE TECH.",
         "label": "EEPROM ausente ou em branco"
       },
-      "a025": {
+      "A025": {
         "description": "O conteúdo de parte da área de trabalho da EEPROM foi alterado.\n\nAdvertência!\n\n\tTente reinicializar. Se o alarme persistir, entre em contato com a VULKAN DRIVE TECH.",
         "label": "Parâmetros incorretos na área de trabalho da EEPROM"
       },
-      "a026": {
+      "A026": {
         "label": "Falha com o  Backup de área na EEPROM"
       },
-      "a027": {
+      "A027": {
         "label": "Falha na comunicação serial"
       },
-      "a028": {
+      "A028": {
         "label": "Falha com o FieldBus"
       },
-      "a029": {
+      "A029": {
         "description": "Desgaste das pastilhas\n\nObservação!\n\n\tSe o CDPG 24 V que monitora o desgaste das pastilhas estiver instalado, verifique as pastilhas do freio.\n\tSe não estiver, verifique se o terminal C3 está conectado a C2.",
         "label": "Alarme externo 2 (Pastilhas gastas no Freio)"
       },
-      "a030": {
+      "A030": {
         "label": "Alarme externo 3"
       },
-      "a031": {
+      "A031": {
         "description": "Foram detectadas alterações nos dados da EEPROM ao ligar o equipamento. O usuário não tem acesso a esses dados.\n\nObservação!\n\n\tEsse alarme não pode ser excluído. Entre em contato com a VULKAN DRIVE TECH.",
         "label": "Falha interna da EEPROM"
       },
-      "a032": {
+      "A032": {
         "description": "Reinicialização do microcontrolador.\n\nAdvertência!\n\n\tProvavelmente, o alarme foi causado por uma perturbação eletromagnética. Tente reinicializar. Se o alarme persistir, entre em contato com a VULKAN DRIVE TECH.",
         "label": "Reinicialização do Microcontrolador"
       },
-      "a033": {
+      "A033": {
         "description": "Um alarme desconhecido foi armazenado. Nesse caso, basta reinicializar o alarme.",
         "label": "Falha desconhecida"
       },
-      "w001": {
+      "W001": {
         "label": "Alerta não nomeado"
       },
-      "w002": {
+      "W002": {
         "label": "Feedback de velocidade chaveado para Vout (bobina)"
       },
-      "w003": {
+      "W003": {
         "label": "<![CDATA[Limite da corrente do Hardware < 100%]]>"
       },
-      "w004": {
+      "W004": {
         "label": "Habilitação de Desliga-Liga para acionar Freio"
       },
-      "w005": {
+      "W005": {
         "label": "Start de Desliga-Liga para acionar Freio"
       },
-      "w006": {
+      "W006": {
         "label": "Valores de Backup armazenados na RAM"
       },
-      "w007": {
+      "W007": {
         "label": "Valores originais armazenados na RAM"
       },
-      "w008": {
+      "W008": {
         "label": "Falha na EEPROM na área de trabalho"
       },
-      "w009": {
+      "W009": {
         "label": "Falha na EEPROM na área de Backup"
       },
-      "wXXX": {
+      "WXXX": {
         "label": "Alarme/alerta fora da faixa"
       }
     },
     "en": {
-      "a001": {
+      "A001": {
         "label": "Field failure"
       },
-      "a002": {
+      "A002": {
         "description": "The contact relating to the thermo switch assembled in the size (V317) heatsink is open, thus signalling that the max. allowable temperature has been exceeded.\n\nNOTE!\n\n\tControl environmental conditions of the installation.\n\tControl the working cycle.",
         "label": "Heatsink Overtemperature"
       },
-      "a003": {
+      "A003": {
         "description": "The instantaneous value (peak value) of the output current M004 (Iout) has exceeded 200 % of the V317 power supply maximum current. NOTE! Control coil resistance Control output cable integrity.",
         "label": "Output DC Over Current"
       },
-      "a004": {
+      "A004": {
         "label": "Output Load Loss"
       },
-      "a005": {
+      "A005": {
         "label": "Unnamed alarm"
       },
-      "a006": {
+      "A006": {
         "description": "<![CDATA[The frequency of the grid varies more than the max. allowable value, equal to 500 μs between two mains periods. This alarm may occur only when the V317 power supply is enabled. This alarm may be disabled using parameter C153 and continuous autoreset using parameter C093.\n\nNOTE!\n\n\tMake sure that voltage and frequency of the grid are in the allowed range. See V317 power supply ratings (4.4 - Ratings).]]>",
         "label": "Unstable Mains Frequency"
       },
-      "a007": {
+      "A007": {
         "description": "Failure of one of the three mains phases, or more than one. This alarm may occur only when the V317 power supply is enabled. This alarm may be disabled using parameter C154 and continuous autoreset using parameter C093.\n\nNOTE!\n\n\tMake sure that voltage and frequency of the grid are in the allowed range. See V317 power supply ratings (4.4 - Ratings).",
         "label": "Mains Failure"
       },
-      "a008": {
+      "A008": {
         "label": "Speed Feedback Failure"
       },
-      "a009": {
+      "A009": {
         "label": "Field OverCurrent"
       },
-      "a010": {
+      "A010": {
         "label": "Brake Coil OverVoltage"
       },
-      "a011": {
+      "A011": {
         "label": "L out of Range"
       },
-      "a012": {
+      "A012": {
         "description": "Frequency M008 (MFreq) of the mains is over 70 Hz or is under 40 Hz. This alarm may occur only when the V317 power supply is enabled. Set continuous autoreset using parameter C093.\n\nNOTE!\n\n\tMake sure that voltage and frequency of the grid are in the allowed range. See V317 power supply ratings (4.4 - Ratings).",
         "label": "Frequency out of Range"
       },
-      "a013": {
+      "A013": {
         "description": "Failure of the circuits supplying the synchronizing signals of the mains three-phase voltage. This alarm may trip only when the ENABLE digital input is active. Set continuous autoreset using parameter C093.\n\nNOTE!\n\n\tMake sure that voltage and frequency of the grid are in the allowed range. See V317 power supply ratings (4.4 - Ratings).",
         "label": "Missing Synchronization"
       },
-      "a014": {
+      "A014": {
         "label": "R out of Range"
       },
-      "a015": {
+      "A015": {
         "label": "AutoTune Error"
       },
-      "a016": {
+      "A016": {
         "description": "<![CDATA[The grid voltage (Vmains) has exceeded the 15% of 480 VAC. This alarm may trip only when the ENABLE digital input is active. It may be delayed using parameter C141 and disabled using parameter C157.\n\nNOTE!\n\n\tMake sure that voltage and frequency of the grid are in the allowed range. See V317 power supply ratings (4.4 - Ratings).]]>",
         "label": "Mains OverVoltage"
       },
-      "a017": {
+      "A017": {
         "description": "<![CDATA[Value M009 of power section mains voltage (Vmains) is 15% under 220 VAC in case of drives which can regenerate mains energy (2nd and/or 4th quadrant enabled). This alarm may occur only when the ENABLE digital input is active. It may be delayed using parameter C141 and disabled using parameter C157. Set continuous autoreset using parameter C093.\n\tThe alarm delay set through par. C141 is active only if the supply voltage is not under 140 VAC and if the V317 power supply is working on the 1st quadrant, otherwise the alarm will immediately trip.\n\nNOTE!\n\n\tMake sure that voltage and frequency of the grid are in the allowed range. See V317 power supply ratings (4.4 - Ratings).]]>",
         "label": "Mains UnderVoltage"
       },
-      "a018": {
+      "A018": {
         "label": "AutoTune Interrupted"
       },
-      "a019": {
+      "A019": {
         "label": "AutoTune Limitation"
       },
-      "a020": {
+      "A020": {
         "description": "The brake doesn’t open with the V317 power supply enabled\n\nNOTE!\n\n\tCheck the brake.\n\tCheck power and control wires between V317 power supply and brake microswitch.\n\tCheck the adjustment of the microswitch that signals the opening of the brake.\n\tCheck the programming of call (C000) and economic current (P128).\n\tCheck the programming of brake opening time confirmation P177.",
         "label": "External Failure 1 (Brake opening fault)"
       },
-      "a021": {
+      "A021": {
         "description": "Brake overtemperature. The brake I2t trip depends on the value programmed in parameters C001 (current for thermal protection) and C002 (Time Constant for Thermal Protection).\n\nNOTE!\n\n\tAfter this alarm is trigged, wait for some minutes before resetting.\n\tCheck the programming of call, economic current and the setting of the protection (see programming guide).\n\tCheck the temperature of the coil.",
         "label": "Brake I2t Trip"
       },
-      "a022": {
+      "A022": {
         "label": "Drive It Trip"
       },
-      "a023": {
+      "A023": {
         "label": "Ifld UnderLimited"
       },
-      "a024": {
+      "A024": {
         "description": "At the size power on, the alarm trips:\n\ta. If EEPROM is missing.\n\tb. If EEPROM is not programmed.\n\nWARNING!\n\n\tThis alarm cannot be deleted. Please contact VULKAN DRIVE TECH.",
         "label": "Missing or blank EEPROM"
       },
-      "a025": {
+      "A025": {
         "description": "The content of some part in EEPROM work area has been changed.\n\nWARNING!\n\n\tTry to reset. If the error persists, contact VULKAN DRIVE TECH.",
         "label": "EEPROM WorkArea Failure"
       },
-      "a026": {
+      "A026": {
         "label": "EEPROM BackupArea Failure"
       },
-      "a027": {
+      "A027": {
         "label": "Serial Link Failure"
       },
-      "a028": {
+      "A028": {
         "label": "FieldBus Failure"
       },
-      "a029": {
+      "A029": {
         "description": "Worn pads\n\nNOTE!\n\n\tIf the CDPG 24V that monitors pad wear is installed, change the brake pads.\n\tIf the CDPG 24V is not installed, make sure that the C3 terminal is connected to C2.",
         "label": "External Failure 2 (Brake Worn Pads)"
       },
-      "a030": {
+      "A030": {
         "label": "External Failure 3"
       },
-      "a031": {
+      "A031": {
         "description": "Changes to the EEPROM data detected when turning the equipment ON. This data cannot be accessed by the user.\n\nNOTE!\n\n\tThis alarm cannot be deleted. Please contact VULKAN DRIVE TECH.",
         "label": "Internal EEPROM Failure"
       },
-      "a032": {
+      "A032": {
         "description": "Reset of the microcontroller.\n\nWARNING!\n\n\tProbably the alarm was caused by an electromagnetic disturbance, try to reset it. If the alarm persists, contact VULKAN DRIVE TECH.",
         "label": "Microcontroller Reset"
       },
-      "a033": {
+      "A033": {
         "description": "An unknown alarm has been stored. In that case, you just need to reset the alarm.",
         "label": "Unknown Failure"
       },
-      "w001": {
+      "W001": {
         "label": "Unnamed warning"
       },
-      "w002": {
+      "W002": {
         "label": "Speed FeedBack switched to Varm"
       },
-      "w003": {
+      "W003": {
         "label": "<![CDATA[Hardware Limit Current < 100%]]>"
       },
-      "w004": {
+      "W004": {
         "label": "Open-Close ENABLE to run"
       },
-      "w005": {
+      "W005": {
         "label": "Open-Close START to run"
       },
-      "w006": {
+      "W006": {
         "label": "Backup Values Stored in RAM"
       },
-      "w007": {
+      "W007": {
         "label": "Default Values Stored in RAM"
       },
-      "w008": {
+      "W008": {
         "label": "EEPROM WorkArea Failure"
       },
-      "w009": {
+      "W009": {
         "label": "EEPROM BackupArea Failure"
       },
-      "wXXX": {
+      "WXXX": {
         "label": "Alarm/warning out of range"
       }
     }
