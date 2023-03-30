@@ -50,9 +50,11 @@ class ModBusValues {
 
             return when {
                 number == 0 -> DRIVE_OK
-                number <= 33 -> "A%03d".format(number)
-                number < 43 -> "W%03d".format(number - 33)
-                else -> WXXX
+//                number <= 33 -> "A%03d".format(number)
+//                else -> WXXX
+                listOf(2, 3, 6, 7, 12, 13, 16, 17, 20, 21, 24, 29, 32, 33).indexOf(number) > -1 -> "A%03d".format(number)
+                number == 37 -> "W%03d".format(number - 33)
+                else -> "A033"
             }
         }
 

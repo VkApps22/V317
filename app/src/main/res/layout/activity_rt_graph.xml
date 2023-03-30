@@ -10,29 +10,54 @@
         tools:context=".activities.RtGraphActivity">
 
 
-
         <com.github.mikephil.charting.charts.LineChart
             android:id="@+id/monitoring_line_chart"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:keepScreenOn="true">
+            android:keepScreenOn="true"
+            tools:layout_editor_absoluteY="16dp">
 
         </com.github.mikephil.charting.charts.LineChart>
+
+        <LinearLayout
+            android:id="@+id/layout_watermark"
+            android:layout_width="152dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="32dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:adjustViewBounds="true"
+                android:alpha="0.5"
+                android:cropToPadding="false"
+                app:srcCompat="@drawable/ic_logo_main" />
+
+            <TextView
+                android:id="@+id/model"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Model" />
+
+            <TextView
+                android:id="@+id/date_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Date and time" />
+        </LinearLayout>
 
         <ProgressBar
             android:id="@+id/progressBar2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/colorAccent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <View
-            android:id="@+id/rt_graph_pause_view"
-            android:layout_width="56dp"
-            android:layout_height="56dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

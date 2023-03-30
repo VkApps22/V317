@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name" translatable="false">Vulkan Connect v317</string>
+    <string name="app_name" translatable="false">VConnect</string>
     <string name="hello_world">Hello World!</string>
     <string name="logo_description" translatable="false">app logo</string>
     <string name="bye_world">Bye World!</string>
@@ -204,5 +204,9 @@
     </plurals>
     <plurals name="toast_rt_graph_reading_failed">
         <item quantity="other">Reading failed at %.2f s!</item>
+    </plurals>
+
+    <plurals name="date_time_lit_mid_endian">
+        <item quantity="other">%02d/%02d/%04d %02d:%02d:%02d</item>
     </plurals>
 </resources>

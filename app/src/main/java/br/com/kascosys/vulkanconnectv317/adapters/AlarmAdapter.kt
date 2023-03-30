@@ -143,7 +143,7 @@ class AlarmAdapter(
 
                         filtering = true
                         filteredAlarms = alarms.filter {
-                            it.data.name!!.toLowerCase().contains(queryString) || it.data.idNumber.toLowerCase().contains(
+                            it.data.name.toLowerCase().contains(queryString) || it.data.idNumber.toLowerCase().contains(
                                 queryString
                             )
                         }.toMutableList()
@@ -309,8 +309,8 @@ class AlarmAdapter(
                     .from(parent.context)
                     .inflate(R.layout.alarm_card, parent, false)
 
-                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O)
-                    itemView.findViewById<TextView>(R.id.alarm_detail_text).justificationMode = LineBreaker.JUSTIFICATION_MODE_INTER_WORD
+//                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O)
+//                    itemView.findViewById<TextView>(R.id.alarm_detail_text).justificationMode = Layout.JUSTIFICATION_MODE_INTER_WORD
 
                 return ItemViewHolder(itemView)
             }

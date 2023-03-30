@@ -48,7 +48,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_marginTop="4dp"
-            android:layout_marginEnd="8dp"
+            android:layout_marginEnd="16dp"
             android:text="To recap: whenever the View item is clicked, Android calls the click listener. We supply a lambda expression. Within this lambda expression, we call the click listener with the relevant data class instance. We got the click listener through a function parameter."
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"

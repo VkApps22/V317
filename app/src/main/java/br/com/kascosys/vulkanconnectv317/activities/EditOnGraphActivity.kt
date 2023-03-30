@@ -20,8 +20,10 @@ import br.com.kascosys.vulkanconnectv317.R
 import br.com.kascosys.vulkanconnectv317.constants.*
 import br.com.kascosys.vulkanconnectv317.databinding.ActivityEditOnGraphBinding
 import br.com.kascosys.vulkanconnectv317.enums.DataType
+import br.com.kascosys.vulkanconnectv317.enums.LockState
 import br.com.kascosys.vulkanconnectv317.enums.ParameterState
 import br.com.kascosys.vulkanconnectv317.managers.DriveManager
+import br.com.kascosys.vulkanconnectv317.managers.OnlineManager
 import br.com.kascosys.vulkanconnectv317.managers.ParameterManager
 import br.com.kascosys.vulkanconnectv317.models.NewParameterModel
 import br.com.kascosys.vulkanconnectv317.utils.ConnectionUtils
@@ -49,6 +51,8 @@ class EditOnGraphActivity : AppCompatActivity() {
     private lateinit var parameterManager: ParameterManager
 
     private lateinit var driveManager: DriveManager
+
+    private lateinit var onlineManager: OnlineManager
 
     private lateinit var generalState: ParameterState
 
@@ -81,6 +85,8 @@ class EditOnGraphActivity : AppCompatActivity() {
 
         parameterManager = ParameterManager.getInstance(this)
         driveManager = DriveManager.getInstance(this)
+        onlineManager = OnlineManager.getInstance(this)
+
         viewModel = ViewModelProviders.of(this).get(EditOnGraphViewModel::class.java)
         generalState = viewModel.generalState
 
@@ -106,7 +112,7 @@ class EditOnGraphActivity : AppCompatActivity() {
             setFocusToId(null)
         }
 
-        mainLayout= binding.editGraphMainLayout
+        mainLayout = binding.editGraphMainLayout
         mainLayout.setOnClickListener {
             setFocusToId(null)
         }
@@ -130,7 +136,7 @@ class EditOnGraphActivity : AppCompatActivity() {
                 )}"
             val editText = getEditText(id)
 
-            if(initialValue.toFloat() < READ_ERROR.toFloat()) {
+            if (initialValue.toFloat() < READ_ERROR.toFloat()) {
                 editText?.setText(
                     "%.2f".format(initialValue.toFloat()) + unitString
                 )
@@ -173,17 +179,19 @@ class EditOnGraphActivity : AppCompatActivity() {
 
         applyButton = binding.editGraphApplyButton
         applyButton.setOnClickListener {
-            when (generalState) {
-                ParameterState.EDITED -> {
-                    onProgramClick()
+            if (onlineManager.onlineModeOn && driveManager.lockState == LockState.UNLOCKED) {
+                when (generalState) {
+                    ParameterState.EDITED -> {
+                        onProgramClick()
+                    }
+                    ParameterState.UNSAVED -> {
+                        onSaveClick()
+                    }
+                    else -> Log.e(
+                        "EditOnGraphActivity",
+                        "editGraphApplyButton button should be gone!"
+                    )
                 }
-                ParameterState.UNSAVED -> {
-                    onSaveClick()
-                }
-                else -> Log.e(
-                    "EditOnGraphActivity",
-                    "editGraphApplyButton button should be gone!"
-                )
             }
         }
 
@@ -200,6 +208,15 @@ class EditOnGraphActivity : AppCompatActivity() {
         editText: EditText,
         unit: String
     ) {
+        // Disable editing if screen is locked
+        if (onlineManager.onlineModeOn
+            && driveManager.lockState != LockState.UNLOCKED
+        ) {
+            editText.isCursorVisible = false
+            editText.clearFocus()
+            return
+        }
+
         if (hasFocus) {
             Log.i(
                 "EditOnGraphActivity",
