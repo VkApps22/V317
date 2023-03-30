@@ -34,9 +34,13 @@ class DriveManager private constructor(context: Context) {
             _nickName = value
         }
 
-    private var _lockState = LockState.LOCKED
+    private var _lockState = LockState.FIRST_LOCKED
     val lockState
         get() = _lockState
+
+    fun firstLock() {
+        _lockState = LockState.FIRST_LOCKED
+    }
 
     fun setLocked() {
         _lockState = LockState.LOCKED

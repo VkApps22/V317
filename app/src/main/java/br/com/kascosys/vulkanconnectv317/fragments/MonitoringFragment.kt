@@ -144,6 +144,9 @@ class MonitoringFragment : Fragment(), OnChildCheck, OnRefreshClick, GraphClickL
                 lastClick = SystemClock.elapsedRealtime()
                 val action = MonitoringFragmentDirections
                     .actionMonitoringFragmentToAlarmFragment()
+
+                Lingver.getInstance().setLocale(context!!, Locale.getDefault())
+
                 view.findNavController().navigate(action)
             }
         }

@@ -18,12 +18,14 @@ import br.com.kascosys.vulkanconnectv317.constants.P171
 import br.com.kascosys.vulkanconnectv317.constants.P177
 import br.com.kascosys.vulkanconnectv317.constants.READ_ERROR
 import br.com.kascosys.vulkanconnectv317.enums.DataType
+import br.com.kascosys.vulkanconnectv317.enums.LockState
 import br.com.kascosys.vulkanconnectv317.enums.ParameterState
 import br.com.kascosys.vulkanconnectv317.enums.UserPermission
 import br.com.kascosys.vulkanconnectv317.interfaces.GraphClickListener
 import br.com.kascosys.vulkanconnectv317.interfaces.OnSlide
 import br.com.kascosys.vulkanconnectv317.interfaces.ParameterListItem
 import br.com.kascosys.vulkanconnectv317.managers.DriveManager
+import br.com.kascosys.vulkanconnectv317.managers.OnlineManager
 import br.com.kascosys.vulkanconnectv317.managers.PermissionManager
 import br.com.kascosys.vulkanconnectv317.models.NewParameterModel
 import br.com.kascosys.vulkanconnectv317.models.ParameterItem
@@ -40,7 +42,8 @@ class ParametersAdapter(
     private val slideListener: OnSlide,
     private val graphClickListener: GraphClickListener,
     private val permissionManager: PermissionManager,
-    private val driveManager: DriveManager
+    private val driveManager: DriveManager,
+    private val onlineManager: OnlineManager
 ) :
     StickyAdapter<RecyclerView.ViewHolder, RecyclerView.ViewHolder>() {
 
@@ -79,7 +82,7 @@ class ParametersAdapter(
         when (viewHolder) {
             is ParameterItemViewHolder -> viewHolder.bind(
                 (myParametersDataSet[position] as ParameterItem).data,
-                slideListener, graphClickListener, permissionManager, driveManager
+                slideListener, graphClickListener, permissionManager, driveManager, onlineManager
             )
             is ParameterHeaderViewHolder -> viewHolder.bind(sectionType)
             else -> Log.e(
@@ -166,7 +169,8 @@ class ParametersAdapter(
             slideListener: OnSlide,
             graphClickListener: GraphClickListener,
             permissionManager: PermissionManager,
-            driveManager: DriveManager
+            driveManager: DriveManager,
+            onlineManager: OnlineManager
         ) {
             Log.i(
                 "ParameterItemViewHolder",
@@ -302,6 +306,13 @@ class ParametersAdapter(
                 context.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
 
             parameterValue.setOnFocusChangeListener { _, hasFocus ->
+                // Disable editing if screen is locked
+                if(onlineManager.onlineModeOn && driveManager.lockState != LockState.UNLOCKED){
+                    parameterValue.isCursorVisible = false
+                    parameterValue.clearFocus()
+                    return@setOnFocusChangeListener
+                }
+
                 if (hasFocus) {
 
                     if (parameterValue.text != null) {

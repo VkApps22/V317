@@ -33,6 +33,7 @@ import br.com.kascosys.vulkanconnectv317.database.DeviceMinimalData
 import br.com.kascosys.vulkanconnectv317.database.firebase.AlertsFirebaseRepository
 import br.com.kascosys.vulkanconnectv317.databinding.ActivityPairingBinding
 import br.com.kascosys.vulkanconnectv317.enums.DeviceState
+import br.com.kascosys.vulkanconnectv317.enums.LockState
 import br.com.kascosys.vulkanconnectv317.interfaces.DeviceContainerActivity
 import br.com.kascosys.vulkanconnectv317.interfaces.LangClickListener
 import br.com.kascosys.vulkanconnectv317.interfaces.OnDeviceClick
@@ -119,7 +120,6 @@ class PairingActivity : AppCompatActivity(), OnDeviceClick, DeviceContainerActiv
         val locale = Locale.getDefault()
         Log.i("PairingActivity", "onCreate locale ${locale.language}")
 
-
 //        binding.langButton.setImageResource(
 //            when (locale.language) {
 //                LANGUAGE_EN -> R.drawable.ic_gb
@@ -157,6 +157,7 @@ class PairingActivity : AppCompatActivity(), OnDeviceClick, DeviceContainerActiv
                     "PairingActivity",
                     "inflateLangDialog listener.onLanguageClicked $pos ${languageList[pos]}"
                 )
+
                 Lingver.getInstance().setLocale(context, languageList[pos])
 
                 dialog.dismiss()
@@ -639,14 +640,23 @@ class PairingActivity : AppCompatActivity(), OnDeviceClick, DeviceContainerActiv
                 inflateOfflineDialog(ssId)
             }
             DeviceState.ONLINE -> {
-                driveManager.name = nick
+                setCurrentNick(nick)
                 connectToAp(ssId)
             }
             DeviceState.CONNECTED -> {
-                driveManager.name = nick
+                setCurrentNick(nick)
                 goToTabs()
             }
         }
+    }
+
+    private fun setCurrentNick(nick: String) {
+        Log.i("PairingActivity", "setCurrentNick $nick ${driveManager.name}--------")
+
+        if (nick != driveManager.name) {
+            driveManager.firstLock()
+        }
+        driveManager.name = nick
     }
 
     private fun connectToAp(ssId: String) {

@@ -1,6 +1,7 @@
 package br.com.kascosys.vulkanconnectv317.activities
 
 import android.content.Context
+import android.content.res.Resources
 import android.graphics.Color
 import android.net.wifi.WifiManager
 import android.os.*
@@ -8,6 +9,7 @@ import android.util.Log
 import android.view.MotionEvent
 import android.view.View
 import android.widget.ProgressBar
+import android.widget.TextView
 import android.widget.Toast
 import androidx.annotation.WorkerThread
 import androidx.appcompat.app.AppCompatActivity
@@ -124,14 +126,7 @@ class RtGraphActivity : AppCompatActivity(), OnChartGestureListener {
 //        saveScreenshot()
     }
 
-    private fun saveScreenshot() {
-        val prefixSD = "/storage/emulated/0"
-
-        val galleryPath = getExternalFilesDir(Environment.DIRECTORY_DCIM)?.absolutePath
-        val screenShotPath = "Vulkan"
-        val folderPath = "$galleryPath/$screenShotPath"
-        val folderFile = File(folderPath)
-
+    private fun getFormattedDateTime(resources: Resources): String {
         val calendar = Calendar.getInstance()
         val year = calendar.get(Calendar.YEAR)
         val month = calendar.get(Calendar.MONTH) + 1
@@ -140,45 +135,74 @@ class RtGraphActivity : AppCompatActivity(), OnChartGestureListener {
         val hour = calendar.get(Calendar.HOUR_OF_DAY)
         val minute = calendar.get(Calendar.MINUTE)
         val second = calendar.get(Calendar.SECOND)
-        val milli = calendar.get(Calendar.MILLISECOND)
-
-        val fileName =
-            "$year${"%02d".format(month)}${"%02d".format(day)}${"%02d".format(hour)}${"%02d".format(
-                minute
-            )}${"%02d".format(second)}${"%03d".format(milli)}_$id"
-
-        Log.i("RtGraphActivity", "onChartLongPressed $folderPath $fileName")
-
-        if (folderFile.exists() && folderFile.isDirectory) {
-            Log.i("RtGraphActivity", "onChartLongPressed directory found. Saving on folder...")
-        } else {
-            Log.i(
-                "RtGraphActivity",
-                "onChartLongPressed directory not found. Trying to create folder..."
-            )
-
-            if (getExternalFilesDir(Environment.DIRECTORY_DCIM)!!.exists()) {
-                Log.i(
-                    "RtGraphActivity",
-                    "onChartLongPressed parent directory found. Creating folder..."
-                )
-
-                if (!folderFile.mkdir()) {
-                    Log.e("RtGraphActivity", "onChartLongPressed making of directory failed!")
-
-                    return
-                }
-            } else {
-                Log.e("RtGraphActivity", "onChartLongPressed parent directory not found!")
-
-                return
-            }
-        }
-
-        lineChart.saveToPath(fileName, folderPath.removePrefix(prefixSD))
-
-        Toast.makeText(this, "Screenshot saved to $folderPath", Toast.LENGTH_LONG).show()
+        
+        return resources.getQuantityString(
+            R.plurals.date_time_lit_mid_endian,
+            0,
+            day,
+            month,
+            year,
+            hour,
+            minute,
+            second
+        )
     }
+
+//    private fun saveScreenshot() {
+//        val prefixSD = "/storage/emulated/0"
+//
+//        val galleryPath = getExternalFilesDir(Environment.DIRECTORY_DCIM)?.absolutePath
+//        val screenShotPath = "Vulkan"
+//        val folderPath = "$galleryPath/$screenShotPath"
+//        val folderFile = File(folderPath)
+//
+//        val calendar = Calendar.getInstance()
+//        val year = calendar.get(Calendar.YEAR)
+//        val month = calendar.get(Calendar.MONTH) + 1
+//        val day = calendar.get(Calendar.DATE)
+//
+//        val hour = calendar.get(Calendar.HOUR_OF_DAY)
+//        val minute = calendar.get(Calendar.MINUTE)
+//        val second = calendar.get(Calendar.SECOND)
+//        val milli = calendar.get(Calendar.MILLISECOND)
+//
+//        val fileName =
+//            "$year/${"%02d".format(month)}/${"%02d".format(day)} ${"%02d".format(hour)}:${"%02d".format(
+//                minute
+//            )}:${"%02d".format(second)}${"%03d".format(milli)}_$id"
+//
+//        Log.i("RtGraphActivity", "onChartLongPressed $folderPath $fileName")
+//
+//        if (folderFile.exists() && folderFile.isDirectory) {
+//            Log.i("RtGraphActivity", "onChartLongPressed directory found. Saving on folder...")
+//        } else {
+//            Log.i(
+//                "RtGraphActivity",
+//                "onChartLongPressed directory not found. Trying to create folder..."
+//            )
+//
+//            if (getExternalFilesDir(Environment.DIRECTORY_DCIM)!!.exists()) {
+//                Log.i(
+//                    "RtGraphActivity",
+//                    "onChartLongPressed parent directory found. Creating folder..."
+//                )
+//
+//                if (!folderFile.mkdir()) {
+//                    Log.e("RtGraphActivity", "onChartLongPressed making of directory failed!")
+//
+//                    return
+//                }
+//            } else {
+//                Log.e("RtGraphActivity", "onChartLongPressed parent directory not found!")
+//
+//                return
+//            }
+//        }
+//
+//        lineChart.saveToPath(fileName, folderPath.removePrefix(prefixSD))
+//
+//        Toast.makeText(this, "Screenshot saved to $folderPath", Toast.LENGTH_LONG).show()
+//    }
 
     override fun onChartDoubleTapped(me: MotionEvent?) {
         Log.i("RtGraphActivity", "onChartDoubleTapped------------------")
@@ -224,12 +248,16 @@ class RtGraphActivity : AppCompatActivity(), OnChartGestureListener {
     private val mainsModel = MainsModel()
 
     private lateinit var mainsPollTimer: CountDownTimer
+    private lateinit var dateTimer: CountDownTimer
 
     private val entryQueue = mutableListOf<Entry>()
 
     private val handler = Handler()
 
     private lateinit var playPauseView: View
+
+    private lateinit var modelText: TextView
+    private lateinit var dateTimeText: TextView
 
     private var lastXValue = -1.0f
 
@@ -251,7 +279,10 @@ class RtGraphActivity : AppCompatActivity(), OnChartGestureListener {
 
         progressBar = binding.progressBar2
 
-        playPauseView = binding.rtGraphPauseView
+        modelText = binding.model
+        dateTimeText = binding.dateTime
+
+        playPauseView = binding.layoutWatermark
         playPauseView.setOnClickListener {
             Log.i(
                 "RtGraphActivity",
@@ -313,6 +344,8 @@ class RtGraphActivity : AppCompatActivity(), OnChartGestureListener {
 
         item = monitoringManager.getBy(id!!)
 
+        modelText.text = "V317-${driveManager.size}A"
+
 //        Log.i("RtGraphActivity", "test ${0.0001002f} ${Utils.getDecimals(0.0001002f)}")
 
     }
@@ -347,6 +380,17 @@ class RtGraphActivity : AppCompatActivity(), OnChartGestureListener {
 
                     }
                 }.start()
+
+            dateTimer =
+                object : CountDownTimer(Long.MAX_VALUE, TIME_POLLING_MILLIS) {
+                    override fun onFinish() {
+                        start()
+                    }
+
+                    override fun onTick(p0: Long) {
+                        dateTimeText.text = getFormattedDateTime(resources)
+                    }
+                }.start()
         } else {
             Log.e("RtGraphActivity", "onResume id null!")
         }
@@ -363,6 +407,7 @@ class RtGraphActivity : AppCompatActivity(), OnChartGestureListener {
 
         try {
             mainsPollTimer.cancel()
+            dateTimer.cancel()
         } catch (e: Exception) {
             e.printStackTrace()
         }

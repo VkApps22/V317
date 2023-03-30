@@ -228,7 +228,8 @@ class HomeFragment : Fragment(), OnSlide, GraphClickListener {
             this,
             this,
             permissionManager,
-            driveManager
+            driveManager,
+            onlineManager
         )
 
 //        Log.d(
@@ -254,16 +255,18 @@ class HomeFragment : Fragment(), OnSlide, GraphClickListener {
             )
 
             Handler().post {
-                when (generalParameterState.value) {
+                if (onlineManager.onlineModeOn && driveManager.lockState == LockState.UNLOCKED) {
+                    when (generalParameterState.value) {
 
 
-                    ParameterState.UNEDITED -> Log.e(
-                        "HomeFragment",
-                        "button clickListener button should be hidden!"
-                    )
-                    ParameterState.EDITED -> onProgramClick()
-                    ParameterState.UNSAVED -> onSaveClick()
-                    else -> {}
+                        ParameterState.UNEDITED -> Log.e(
+                            "HomeFragment",
+                            "button clickListener button should be hidden!"
+                        )
+                        ParameterState.EDITED -> onProgramClick()
+                        ParameterState.UNSAVED -> onSaveClick()
+                        else -> {}
+                    }
                 }
 
 //                progressBar.visibility = View.GONE
@@ -291,6 +294,9 @@ class HomeFragment : Fragment(), OnSlide, GraphClickListener {
                 lastClick = SystemClock.elapsedRealtime()
 
                 val action = HomeFragmentDirections.actionHomeFragmentToAlarmFragment()
+
+                Lingver.getInstance().setLocale(context!!, Locale.getDefault())
+
                 view.findNavController().navigate(action)
             }
 
@@ -353,9 +359,23 @@ class HomeFragment : Fragment(), OnSlide, GraphClickListener {
         var flag = false
         val fragment = this
 
+        Log.d(
+            "HomeFragment",
+            "onResume ${onlineManager.onlineModeOn} ${fragment.driveManager.lockState}"
+        )
+
+
         GetDriveSizeAsync(this).execute()
 
         val statusRunning = getString(R.string.status_running)
+
+        // if app hasn't been unlocked yet in online mode, ask for unlocking
+
+        if (fragment.onlineManager.onlineModeOn
+            && fragment.driveManager.lockState == LockState.FIRST_LOCKED
+        ) {
+            inflateUnlockDialog()
+        }
 
         alarmPollTimer = object : CountDownTimer(Long.MAX_VALUE, ALARM_POLLING_MILLIS) {
             override fun onFinish() {
@@ -373,7 +393,9 @@ class HomeFragment : Fragment(), OnSlide, GraphClickListener {
 
                     ReadListAsync(fragment, parameterList, false).execute()
 
-                    CheckPasswordAsync(fragment).execute()
+                    if (driveManager.lockState != LockState.FIRST_LOCKED) {
+                        CheckPasswordAsync(fragment).execute()
+                    }
                 }
             }
         }.start()
@@ -463,6 +485,10 @@ class HomeFragment : Fragment(), OnSlide, GraphClickListener {
                         "AttemptConnectAsync",
                         "onPostExecute else"
                     )
+                }
+
+                if (parent.driveManager.lockState == LockState.FIRST_LOCKED) {
+                    parent.inflateUnlockDialog()
                 }
 
             } else {

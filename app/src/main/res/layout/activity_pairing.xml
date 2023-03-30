@@ -22,27 +22,26 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/logo_main" />
+            app:srcCompat="@drawable/ic_logo_main" />
 
         <LinearLayout
             android:id="@+id/linearLayout4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginEnd="8dp"
+            android:layout_marginTop="32dp"
             android:gravity="center"
             android:orientation="horizontal"
             android:weightSum="1.0"
-            app:layout_constraintTop_toBottomOf="@+id/image_logo">
+            app:layout_constraintTop_toBottomOf="@+id/image_logo"
+            tools:layout_editor_absoluteX="8dp">
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/deviceButton"
                 style="@style/Widget.MaterialComponents.Button"
-                android:layout_weight="0.5"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="10dp"
+                android:layout_weight="0.5"
                 android:text="@string/pairing_button"
                 android:textColor="#FFF"
                 android:textSize="14sp"
@@ -54,9 +53,9 @@
                 android:id="@+id/configButton"
                 style="@style/Widget.MaterialComponents.Button"
                 android:layout_width="0dp"
-                android:layout_weight="0.5"
                 android:layout_height="match_parent"
                 android:layout_marginStart="10dp"
+                android:layout_weight="0.5"
                 android:text="@string/config_button"
                 android:textColor="#FFF"
                 android:textSize="14sp"

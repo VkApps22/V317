@@ -79,8 +79,10 @@
     <string name="unnamed_device">No nombrado</string>
     <string name="toast_connection_failed">La conexión ha fallado!</string>
     <string name="voltage_card">Tensión de Entrada</string>
+    <string name="w001_label">Alerta no nombrado</string>
     <string name="warning_title">¡Atención!</string>
     <string name="warning_wifi_off">¡Wifi apagado!</string>
+    <string name="wXXX_label">Alarma/alerta fuera de rango</string>
     <string name="config_button">Ajustes</string>
     <string name="dialog_no">No</string>
     <string name="dialog_yes">Si</string>
@@ -204,6 +206,9 @@
     <string name="bye_world">Adiós Mundo!</string>
     <string name="select_language">Seleccionar idioma</string>
     <string name="language_text">Idioma</string>
+    <string name="w005_label">Start de Encender-Apagar para aplicar freno</string>
+    <string name="w004_label">Reinicio seguro tras la energización o la alarma en el Conversor V317</string>
+
     <string name="status_card">Status</string>
     <string name="save_failed">¡La operación de guardar ha fallado! Verifique la conexión</string>
     <string name="analog_config_label1">1: Tensión de Referencia en Rampa</string>
