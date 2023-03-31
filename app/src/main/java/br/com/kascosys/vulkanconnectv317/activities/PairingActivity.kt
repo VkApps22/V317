@@ -527,7 +527,7 @@ class PairingActivity : AppCompatActivity(), OnDeviceClick, DeviceContainerActiv
             when (locale.language) {
                 LANGUAGE_EN -> R.drawable.ic_gb
                 LANGUAGE_ES -> R.drawable.ic_es
-                LANGUAGE_PT -> R.drawable.ic_pt
+                LANGUAGE_PT -> R.drawable.ic_br
                 else -> R.drawable.ic_gb
             }
         )
