@@ -1,443 +1,272 @@
 {
-    "es": {
-      "A001": {
-        "label": "Falla en Campo"
-      },
-      "A002": {
-        "description": "El contacto asociado al interruptor térmico montado en el disipador de calor del conversor V317 está abierto, señalizando que la temperatura máxima permitida fue excedida.\n\n¡Observación!\n\n\tControle las condiciones ambientales de la instalación.\n\tControle el ciclo de trabajo.\n\tDespués del disparo de esta alarma, espere algunos minutos para reiniciar.",
-        "label": "Temperatura Excesiva en el Disipador de Calor"
-      },
-      "A003": {
-        "description": "El valor instantáneo (valor pico) de la corriente de salida M004 (Iout) excedió 200% de la corriente máxima del conversor V317.\n\n¡Observación!\n\n\tControle la resistencia de bobina.\n\tControle la integridad del cable de salida.",
-        "label": "Sobrecorriente de Salida CC"
-      },
-      "A004": {
-        "label": "Perdida de Carga de Salida"
-      },
-      "A005": {
-        "label": "Alarma no nombrada"
-      },
-      "A006": {
-        "description": "<![CDATA[La frecuencia de la red eléctrica varía más que el valor máximo permitido, que es igual a 500 μs entre dos períodos de la red eléctrica. Esa alarma puede ocurrir solamente cuando el conversor V317 esté activado. Desactive esa alarma usando el parámetro C153 y el reinicio continuo usando el parámetro C093.\n\n ¡Observación!\n\n\tGarantice que la tensión y la frecuencia de la reja estén dentro del intervalo permitido. Consulte los valores nominales del conversor V317. (4.4 Valores nominales).]]>",
-        "label": "Frecuencia de Red Eléctrica Inestable"
-      },
-      "A007": {
-        "description": "Falla de una o más de las tres fases de la red eléctrica. Esa alarma puede ocurrir solamente cuando el conversor V317 esté activado. Desactive esa alarma usando el parámetro C154 y el reinicio continuo usando el parámetro C093.\n\n¡Observación!\n\n\tGarantice que la tensión y la frecuencia de la reja estén dentro del rango permitido. Consulte los valores nominales del conversor V317. (4.4 Valores nominales).",
-        "label": "Falla de la Red Eléctrica"
-      },
-      "A008": {
-        "label": "Falla de Retroalimentación de Velocidad"
-      },
-      "A009": {
-        "label": "Sobrecorriente de Campo"
-      },
-      "A010": {
-        "label": "Sobretensión en la Bobina del Freno"
-      },
-      "A011": {
-        "label": "Inductancia L fuera de rango"
-      },
-      "A012": {
-        "description": "La frecuencia M008 (MFreq) de la red eléctrica está por encima de 70 Hz o por debajo de 40 Hz. Esa alarma puede ocurrir solamente cuando el conversor V317 esté activado. Defina el reinicio automático usando el parámetro C093.\n\n¡Observación!\n\n\tGarantice que la tensión y la frecuencia de la reja estén dentro del rango permitido. Consulte los valores nominales del conversor V317. (4.4 Valores nominales).",
-        "label": "Frecuencia de Red Eléctrica fuera de rango"
-      },
-      "A013": {
-        "description": "Falla de los circuitos que proveen las señales de sincronización de la tensión trifásica de la red eléctrica. Esa alarma puede disparar solamente cuando la entrada digital ENABLE esté activa. Defina el reinicio automático usando el parámetro C093.\n\n ¡Observación!\n\n\tGarantice que la tensión y la frecuencia de la reja estén dentro del rango permitido. Consulte los valores nominales del conversor V317. (4.4 Valores nominales).",
-        "label": "Falta de Sincronización"
-      },
-      "A014": {
-        "label": "Resistencia R Fuera de rango"
-      },
-      "A015": {
-        "label": "Error en \"AutoTune\""
-      },
-      "A016": {
-        "description": "<![CDATA[La tensión de la red eléctrica (Vmains) excedió 15% de 480 VAC. Esa alarma puede disparar solamente cuando la entrada digital ENABLE esté activa. Atrase esa alarma usando el parámetro C141 y desactívela usando el parámetro C157.\n\n ¡Observación!\n\n\tGarantice que la tensión y la frecuencia de la reja estén dentro del rango permitido. Consulte los valores nominales del conversor V317. (4.4 Valores nominales).]]>",
-        "label": "Sobretensión de la red eléctrica"
-      },
-      "A017": {
-        "description": "<![CDATA[\tEl valor M009 de la tensión de la red eléctrica de la sección de potencia (Vmains) está 15% por debajo de 220 VAC en el caso de accionamientos con capacidad para regeneración de la energía de la red eléctrica (2° y/o 4° cuadrante activado). Esa alarma puede ocurrir solamente cuando la entrada digital ENABLE esté activa. Atrase esa alarma usando el parámetro C141 y desactívela usando el parámetro C157. Defina el reinicio automático usando el parámetro C093.\n\tEl atraso de la alarma definido en el parámetro C141 queda activo solamente si la tensión de alimentación no fuere inferior a 140 VCA y si el conversor V317 estuviere trabajando en el 1° cuadrante; caso contrario, la alarma será disparada inmediatamente.\n\n ¡Observación!\n\n\tGarantice que la tensión y la frecuencia de la reja estén dentro del rango permitido. Consulte los valores nominales del conversor V317. (4.4 Valores nominales).]]>",
-        "label": "Tensión de red eléctrica insuficiente"
-      },
-      "A018": {
-        "label": "Interrupcion en AutoTune"
-      },
-      "A019": {
-        "label": "Límite en AutoTune"
-      },
-      "A020": {
-        "description": "El freno no abre cuando el conversor V317 está activado.\n\n ¡Observación!\n\n\tVerifique el freno.\n\tVerifique los cables de alimentación y control entre el conversor V317 y la microllave del freno.\n\tVerifique la regulación de la microllave que señaliza la apertura del freno.\n\tVerifique la programación de las corrientes de llamada (C000) y economía (P128).\n\tVerifique la programación de tiempo para confirmación de apertura del freno P177.",
-        "label": "Falla Externa 1 - Falla de Apertura del Freno"
-      },
-      "A021": {
-        "description": "Temperatura del freno excesivamente alta. El disparo de I2t de freno depende de los valores programados en los parámetros C001 (Corriente para protección térmica) y C002 (Constante de tiempo para protección térmica).\n\n ¡Observación!\n\n\tDespués del disparo de esta alarma, espere algunos minutos para reiniciar.\n\tVerifique la programación de las corrientes de llamada y economía y el ajuste de protección (consulte la sección de programación).\n\tVerifique la temperatura de bobina.",
-        "label": "Disparo de I2t del freno"
-      },
-      "A022": {
-        "label": ""
-      },
-      "A023": {
-        "label": "Corriente de Campo Inferior al Límite"
-      },
-      "A024": {
-        "description": "EEPROM Ausente o en Blanco",
-        "label": "EEPROM Ausente o en Blanco"
-      },
-      "A025": {
-        "description": "El contenido de parte del área de trabajo de la EEPROM fue alterado.\n\n¡ADVERTENCIA!\n\n\tTrate de reiniciar. Si la alarma persiste, entre en contacto con VULKAN DRIVE TECH.",
-        "label": "Falla en Área de Trabajo de la EEPROM"
-      },
-      "A026": {
-        "label": "Falla en EEPROM BackupArea"
-      },
-      "A027": {
-        "label": "Falla en Comunicación Serial"
-      },
-      "A028": {
-        "label": "Falla en FieldBus"
-      },
-      "A029": {
-        "description": "Desgaste de las pastillas\n\n ¡Observación!\n\n\tSi el CDPG 24 V que monitoriza el desgaste de las pastillas está instalado, verifique las pastillas del freno.\n\tSi no lo está, verifique si el terminal C3 está conectado a C2.",
-        "label": "Falla Externa 2 (Pastillas Gastadas en el Freno)"
-      },
-      "A030": {
-        "label": "Alarma Externa 3"
-      },
-      "A031": {
-        "description": "Falla Interna de la EEPROM",
-        "label": "Falla Interna de la EEPROM"
-      },
-      "A032": {
-        "description": "Reinicio del microcontrolador.\n\n¡ADVERTENCIA!\n\n\tProbablemente, la alarma fue causada por una perturbación electromagnética. Trate de reiniciar. Si la alarma persiste, entre en contacto con VULKAN DRIVE TECH.",
-        "label": "Microcontrolador Reiniciado"
-      },
-      "A033": {
-        "description": "Una alarma desconocida fue almacenada. En ese caso, basta reiniciar la alarma.",
-        "label": "Falla desconocida"
-      },
-      "W001": {
-        "label": "Alerta no nombrado"
-      },
-      "W002": {
-        "label": "Retroalimentación de Velocidad Commutada para Tensión de Armadura"
-      },
-      "W003": {
-        "label": "Limite de Corriente de Hardware"
-      },
-      "W004": {
-        "label": "Enable de Encender-Apagar para aplicar freno"
-      },
-      "W005": {
-        "label": "Start de Encender-Apagar para aplicar freno"
-      },
-      "W006": {
-        "label": "Valores de Backup almacenados en la RAM"
-      },
-      "W007": {
-        "label": "Valores originales almacenados en la RAM"
-      },
-      "W008": {
-        "label": "Falla en EEPROM WorkArea"
-      },
-      "W009": {
-        "label": "Falla en EEPROM BackupArea"
-      },
-      "WXXX": {
-        "label": "Alarma/alerta fuera de rango"
-      }
+  "en": {
+    "A002": {
+      "description": "<p><strong>Possible Cause: 1</strong> The power supply identified an overtemperature condition on its heatsink and the thermo-switch contact is open.</p><strong>Fault Detection: 1.1</strong> The power supply is supplying more DC current than required for Brake operation.<p><strong>Solutions: 1.1</strong> On the power supply, check if the Brake current settings are correct (parameters C000, P128, and P171),</p> <hr> <p><strong>Possible Cause: 1</strong> The power supply identified an overtemperature condition on its heatsink and the thermo-switch contact is open.</p> <p><strong>Fault Detection: 1.2</strong> The number of brake operation cycles is above the maximum allowed for the assembly (power supply and brake).</p> <p><strong>Solutions: 1.2</strong> Check the power supply/brake operation frequency; it might be above the allowed value.</p> <hr> <p><strong>Possible Cause: 1</strong> The power supply identified an overtemperature condition on its heatsink and the thermo-switch contact is open.</p> <p><strong>Fault Detection: 1.3</strong> Ruptured wires or poor contact on the thermo-switch connected to CN22 terminals on the power rectifier control board.</p> <p><strong>Solutions: 1.3</strong> Replace the power supply if it is not possible to repair the ruptured wires or the poor contact on the switch terminals.</p>",
+      "label": "Heatsink Overtemperature."
     },
-    "pt": {
-      "A001": {
-        "label": "Falha no Campo"
-      },
-      "A002": {
-        "description": "O contato associado ao interruptor térmico montado no dissipador de calor do conversor V317 está aberto, sinalizando que a temperatura máxima permitida foi excedida.\n\nObservação!\n\n\tControle as condições ambientais da instalação.\n\tControle o ciclo de trabalho.",
-        "label": "Temperatura excessiva no dissipador de calor"
-      },
-      "A003": {
-        "description": "O valor instantâneo (valor de pico) da corrente de saída M004 (Iout) excedeu 200 % da corrente máxima do conversor V317. \n\nObservação! \n\tControle a resistência da bobina.\n\tControle a integridade do cabo de saída.",
-        "label": "Sobrecorrente de saída CC"
-      },
-      "A004": {
-        "label": "Perda da carga ou terminais Potencia de saída CC sem carga"
-      },
-      "A005": {
-        "label": "Alarme não nomeado"
-      },
-      "A006": {
-        "description": "<![CDATA[A frequência da rede elétrica varia mais do que o valor máximo permitido, que é igual a 500 μs entre dois períodos da rede elétrica. Esse alarme pode ocorrer somente quando o conversor V317 estiver ativado. Desative esse alarme usando o parâmetro C153 e a reinicialização contínua usando o parâmetro C093.\n\nObservação!\n\n\tGaranta que a tensão e a frequência da grade estejam dentro da faixa permitida. Consulte os valores nominais do conversor V317 (4.4 Valores Nominais).]]>",
-        "label": "Frequência da rede elétrica instável"
-      },
-      "A007": {
-        "description": "Falha de uma ou mais das três fases da rede elétrica. Esse alarme pode ocorrer somente quando o conversor V317. estiver ativada. Desative esse alarme usando o parâmetro C154 e a reinicialização contínua usando o parâmetro C093.\n\nObservação!\n\n\tGaranta que a tensão e a frequência da grade estejam dentro da faixa permitida. Consulte os valores nominais do conversor V317 (4.4 Valores Nominais).",
-        "label": "Falha de fase da rede elétrica"
-      },
-      "A008": {
-        "label": "Falha no Feedback de velocidade"
-      },
-      "A009": {
-        "label": "Sobre-corrente de campo"
-      },
-      "A010": {
-        "label": "Sobre-tensão na bobina do Freio"
-      },
-      "A011": {
-        "label": "Indutância L fora da faixa"
-      },
-      "A012": {
-        "description": "A frequência M008 (MFreq) da rede elétrica está acima de 70 Hz ou abaixo de 40 Hz.. Esse alarme pode ocorrer somente quando o conversor V317 estiver ativada. Defina a reinicialização automática usando o parâmetro C093.\n\nObservação!\n\n\tGaranta que a tensão e a frequência da grade estejam dentro da faixa permitida. Consulte os valores nominais do conversor V317 (4.4 Valores Nominais).",
-        "label": "Frequência da rede elétrica fora da faixa"
-      },
-      "A013": {
-        "description": "Falha dos circuitos que fornecem os sinais de sincronização da tensão trifásica da rede elétrica. Esse alarme pode disparar somente quando a entrada digital ENABLE estiver ativa. Defina a reinicialização automática usando o parâmetro C093.\n\nObservação!\n\n\tGaranta que a tensão e a frequência da grade estejam dentro da faixa permitida. Consulte os valores nominais do conversor V317 (4.4 Valores Nominais).",
-        "label": "Falha de sincronização"
-      },
-      "A014": {
-        "label": "Resistência R fora da faixa"
-      },
-      "A015": {
-        "label": "Erro no \"AutoTune\""
-      },
-      "A016": {
-        "description": "<![CDATA[A tensão da rede elétrica (Vmains) excedeu 15% de 480 VAC. Esse alarme pode disparar somente quando a entrada digital ENABLE estiver ativa. Atrase esse alarme usando o parâmetro C141 e desative-o usando o parâmetro C157.\n\nObservação!\n\n\tGaranta que a tensão e a frequência da grade estejam dentro da faixa permitida. Consulte os valores nominais do conversor V317 (4.4 Valores Nominais).]]>",
-        "label": "Sobre-tensão da rede elétrica"
-      },
-      "A017": {
-        "description": "<![CDATA[O valor M009 da tensão da rede elétrica da seção de potência (Vmains) está 15% abaixo de 220 VAC no caso de acionamentos com capacidade para regeneração da energia da rede elétrica (2° e/ou 4° quadrante ativado). Esse alarme pode ocorrer somente quando a entrada digital ENABLE estiver ativa. Atrase esse alarme usando o parâmetro C141 e desative-o usando o parâmetro C157. Defina a reinicialização automática usando o parâmetro C093.\n\tO atraso do alarme definido no parâmetro C141 fica ativo somente se a tensão de alimentação não for inferior a 140 VCA e se o conversor V317 estiver trabalhando no 1° quadrante; caso contrário, o alarme será disparado imediatamente.\n\nObservação!\n\n\tGaranta que a tensão e a frequência da grade estejam dentro da faixa permitida. Consulte os valores nominais do conversor V317 (4.4 Valores Nominais).]]>",
-        "label": "Tensão da rede elétrica insuficiente"
-      },
-      "A018": {
-        "label": "\"AutoTune\" interrompido"
-      },
-      "A019": {
-        "label": "Limite no \"AutoTune\""
-      },
-      "A020": {
-        "description": "O freio não abre quando o conversor V317 está ativado.\n\nObservação!\n\n\tVerifique o freio.\n\tVerifique os fios de alimentação e controle entre o conversor V317 e a micro-chave do freio.\n\tVerifique a regulagem da micro-chave que sinaliza a abertura do freio.\n\tVerifique a programação das correntes de chamada (C000) e economia (P128).\n\tVerifique a programação do tempo para confirmação de abertura do freio P177.",
-        "label": "Alarme externo 1 - Falha de abertura do Freio"
-      },
-      "A021": {
-        "description": "Temperatura do freio excessivamente alta. O disparo de I2t do freio depende dos valores programados nos parâmetros C001 (Corrente para proteção térmica) e C002 (Constante de tempo para proteção térmica).\n\nObservação!\n\n\tDepois do disparo deste alarme, espere alguns minutos para reiniciar.\n\tVerifique a programação das correntes de chamada e economia e o ajuste da proteção (consulte a seção de programação).Verifique a temperatura da bobina.",
-        "label": "Disparo de I2t do freio"
-      },
-      "A022": {
-        "label": ""
-      },
-      "A023": {
-        "label": "Corrente de campo abaixo do limite"
-      },
-      "A024": {
-        "description": "Ao ligar, o alarme dispara:\n\ta. Se a EEPROM estiver ausente.\n\tb. Se a EEPROM não estiver programada.\n\nAdvertência!\n\n\tEsse alarme não pode ser excluído. Entre em contato com a VULKAN DRIVE TECH.",
-        "label": "EEPROM ausente ou em branco"
-      },
-      "A025": {
-        "description": "O conteúdo de parte da área de trabalho da EEPROM foi alterado.\n\nAdvertência!\n\n\tTente reinicializar. Se o alarme persistir, entre em contato com a VULKAN DRIVE TECH.",
-        "label": "Parâmetros incorretos na área de trabalho da EEPROM"
-      },
-      "A026": {
-        "label": "Falha com o  Backup de área na EEPROM"
-      },
-      "A027": {
-        "label": "Falha na comunicação serial"
-      },
-      "A028": {
-        "label": "Falha com o FieldBus"
-      },
-      "A029": {
-        "description": "Desgaste das pastilhas\n\nObservação!\n\n\tSe o CDPG 24 V que monitora o desgaste das pastilhas estiver instalado, verifique as pastilhas do freio.\n\tSe não estiver, verifique se o terminal C3 está conectado a C2.",
-        "label": "Alarme externo 2 (Pastilhas gastas no Freio)"
-      },
-      "A030": {
-        "label": "Alarme externo 3"
-      },
-      "A031": {
-        "description": "Foram detectadas alterações nos dados da EEPROM ao ligar o equipamento. O usuário não tem acesso a esses dados.\n\nObservação!\n\n\tEsse alarme não pode ser excluído. Entre em contato com a VULKAN DRIVE TECH.",
-        "label": "Falha interna da EEPROM"
-      },
-      "A032": {
-        "description": "Reinicialização do microcontrolador.\n\nAdvertência!\n\n\tProvavelmente, o alarme foi causado por uma perturbação eletromagnética. Tente reinicializar. Se o alarme persistir, entre em contato com a VULKAN DRIVE TECH.",
-        "label": "Reinicialização do Microcontrolador"
-      },
-      "A033": {
-        "description": "Um alarme desconhecido foi armazenado. Nesse caso, basta reinicializar o alarme.",
-        "label": "Falha desconhecida"
-      },
-      "W001": {
-        "label": "Alerta não nomeado"
-      },
-      "W002": {
-        "label": "Feedback de velocidade chaveado para Vout (bobina)"
-      },
-      "W003": {
-        "label": "<![CDATA[Limite da corrente do Hardware < 100%]]>"
-      },
-      "W004": {
-        "label": "Habilitação de Desliga-Liga para acionar Freio"
-      },
-      "W005": {
-        "label": "Start de Desliga-Liga para acionar Freio"
-      },
-      "W006": {
-        "label": "Valores de Backup armazenados na RAM"
-      },
-      "W007": {
-        "label": "Valores originais armazenados na RAM"
-      },
-      "W008": {
-        "label": "Falha na EEPROM na área de trabalho"
-      },
-      "W009": {
-        "label": "Falha na EEPROM na área de Backup"
-      },
-      "WXXX": {
-        "label": "Alarme/alerta fora da faixa"
-      }
+    "A003": {
+      "description": "<p> <strong>Possible Cause: 1</strong> - The instantaneous (peak) value of the power supply output current (shown in M004) has exceeded 200% of the power supply maximum current.</p> <p><strong>Fault Detection: 1.1</strong> - Use of an incorrect Brake coil.</p> <p><strong>Solutions: 1.1</strong> - Check the model of the brake in use and the nominal resistance of its coil. Set the proper parameters (C000, P128 e P171) correctly for the coil in use.</p> <p><strong>Possible Cause: 1</strong> - The instantaneous (peak) value of the power supply output current (shown in M004) has exceeded 200% of the power supply maximum current.</p> <p><strong>Fault Detection: 1.2</strong> - Damaged brake coil or too low resistance (incompatible with the nominal values shown on the Brake Manuals).</p> <p><strong>Solutions: 1.2</strong> - Replace the Brake. Purchase services and repair from Vulkan.</p> <p><strong>Possible Cause: 1</strong> - The instantaneous (peak) value of the power supply output current (shown in M004) has exceeded 200% of the power supply maximum current.</p> <p><strong>Fault Detection: 1.3</strong> - Low electrical insulation on the Brake coil.</p> <p><strong>Solutions: 1.3</strong> - Replace the Brake. Purchase services and repair from Vulkan.</p> <p><strong>Possible Cause: 1</strong> - The instantaneous (peak) value of the power supply output current (shown in M004) has exceeded 200% of the power supply maximum current.</p> <p><strong>Fault Detection: 1.4</strong> - The power supply cables between the power supply and the coil are shorted. Low impedance connected to the power supply output.</p> <p><strong>Solutions: 1.4</strong> - Replace damaged cables on the Brake power supply line.</p>",
+      "label": "Output Overcurrent."
     },
-    "en": {
-      "A001": {
-        "label": "Field failure"
-      },
-      "A002": {
-        "description": "The contact relating to the thermo switch assembled in the size (V317) heatsink is open, thus signalling that the max. allowable temperature has been exceeded.\n\nNOTE!\n\n\tControl environmental conditions of the installation.\n\tControl the working cycle.",
-        "label": "Heatsink Overtemperature"
-      },
-      "A003": {
-        "description": "The instantaneous value (peak value) of the output current M004 (Iout) has exceeded 200 % of the V317 power supply maximum current. NOTE! Control coil resistance Control output cable integrity.",
-        "label": "Output DC Over Current"
-      },
-      "A004": {
-        "label": "Output Load Loss"
-      },
-      "A005": {
-        "label": "Unnamed alarm"
-      },
-      "A006": {
-        "description": "<![CDATA[The frequency of the grid varies more than the max. allowable value, equal to 500 μs between two mains periods. This alarm may occur only when the V317 power supply is enabled. This alarm may be disabled using parameter C153 and continuous autoreset using parameter C093.\n\nNOTE!\n\n\tMake sure that voltage and frequency of the grid are in the allowed range. See V317 power supply ratings (4.4 - Ratings).]]>",
-        "label": "Unstable Mains Frequency"
-      },
-      "A007": {
-        "description": "Failure of one of the three mains phases, or more than one. This alarm may occur only when the V317 power supply is enabled. This alarm may be disabled using parameter C154 and continuous autoreset using parameter C093.\n\nNOTE!\n\n\tMake sure that voltage and frequency of the grid are in the allowed range. See V317 power supply ratings (4.4 - Ratings).",
-        "label": "Mains Failure"
-      },
-      "A008": {
-        "label": "Speed Feedback Failure"
-      },
-      "A009": {
-        "label": "Field OverCurrent"
-      },
-      "A010": {
-        "label": "Brake Coil OverVoltage"
-      },
-      "A011": {
-        "label": "L out of Range"
-      },
-      "A012": {
-        "description": "Frequency M008 (MFreq) of the mains is over 70 Hz or is under 40 Hz. This alarm may occur only when the V317 power supply is enabled. Set continuous autoreset using parameter C093.\n\nNOTE!\n\n\tMake sure that voltage and frequency of the grid are in the allowed range. See V317 power supply ratings (4.4 - Ratings).",
-        "label": "Frequency out of Range"
-      },
-      "A013": {
-        "description": "Failure of the circuits supplying the synchronizing signals of the mains three-phase voltage. This alarm may trip only when the ENABLE digital input is active. Set continuous autoreset using parameter C093.\n\nNOTE!\n\n\tMake sure that voltage and frequency of the grid are in the allowed range. See V317 power supply ratings (4.4 - Ratings).",
-        "label": "Missing Synchronization"
-      },
-      "A014": {
-        "label": "R out of Range"
-      },
-      "A015": {
-        "label": "AutoTune Error"
-      },
-      "A016": {
-        "description": "<![CDATA[The grid voltage (Vmains) has exceeded the 15% of 480 VAC. This alarm may trip only when the ENABLE digital input is active. It may be delayed using parameter C141 and disabled using parameter C157.\n\nNOTE!\n\n\tMake sure that voltage and frequency of the grid are in the allowed range. See V317 power supply ratings (4.4 - Ratings).]]>",
-        "label": "Mains OverVoltage"
-      },
-      "A017": {
-        "description": "<![CDATA[Value M009 of power section mains voltage (Vmains) is 15% under 220 VAC in case of drives which can regenerate mains energy (2nd and/or 4th quadrant enabled). This alarm may occur only when the ENABLE digital input is active. It may be delayed using parameter C141 and disabled using parameter C157. Set continuous autoreset using parameter C093.\n\tThe alarm delay set through par. C141 is active only if the supply voltage is not under 140 VAC and if the V317 power supply is working on the 1st quadrant, otherwise the alarm will immediately trip.\n\nNOTE!\n\n\tMake sure that voltage and frequency of the grid are in the allowed range. See V317 power supply ratings (4.4 - Ratings).]]>",
-        "label": "Mains UnderVoltage"
-      },
-      "A018": {
-        "label": "AutoTune Interrupted"
-      },
-      "A019": {
-        "label": "AutoTune Limitation"
-      },
-      "A020": {
-        "description": "The brake doesn’t open with the V317 power supply enabled\n\nNOTE!\n\n\tCheck the brake.\n\tCheck power and control wires between V317 power supply and brake microswitch.\n\tCheck the adjustment of the microswitch that signals the opening of the brake.\n\tCheck the programming of call (C000) and economic current (P128).\n\tCheck the programming of brake opening time confirmation P177.",
-        "label": "External Failure 1 (Brake opening fault)"
-      },
-      "A021": {
-        "description": "Brake overtemperature. The brake I2t trip depends on the value programmed in parameters C001 (current for thermal protection) and C002 (Time Constant for Thermal Protection).\n\nNOTE!\n\n\tAfter this alarm is trigged, wait for some minutes before resetting.\n\tCheck the programming of call, economic current and the setting of the protection (see programming guide).\n\tCheck the temperature of the coil.",
-        "label": "Brake I2t Trip"
-      },
-      "A022": {
-        "label": "Drive It Trip"
-      },
-      "A023": {
-        "label": "Ifld UnderLimited"
-      },
-      "A024": {
-        "description": "At the size power on, the alarm trips:\n\ta. If EEPROM is missing.\n\tb. If EEPROM is not programmed.\n\nWARNING!\n\n\tThis alarm cannot be deleted. Please contact VULKAN DRIVE TECH.",
-        "label": "Missing or blank EEPROM"
-      },
-      "A025": {
-        "description": "The content of some part in EEPROM work area has been changed.\n\nWARNING!\n\n\tTry to reset. If the error persists, contact VULKAN DRIVE TECH.",
-        "label": "EEPROM WorkArea Failure"
-      },
-      "A026": {
-        "label": "EEPROM BackupArea Failure"
-      },
-      "A027": {
-        "label": "Serial Link Failure"
-      },
-      "A028": {
-        "label": "FieldBus Failure"
-      },
-      "A029": {
-        "description": "Worn pads\n\nNOTE!\n\n\tIf the CDPG 24V that monitors pad wear is installed, change the brake pads.\n\tIf the CDPG 24V is not installed, make sure that the C3 terminal is connected to C2.",
-        "label": "External Failure 2 (Brake Worn Pads)"
-      },
-      "A030": {
-        "label": "External Failure 3"
-      },
-      "A031": {
-        "description": "Changes to the EEPROM data detected when turning the equipment ON. This data cannot be accessed by the user.\n\nNOTE!\n\n\tThis alarm cannot be deleted. Please contact VULKAN DRIVE TECH.",
-        "label": "Internal EEPROM Failure"
-      },
-      "A032": {
-        "description": "Reset of the microcontroller.\n\nWARNING!\n\n\tProbably the alarm was caused by an electromagnetic disturbance, try to reset it. If the alarm persists, contact VULKAN DRIVE TECH.",
-        "label": "Microcontroller Reset"
-      },
-      "A033": {
-        "description": "An unknown alarm has been stored. In that case, you just need to reset the alarm.",
-        "label": "Unknown Failure"
-      },
-      "W001": {
-        "label": "Unnamed warning"
-      },
-      "W002": {
-        "label": "Speed FeedBack switched to Varm"
-      },
-      "W003": {
-        "label": "<![CDATA[Hardware Limit Current < 100%]]>"
-      },
-      "W004": {
-        "label": "Open-Close ENABLE to run"
-      },
-      "W005": {
-        "label": "Open-Close START to run"
-      },
-      "W006": {
-        "label": "Backup Values Stored in RAM"
-      },
-      "W007": {
-        "label": "Default Values Stored in RAM"
-      },
-      "W008": {
-        "label": "EEPROM WorkArea Failure"
-      },
-      "W009": {
-        "label": "EEPROM BackupArea Failure"
-      },
-      "WXXX": {
-        "label": "Alarm/warning out of range"
-      }
+    "A006": {
+      "description": "<p><strong>Possible Cause: 1</strong> - The power line frequency varies more than the max. allowable value, equal to 500 µs between two mains periods.</p> <p><strong>Fault Detection: 1.1</strong> - Oscillations on the three-phase input of the power supply. Poor contact on the three-phase power supply terminals.</p> <p><strong>Solutions: 1.1</strong> - Check the conditions of all cables and terminals in your electrical installation, from the source to the three-phase power supply input.</p> <p><strong>Possible Cause: 1</strong> - The power line frequency varies more than the max. allowable value, equal to 500 µs between two mains periods.</p> <p><strong>Fault Detection: 1.2</strong> - Frequency fluctuations on the three-phase electrical power line.</p> <p><strong>Solutions: 1.2</strong> - Check if other electrical loads connected to the same electrical power line as the V317 power supply are affecting the sinusoidal supply for the power supply.</p> <p><strong>NOTE!</strong><br>This alarm is inhibited on V317 power supply (C153 = 0); thus, by default, the power supply does not display this fault. Auto-reset of this alarm is also set (C093 = 1).</p>",
+      "label": "Unstable Mains Frequency."
+    },
+    "A007": {
+      "description": "<p><strong>Possible Cause: 1</strong> - One or more phases on V317 power supply input are faulty.</p> <p><strong>Fault Detection: 1.1</strong> - Oscillations on the three-phase input of the power supply or phase(s) absent or poor contact on the terminals for three-phase power supply.</p> <p><strong>Solutions: 1.1</strong> - Check the conditions of all cables and terminals in your electrical installation, from the source to the three-phase power supply input.</p> <p><strong>NOTE!</strong> This alarm is inhibited on V317 power supply (C153 = 0); thus, by default, the power supply does not display this fault. Auto-reset of this alarm is also set (C093 = 1).</p>",
+      "label": "Grid Power Failure."
+    },
+    "A012": {
+      "description": "<p><strong>Possible Cause: 1</strong> - Frequency (M008– MFreq) of the mains is over 70Hz or under 40Hz.</p> <p><strong>Fault Detection: 1.1</strong> - The three-phase input for the power supply is at a frequency that is out of the rated range of values.</p> <p><strong>Solutions: 1.1</strong> - Check if the three-phase power connected to the power supply input is proper for the rated frequency range.</p> <p><strong>Possible Cause: 1</strong> - Frequency (M008– MFreq) of the mains is over 70Hz or under 40Hz.</p> <p><strong>Fault Detection: 1.2</strong> - The three-phase supply for the V317 power supply is not from a sinusoidal three-phase supply.</p> <p><strong>Solutions: 1.2</strong> - Use the three-phase power supply from a proper supply point. Reduce voltage oscillations caused by other non-linear loads.</p> <p><strong>NOTE!</strong></p> <p>Auto-reset of this alarm is also set (C093 = 1).</p>",
+      "label": "Frequency out of Range"
+    },
+    "A013": {
+      "description": "<p><strong>Possible Cause: 1</strong> - Failure of the circuits supplying the synchronization signals of the three-phase mains at the V317 power supply.</p> <p><strong>Fault Detection: 1.1</strong> - Internal boards of the power supply do not identify the phase sequence from the mains.</p> <p><strong>Solutions: 1.1</strong> - Check the electrical wiring, ensuring that L1, L2, and L3 terminals on the V317 power supply are connected to the R, S, and T phases, respectively. Turn the power supply OFF and ON. Replace the power supply.</p> <p><strong>NOTE!</strong> Auto-reset of this alarm is also set (C093 = 1).</p>",
+      "label": "No Synchronization"
+    },
+    "A016": {
+      "description": "<p><strong>Possible Cause: 1</strong> The mains voltage for V317 power supply exceeded 480 VAC by 15%.</p> <p><strong>Fault Detection: 1.1</strong> Measuring the voltage at L1, L2, and L3 power supply input terminals. Monitoring the input voltage on M009 parameter at the KeyPad (MMI), RemoteDrive Software, or VConnect Application</p> <p><strong>Solutions: 1.1</strong> Fix the three-phase power supply at the converter input.</p> <p><strong>Possible Cause: 1</strong> The mains voltage for V317 power supply exceeded 480 VAC by 15%.</p> <p>Fault Detection: 1.2 Measuring the voltage at L1, L2, and L3 power supply input terminals. Monitoring the input voltage on M009 parameter at the KeyPad (MMI), RemoteDrive Software, or VConnect Application</p> <p><strong>Solutions: 1.2</strong> Use the three-phase power supply from a proper supply point.</p> <p><strong>Possible Cause: 1</strong> The mains voltage for V317 power supply exceeded 480 VAC by 15%.</p> <p><strong>Fault Detection: 1.3</strong> Measuring the voltage at L1, L2, and L3 power supply input terminals. Monitoring the input voltage on M009 parameter at the KeyPad (MMI), RemoteDrive Software, or VConnect Application</p> <p><strong>Solutions: 1.3</strong> Check if other electrical loads connected to the same V317 power supply line are affecting the voltage levels for the power supply.</p> <p><strong>NOTE!</strong><br> This alarm is inhibited on V317 power supply (C157 = 0); thus, by default, the power supply does not display this fault. Auto-reset of this alarm is also set (C093 = 1).</p>",
+      "label": "Mains Overvoltage"
+    },
+    "A017": {
+      "description": "<p><strong>Possible Cause: 1</strong> The mains voltage for V317 power supply is below 220 VAC by 15% or more.</p> <p><strong>Fault Detection: 1.1</strong> Measuring the voltage at L1, L2, and L3 power supply input terminals. Monitoring the input voltage on M009 parameter at the KeyPad (MMI), RemoteDrive Software, or VConnect Application.</p> <p><strong>Solutions: 1.1</strong> Fix the three-phase power supply at the converter input.</p> <p><strong>Possible Cause: 1</strong> The mains voltage for V317 power supply is below 220 VAC by 15% or more.</p> <p><strong>Fault Detection: 1.2</strong> Measuring the voltage at L1, L2, and L3 power supply input terminals. Monitoring the input voltage on M009 parameter at the KeyPad (MMI), RemoteDrive Software, or VConnect Application.</p> <p><strong>Solutions: 1.2</strong> Use the three-phase power supply from a proper supply point.</p> <p><strong>Possible Cause: 1</strong> The mains voltage for V317 power supply is below 220 VAC by 15% or more.</p> <p><strong>Fault Detection: 1.3</strong> Measuring the voltage at L1, L2, and L3 power supply input terminals. Monitoring the input voltage on M009 parameter at the KeyPad (MMI), RemoteDrive Software, or VConnect Application.</p> <p><strong>Solutions: 1.3</strong> Fix the voltage instabilities on the three-phase voltage that is connected to the V317 power supply input.</p> <p><strong>Possible Cause: 1</strong> The mains voltage for V317 power supply exceeded 480 VAC by 15%.</p> <p><strong>Fault Detection: 1.4</strong> Measuring the voltage at L1, L2, and L3 power supply input terminals. Monitoring the input voltage on M009 parameter at the KeyPad (MMI), RemoteDrive Software, or VConnect Application</p> <p><strong>Solutions: 1.4</strong> Check your electrical installation and the conditions and gauges of all cables and terminals in your electrical installation, from the source to the three-phase power supply input.</p> <p><strong>Possible Cause: 1</strong> The mains voltage for V317 power supply exceeded 480 VAC by 15%.</p> <p><strong>Fault Detection: 1.1</strong> Measuring the voltage at L1, L2, and L3 power supply input terminals. Monitoring the input voltage on M009 parameter at the KeyPad (MMI), RemoteDrive Software, or VConnect Application</p> <p><strong>Solutions: 1.1</strong> Check if other electrical loads connected to the same V317 power supply line are affecting the voltage levels for the power supply.</p> <p><strong>NOTE!</strong><br> This alarm is inhibited on V317 power supply (C157 = 0); thus, by default, the power supply does not display this fault. Auto-reset of this alarm is also set (C093 = 1).</p>",
+      "label": "Mains Undervoltage."
+    },
+    "A020": {
+      "description": "<p><strong>Possible Cause: 1</strong> The brake open microswitch (sensor) is not in use, but there is no connection between C1 and C3.</p> <p><strong>Fault Detection: 1.1</strong> After receiving the Open Brake command (Terminal C2 = 24 VDC), the brake closes after the call current time elapses.</p> <p><strong>Solutions: 1.1</strong> Install a jumper between terminals C1 and C3 if the Brake open microswitch is not in use.</p> <p><strong>Possible Cause: 2</strong> Power supply current and time settings are insufficient for brake open operation.</p> <p><strong>Fault Detection: 2.1</strong> After receiving the Open Brake command (terminal C2 = 24 VDC), the brake starts opening, but immediately closes.</p> <p><strong>Solutions: 2.1</strong> Check and fix the call current (C000) setting to comply with the characteristics of the installed brake.</p> <p><strong>Possible Cause: 2</strong> Power supply current and time settings are insufficient for brake open operation.</p> <p><strong>Fault Detection: 2.2</strong> After receiving the Open Brake command (terminal C2 = 24 VDC), the brake starts opening, but immediately closes.</p> <p><strong>Solutions: 2.2</strong> Check and fix the call current time (P171) setting.</p> <p><strong>Possible Cause: 2</strong> Power supply current and time settings are insufficient for brake open operation.</p> <p><strong>Fault Detection: 2.3</strong> After receiving the Open Brake command (terminal C2 = 24 VDC), the brake starts opening, but immediately closes.</p> <p><strong>Solutions: 2.3</strong> Check and fix the economic current time (P128) setting.</p> <p><strong>Possible Cause: 2</strong> Power supply current and time settings are insufficient for brake open operation.</p> <p><strong>Fault Detection: 2.4</strong> After receiving the Open Brake command (Terminal C2 = 24 VDC), the brake closes immediately after receiving the brake open command.</p> <p><strong>Solutions: 2.4</strong> Set P177 parameter to a value that is slightly higher than P171 to ensure that the power supply receives 24 VDC at its C3 terminal (Brake Open signal) before the A020 power supply alarm triggers.</p><p><strong>Possible Cause: 3</strong> Excessive gap between pads and disc/pulley or force above the rated value set on the brake.</p> <p><strong>Fault Detection: 3.1</strong> After receiving the Open Brake command (terminal C2 = 24 VDC), the brake starts opening, but immediately closes.</p> <p><strong>Solutions: 3.1</strong> Adjust and ensure that the gaps between brake pads and disc, or between shoes and pulley, are of the rated value.</p> <p><strong>Possible Cause: 3</strong> Excessive gap between pads and disc/pulley or force above the rated value set on the brake.</p> <p><strong>Fault Detection: 3.2</strong> After receiving the Open Brake command (terminal C2 = 24 VDC), the brake starts opening, but immediately closes.</p> <p><strong>Solutions: 3.2</strong> Check information on the brake manual. These forces are rarely changed. Adjust the force for the design values, if required.</p> <p><strong>Possible Cause: 3</strong> Excessive gap between pads and disc/pulley or force above the rated value set on the brake.</p> <p><strong>Fault Detection: 3.3</strong> After receiving the Open Brake command (Terminal C2 = 24 VDC), the brake closes after the call current time elapses.</p> <p><strong>Solutions: 3.3</strong> Make sure that there is no mechanical dust blockage on the air gap between the armature and the brake housing.</p> <p><strong>Possible Cause: 3</strong> Excessive gap between pads and disc/pulley or force above the rated value set on the brake.</p> <p><strong>Fault Detection: 3.4</strong> After receiving the Open Brake command (Terminal C2 = 24 VDC), the brake closes after the call current time elapses.</p> <p><strong>Solutions: 3.4</strong> Check information on the brake manual. These forces rarely change. Adjust the force for the design values, if required.</p><p><strong>Possible Cause: 4</strong> Signaling fault at the microswitch (Brake Open Sensor).<br> <strong>Fault Detection: 4.1</strong> The microswitch or sensor installed on the Brake fails and interrupts the 24 VDC signal return to C3 terminal on the power supply while the brake is opening (Terminal C2 = 24 VDC) or after being opened.<br><strong> Solutions: 4.1</strong> Set the brake microswitch.</p> <p><strong>Possible Cause: 4</strong> Signaling fault at the microswitch (Brake Open Sensor).<br> <strong>Fault Detection: 4.2</strong> The microswitch or sensor installed on the Brake fails and interrupts the 24 VDC signal return to C3 terminal on the power supply while the brake is opening (Terminal C2 = 24 VDC) or after being opened.<br> Solutions: 4.2 Check if the sensor receives 24 VDC and returns this value to C3 terminal when the brake is open.</p> <p><strong>Possible Cause: 4</strong> Signaling fault at the microswitch (Brake Open Sensor).<br> <strong>Fault Detection: 4.3</strong> The microswitch or sensor installed on the Brake fails and interrupts the 24 VDC signal return to C3 terminal on the power supply while the brake is opening (Terminal C2 = 24 VDC) or after being opened.<br> <strong>Solutions: 4.3</strong> Check the integrity of cables, connectors and connections between the microswitch and C3 terminal for power supply command.</p><p><strong>Possible Cause: 5</strong> Other alarms (A002, A003, A006, A007, A012, A013, A016, and A017), when trigged, are usually overlapped by A020 alarm and the brake does not open or does no close after opening.</p> <p><strong>Fault Detection: 5.1</strong> After receiving the Open Brake command (terminal C2 = 24 VDC), the brake starts opening, but immediately closes.</p> <p><strong>Solutions: 5.1</strong> Install a temporary jumper between C1 and C3 terminals to prevent A020 alarm from occurring. (Terminal C2 = 24 VDC), check the precedence of other alarms, Follow the steps in this chapter for faults/alarms (A002, A003, A006, A007, A012, A013, A016, and A017) and fix properly. After finding the solution, remove this jumper and restore the installation to the original state.</p> <p><strong>Possible Cause: 5</strong> Other alarms (A002, A003, A006, A007, A012, A013, A016, and A017), when trigged, are usually overlapped by A020 alarm and the brake does not open or does no close after opening.</p> <p><strong>Fault Detection: 5.2</strong> After receiving the Open Brake command (Terminal C2 = 24 VDC), the brake closes immediately after receiving the brake open command.</p> <p><strong>Solutions: 5.2</strong> Install a temporary jumper between C1 and C3 terminals to prevent A020 alarm from occurring. (Terminal C2 = 24 VDC), check the precedence of other alarms, Follow the steps in this chapter for faults/alarms (A002, A003, A006, A007, A012, A013, A016, and A017) and fix properly. After finding the solution, remove this jumper and restore the installation to the original state.</p> <p><strong>NOTE!</strong><br>In some cases, for a better fault detection, it might be required to disconnect the signal from the sensor//microswitch from the power supply and connect C1 and C3 terminals to prevent A020 alarm, making easier to check other parameters or settings of the brake or its sensor/microswitch. After solving the fault, restore the original wiring.</p>",
+      "label": "External Fault 1 (Brake Opening Fault)."
+    },
+    "A021": {
+      "description": "<p><strong>Possible Cause: 1</strong> The number of power supply actuations per hour or minute has been exceeded and the brake coil may be overheated.<br> <strong>Fault Detection: 1.1</strong> The brake remains closed and does not open after a sequence of operations.<br> <strong>Solutions: 1.1</strong> Wait for a while. Turn OFF and ON the power supply.</p> <p><strong>Possible Cause: 1</strong> The number of power supply actuations per hour or minute has been exceeded and the brake coil may be overheated.<br> <strong>Fault Detection: 1.2</strong> The brake remains closed and does not open after a sequence of operations.<br> <strong>Solutions: 1.2</strong> The value for the current constant set for this alarm is too low. Increase C001 parameter setting.</p> <p><strong>Possible Cause: 1</strong> The number of power supply actuations per hour or minute has been exceeded and the brake coil may be overheated.<br> <strong>Fault Detection: 1.3</strong> The brake remains closed and does not open after a sequence of operations.<br> <strong>Solutions: 1.3</strong> The value for the time constant set for this alarm is too low. Increase C002 parameter setting.</p> <p><strong>Possible Cause: 1</strong> The number of power supply actuations per hour or minute has been exceeded and the brake coil may be overheated.<br> <strong>Fault Detection: 1.4</strong> The brake remains closed and does not open after a sequence of operations.<br> <strong>Solutions: 1.4</strong> Decrease the number of actuations/hour or actuations/minute between the power supply and brakes.</p> <p><strong>Possible Cause: 1</strong> The number of power supply actuations per hour or minute has been exceeded and the brake coil may be overheated.<br> <strong>Fault Detection: 1.5</strong> The brake remains closed and does not open after a sequence of operations.<br> <strong>Solutions: 1.5</strong> Disable the alarm, setting C002 to 0.</p> <p><strong>NOTE!</strong><br> This alarm is usually inhibited on V317 power supply (C002 = 0); thus, by default, the power supply does not display this fault. <br> You can enable this monitoring/alarm by setting:<br> a)\tParameter C001 = % average current value (calculated based on inactive time + active time of the power supply and respective recovery and economic currents).<br> b)\tParameter C002 = estimated time for an overheating fault of the brake coil.</p>",
+      "label": "Brake I2t Trip."
+    },
+    "A024": {
+      "description": "<p><strong>Possible Cause: 1</strong> The EEPROM on the motherboard is missing or blank.</p>  <p><strong>Fault Detection: 1.1</strong> The power supply stops working and does not command the brake opening.</p> <p><strong>Solutions: 1.1</strong> Replace the power supply.</p>",
+      "label": " EEPROM Missing or Blank."
+    },
+    "A025": {
+      "description": "<p><strong>Possible Cause: 1</strong> Part of the content of the EEPROM work area has changed.</p> <p><strong>Fault Detection: 1.1</strong> The brake remains closed and does not open because the power supply has an active alarm or warning. A025 Alarm is displayed because parts of the data contents in the EEPROM work area have changed. After acknowledgement, this alarm must be reset. Then, as a consequence, a W006 or W008 Warning will be displayed.</p> <p><strong>Solutions: 1.1</strong> Reset this Alarm sending a 24 VDC pulse by closing a contact between C1 and C5 terminals, located on the V317 Power Supply. See the descriptions for W006 and W008 warnings; there you find the procedures to be followed when they occur. See also “Parameter Copy” chapter.</p> <p>Veja também o capítulo Cópia de Parâmetros (Parameter copy).</p>",
+      "label": "Wrong parameters in the EEPROM work area."
+    },
+    "A026": {
+      "description": "<p><strong>Possible Cause: 1</strong> Part of the content of the EEPROM work area has changed.</p> <p><strong>Fault Detection: 1.1</strong> The brake remains closed and does not open because the power supply has an active alarm or warning. A026 Alarm is displayed because parts of the data contents in the EEPROM backup area have changed. Reset this alarm soon after acknowledgement. Then, as a consequence, a W007 or W009 Warning will be displayed.</p> <p><strong>Solutions: 1.1</strong> Reset this Alarm sending a 24 VDC pulse by closing a contact between C1 and C5 terminals, located on the V317 Power Supply.  See the descriptions for W007 and W009 warnings; there you find the procedures to be followed when they occur. See also “Parameter Copy” chapter.</p>",
+      "label": "Parameter errors in the EEPROM backup area"
+    },
+    "A029": {
+      "description": "<p><strong>Possible Cause: 1</strong> The pad wear detection relay (CDPG) is not in use.</p> <p><strong>Fault Detection: 1.1</strong> The brake stays closed and does not open, but the brake pads are in proper conditions for use.</p> <p><strong>Solutions: 1.1</strong> Install a jumper between C1 and C4 terminals.</p> <p><strong>Possible Cause: 2</strong>The pad wear detection relay (CDPG) signals that the brake pads are worn.</p> <p><strong>Fault Detection: 2.1</strong> The worn brake pads and its sensors signal that it is time for replacement.</p> <p><strong>Solutions: 2.2</strong> Replace brake pads and reset the CFPG relay.</p> <p><strong>Possible Cause: 3</strong> The pad wear detection relay (CDPG) installed is not powered, has an active alarm, or is damaged.</p> <p><strong>Fault Detection: 3.1</strong> The brake stays closed and does not open, but the brake pads are in proper conditions for use.</p> <p><strong>Solutions: 3.1</strong> Follow troubleshooting steps for the pad wear detection relay (CDPG). If required, replace the CDPG.</p>",
+      "label": "External Fault 2 (Replace Brake Pads)."
+    },
+    "A031": {
+      "description": "<p><strong>Possible Cause: 1</strong> Internal EEPROM fault.</p> <p><strong>Fault Detection: 1.1</strong> The power supply stops working and does not control brake opening. This occurs when the Power Supply is turned ON and the user cannot access the data in the EEPROM work area, and the data have changed. This alarm cannot be reset. See also “Parameter Copy” chapter.</p> <p><strong>Solutions: 1.1</strong> Replace V317 Power Supply.</p>",
+      "label": "Data changes in the EEPROM Work Area"
+    },
+    "A032": {
+      "description": "<p><strong>Possible Cause: 1</strong> The microcontroller might have been restarted due to an electromagnetic disturbance.</p> <p><strong>Fault Detection: 1.1</strong> The power supply stops working and does not control brake opening.</p> <p><strong>Solutions: 1.1</strong> Turn the power supply OFF and ON.</p> <p><strong>Possible Cause: 1</strong> The microcontroller might have been restarted due to an electromagnetic disturbance.</p> <p><strong>Fault Detection: 1.2</strong> The power supply stops working and does not control brake opening.</p> <p><strong>Solutions: 1.2</strong> Replace the power supply.</p>",
+      "label": "Microcontroller restarted"
+    },
+    "A033": {
+      "description": "<p><strong>Possible Cause: 1</strong> Exceptionally, other faults and causes.</p> <p><strong>Fault Detection: 1.1</strong> The power supply stops working and does not control brake opening.</p> <p><strong>Solutions: 1.1</strong> Replace the power supply.</p><p><strong>NOTE!</strong> <br> Whenever a trigged alarm is not described in this section, contact Vulkan Technical Assistance, as informed on Section 1.8, in this manual.</p>",
+      "label": "Other faults."
+    },
+    "W004": {
+      "description": "<p><strong>Possible Cause: 1</strong> - A safety setting is disabling the CC current output of the V317 Power Supply, preventing the brake from opening.</p> <p><strong>Fault Detection: 1.1</strong> - The open brake command remains active (C2 terminal = 24 VDC) during an energization event or a re-energization of V317 Power Supply.</p> <p><strong>Solutions: 1.1</strong> - Ensure that the open brake command is disabled by opening the contact between C1 and C2 (C2 terminal = 0 VDC) before energizing or re-energizing V317 Power Supply. Send an open brake command by closing the contact between C1 and C2 (or C2 = 24 VDC) only after energizing or re-energizing the power supply. Also ensure that there is no other active alarm.</p> <p><strong>Possible Cause: 1</strong> - A safety setting is disabling the CC current output of the V317 Power Supply, preventing the brake from opening.</p> <p><strong>Fault Detection: 1.2</strong>- The open brake command remains active (C2 terminal = 24 VDC) after an alarm event and/or after a reset pulse (between C1 and C5 terminals).</p> <p>Solutions: 1.2 - Ensure that the open brake command is disabled by opening the contact between C1 and C2 (C2 terminal = 0 VDC) before energizing or re-energizing V317 Power Supply. Send an open brake command by closing the contact between C1 and C2 (or C2 = 24 VDC) only after clearing the alarm condition and resetting the alarm.</p>",
+      "label": "Safe restart after energization, or Alarm on V317 Power Supply"
+    },
+    "W006": {
+      "description": "<p><strong>Possible Cause: 1</strong> - This warning can be trigged (displayed) after resetting an A025 alarm (EEPROM work area fault).</p> <p><strong>Fault Detection: 1.1</strong> - The brake remains closed and does not open because the power supply has an active alarm or warning. V317 power supply keeps displaying the Warning, and this means that the parameter backup values have just been loaded into RAM memory.  User attention is required for correcting the parameters in the EEPROM work area.</p> <p><strong>Solutions: 1.1</strong> - If you are sure that you already made a backup copy of the defined parameters before this alarm was trigged: Define P002 = 3: Backup Restore. Make sure that EEPROM work and backup areas have the same contents, defining P002 = 2:WorkAreaBackup. See also “Parameter Copy” chapter.</p> <p><strong>Possible Cause: 2</strong> - This warning can be trigged (displayed) after resetting an A025 alarm (EEPROM work area fault).</p> <p><strong>Fault Detection: 2.2</strong> - The brake remains closed and does not open because the power supply has an active alarm or warning. V317 power supply keeps displaying the Warning, and this means that the parameter backup values have just been loaded into RAM memory.  User attention is required for correcting the parameters in the EEPROM work area.</p> <p><strong>Solutions: 2.2</strong> - If you are not sure about having made a backup copy of the defined parameters before this alarm was trigged: Define P002 = 1: DefaultRestore do restore the Factory defaults. Then make the proper parameter settings for your Brake. Then make sure that EEPROM work and backup areas have the same contents, defining P002 = 2:WorkAreaBackup. See also “Parameter Copy” chapter.</p>",
+      "label": "Backup values stored in RAM."
+    },
+    "W007": {
+      "description": "<p><strong>Possible Cause: 1</strong> - This W007 warning can be trigged (displayed) after resetting an A026 alarm (EEPROM backup area fault).</p> <p><strong>Fault Detection: 1.1</strong> - The brake remains closed and does not open because the power supply has an active alarm or warning. The Power Supply keeps displaying the Warning, and this means that the default parameters have just been loaded into RAM memory. User attention is required for redefining the work parameters and storing them in the EEPROM work and backup areas.</p> <p><strong>Solutions: 1.1</strong> - We recommend that you overwrite the EEPROM work area with the factory defaults. Execute P002 command, defining P002 = 1: DefaultRestore. Then redefine the parameters for the connected Brake. Then make sure that EEPROM work and backup areas have the same contents, defining P002 = 2:WorkAreaBackup. See also “Parameter Copy” chapter.</p>",
+      "label": "Default values stored in RAM."
+    },
+    "W008": {
+      "description": "<p><strong>Possible Cause: 1</strong> - This W008 warning can be trigged (displayed) after resetting an A025 alarm (EEPROM work area fault).</p> <p><strong>Fault Detection: 1.1</strong> - The brake remains closed and does not open because the power supply has an active alarm or warning. V317 power supply keeps displaying this Warning, and this means a fault while copying the work area into the EEPROM work area due to changes of the values in the work area. User attention is required for correcting the parameters in the EEPROM work area.</p> <p><strong>Solutions: 1.1</strong> - We recommend that you overwrite the EEPROM work area with the factory defaults. Execute P002 command, defining P002 = 1: DefaultRestore. Then redefine the parameters for the connected Brake. Then make sure that EEPROM work and backup areas have the same contents, defining P002 = 2:WorkAreaBackup. See also “Parameter Copy” chapter.</p>",
+      "label": "Wrong parameters in the EEPROM work area"
+    },
+    "W009": {
+      "description": "<p><strong>Possible Cause: 1</strong> - This W009 warning can be trigged (displayed) after resetting an A026 alarm (EEPROM backup area fault).</p> <p><strong>Fault Detection: 1.1</strong> - The brake remains closed and does not open because the power supply has an active alarm or warning. The power supply keeps displaying this Warning, and this means a fault while copying the work area into the EEPROM work area due to changes of the values in the work area. User attention is required for redefining the work parameters and storing them in the EEPROM work and backup areas</p> <p><strong>Solutions: 1.1</strong> - We recommend that you overwrite the EEPROM work area with the factory defaults. Execute P002 command, defining P002 = 1: DefaultRestore. Then redefine the parameters for the connected Brake. Then make sure that EEPROM work and backup areas have the same contents, defining P002 = 2:WorkAreaBackup. See also “Parameter Copy” chapter.</p>",
+      "label": "Parameter error in the EEPROM work area"
     }
+  },
+  "es": {
+    "A002": {
+      "description": "<p><strong>Causa: 1</strong> El convertidor identificó sobre temperatura en su disipador de calor y su interruptor térmico está con el contacto abierto.</p><strong> Detección de Falla: 1.1</strong> El convertidor está suministrando más corriente DC que la necesaria para la operación del Freno.<p><strong>Soluciones: 1.1</strong> Verificar en el convertidor, si la programación de corrientes del Freno está correcta (parámetros C000, P128 y P171).</p> <hr> <p><strong>Causa: 1</strong> El convertidor identificó sobre temperatura en su disipador de calor y su interruptor térmico está con el contacto abierto.</p> <p><strong> Detección de Falla: 1.2</strong> La cantidad de operaciones del freno está por sobre el máximo permitido para el conjunto (convertidor y freno).</p> <p><strong>Soluciones: 1.2</strong> Controlar la frecuencia de maniobras del convertidor / Frenos que puede estar por encima de lo permitido.</p> <hr> <p><strong>Causa: 1</strong> El convertidor identificó sobre temperatura en su disipador de calor y su interruptor térmico está con el contacto abierto.</p> <p><strong> Detección de Falla: 1.3</strong> Cables rotos o mal contacto en el interruptor térmico conectado a las terminales CN22 de la placa de control del rectificador de potencia.</p> <p><strong>Soluciones: 1.3</strong> Sustituir el convertidor si no fuera posible reparar los cables rotos o el mal contacto en las terminales del interruptor.</p>",
+      "label": " Sobre Temperatura en el disipador de calor. "
+    },
+    "A003": {
+      "description": "<p> <strong>Causa: 1</strong> - El valor instantáneo (de pico) de la corriente de salida del convertidor (observado en M004) ha excedido el 200% de la corriente máxima del convertidor.</p> <p><strong>Detección de Falla: 1.1</strong> - Utilización de bobina de Freno equivocada.</p> <p><strong>Soluciones : 1.1</strong> - dentificar el freno utilizado y la resistencia nominal de su bobina.  Configurar parámetros (C000, P128 y P171) adecuados a la operación de la bobina utilizada.</p> <p><strong>Causa: 1</strong> - El valor instantáneo (de pico) de la corriente de salida del convertidor (observado en M004) ha excedido el 200% de la corriente máxima del convertidor.</p> <p><strong>Detección de Falla: 1.2</strong> - Bobina del freno averiada o resistencia eléctrica muy baja (incompatible con valores nominales indicado en los manuales del freno).</p> <p><strong>Soluciones : 1.2</strong> - Sustituir el Freno.  Comprar el reparo de Vulkan.</p> <p><strong>Causa: 2</strong> - El valor instantáneo (de pico) de la corriente de salida del convertidor (observado en M004) ha excedido el 200% de la corriente máxima del convertidor.</p> <p><strong>Detección de Falla: 2.1</strong> - Bajo aislamiento eléctrico en la bobina del Freno.</p> <p><strong>Soluciones : 2.1</strong> - Sustituir el Freno. Comprar el reparo de Vulkan.</p> <p><strong>Causa: 2</strong> - El valor instantáneo (de pico) de la corriente de salida del convertidor (observado en M004) ha excedido el 200% de la corriente máxima del convertidor.</p> <p><strong>Detección de Falla: 2.2</strong> - Cables de alimentación entre convertidor y bobina en cortocircuito.  Baja impedancia conectada a la salida del convertidor.</p> <p><strong>Soluciones : 2.2</strong> - Sustituir los cables averiados que están alimentando a la bobina del Freno.</p>",
+      "label": "Sobre corriente de salida"
+    },
+    "A006": {
+      "description": "<p><strong>Causa: 1</strong> - La frecuencia de la red eléctrica varía más que el valor máximo permitido, que es igual a 500µs entre dos períodos de la red eléctrica.</p> <p><strong>Detección de Falla: 1.1</strong> - Oscilación en la Tensión de alimentación trifásica de entrada del convertidor.  Mal contacto en las terminales de alimentación en la red trifásica.</p> <p><strong>Soluciones: 1.1</strong> - Verificar en su instalación eléctrica, el estado de todos los cables y terminales, desde el origen hasta la alimentación trifásica del convertidor.</p> <p><strong>Causa: 1</strong> - La frecuencia de la red eléctrica varía más que el valor máximo permitido, que es igual a 500µs entre dos períodos de la red eléctrica.</p> <p><strong>Detección de Falla: 1.2</strong> - La frecuencia de la red de alimentación eléctrica trifásica puede estar variando.</p> <p><strong>Soluciones: 1.2</strong> - Verificar si otras cargas eléctricas conectadas a la misma red del convertidor pueden estar afectando la alimentación senoidal trifásica del convertidor.</p> <p><strong>¡OBSERVACIÓN!</strong><br>Esa alarma se inhibe en el convertidor V317 (C153 = 0) Siendo así, por estándar, el convertidor no presentará esa Falla. El auto reset de esta alarma ya está también configurado (C093 = 1).</p>",
+      "label": "Frecuencia de la red eléctrica inestable."
+    },
+    "A007": {
+      "description": "<p><strong>Causa: 1</strong> - Falla en una o más fases en la red eléctrica de alimentación del convertidor V317.</p> <p><strong>Detección de Falla: 1.1</strong> - Oscilación en la Tensión de alimentación trifásica de entrada del convertidor. Falta de fase(s) o mal contacto en las terminales de alimentación en la red trifásica.</p> <p><strong>Soluciones: 1.1</strong> - Verificar en su instalación eléctrica, el estado de todos los cables y terminales, desde el origen hasta la alimentación trifásica del convertidor.</p> <p><strong>¡OBSERVACIÓN!</strong> Esa alarma se inhibe en el convertidor V317 (C153 = 0) Siendo así, por estándar, el convertidor no presentará esa Falla. El auto reset de esta alarma ya está también configurado (C093 = 1). </p>",
+      "label": " Falla en la alimentación de la red eléctrica."
+    },
+    "A012": {
+      "description": "<p><strong>Causa: 1</strong> - La frecuencia (M008 – Mfreq) de la red eléctrica está por sobre 70Hz o por debajo de 40Hz.</p> <p><strong>Detección de Falla: 1.1</strong> - La red de alimentación trifásica del convertidor está con su frecuencia fuera del alcance nominal establecido.</p> <p><strong>Soluciones: 1.1</strong> - Verificar si la alimentación trifásica conectada a la entrada del convertidor se encaja en su alcance nominal de frecuencia.</p> <p><strong>Causa: 1</strong> - La frecuencia (M008 – Mfreq) de la red eléctrica está por sobre 70Hz o por debajo de 40Hz.</p> <p><strong>Detección de Falla: 1.2</strong> - La alimentación trifásica del convertidor no es proveniente de una fuente sensorial trifásica.</p> <p><strong>Soluciones: 1.2</strong> - Utilizar la alimentación trifásica a partir de otro punto de alimentación apropiado.  Reduzca oscilaciones en la tensión de la red causadas por otras cargas no lineales.</p> <p><strong>¡OBSERVACIÓN!</strong></p> <p>El auto reset alarma ya está también configurado (C093 = 1).</p>",
+      "label": "Frecuencia de la red eléctrica fuera de la faja."
+    },
+    "A013": {
+      "description": "<p><strong>Causa: 1</strong> - Falla de los circuitos que suministran las señales de sincronización de la tensión trifásica de la red eléctrica en el convertidor.</p> <p><strong>Detección de Falla: 1.1</strong> - Placas internas del convertidor no identifican la secuencia de fases de la Red eléctrica.</p> <p><strong>Soluciones: 1.1</strong> - Verificar la Conexión eléctrica, garantizar que los bornes L1, L2 y L3 del convertidor, reciben las fases correspondientes a R, S, T. Apagar y encender el convertidor. Sustituir el convertidor.</p> <p><strong>¡OBSERVACIÓN!</strong> El auto reset alarma ya está también configurado (C093 = 1).</p>",
+      "label": "Falta de sincronización."
+    },
+    "A016": {
+      "description": "<p><strong>Causa: 1</strong> La tensión de la red eléctrica de alimentación del convertidor V317 ha excedido el 15% de 480VCA. </p> <p><strong>Detección de Falla: 1.1</strong> Midiendo la tensión en las terminales de entrada del convertidor L1, L2 y L3.  Monitoreando la tensión de entrada a través del parámetro M009 en el KeyPad (HMI), Software RemoteDrive o en el Aplicativo VConnect.</p> <p><strong>Soluciones: 1.1</strong> Corregir la alimentación trifásica conectada a la entrada del convertidor.</p> <p><strong>Causa: 1</strong> La tensión de la red eléctrica de alimentación del convertidor V317 ha excedido el 15% de 480VCA. </p> <p><strong>Detección de Falla: 1.1</strong> Midiendo la tensión en las terminales de entrada del convertidor L1, L2 y L3.  Monitoreando la tensión de entrada a través del parámetro M009 en el KeyPad (HMI), Software RemoteDrive o en el Aplicativo VConnect.</p> <p><strong>Soluciones: 1.2</strong> Utilizar la alimentación trifásica a partir de otro punto de alimentación apropiado.</p> <p><strong>Causa: 1</strong> La tensión de la red eléctrica de alimentación del convertidor V317 ha excedido el 15% de 480VCA. </p> <p><strong>Detección de Falla: 1.3</strong> Midiendo la tensión en las terminales de entrada del convertidor L1, L2 y L3. Monitoreando la tensión de entrada a través del parámetro M009 en el KeyPad (HMI), Software RemoteDrive o en el Aplicativo VConnect.</p> <p><strong>Soluciones: 1.3</strong> Verifique si las otras cargas eléctricas conectadas a la misma instalación del convertidor pueden estar alterando los niveles de tensión de la alimentación sinusoidal trifásica del convertidor.</p> <p><strong>¡OBSERVACIÓN!</strong><br> Esa alarma se inhibe en el convertidor V317 (C157 = 0). Siendo así, por estándar, el convertidor no presentará esa Falla. El auto reset de esta alarma ya está también configurado (C093 = 1).</p>",
+      "label": "Sobre tensión de la red eléctrica."
+    },
+    "A017": {
+      "description": "<p><strong>Causa: 1</strong> La tensión de la red eléctrica de alimentación del convertidor V317 está un 15% por debajo de 220VCA.</p> <p><strong>Detección de Falla: 1.1</strong> Midiendo la tensión en las terminales de entrada del convertidor L1, L2 y L3. Monitoreando la tensión de entrada a través del parámetro M009 en el KeyPad (HMI), Software RemoteDrive o en el Aplicativo VConnect.</p> <p><strong>Soluciones: 1.1</strong> Corregir la alimentación trifásica conectada a la entrada del convertidor.</p> <p><strong>Causa: 1</strong> La tensión de la red eléctrica de alimentación del convertidor V317 está un 15% por debajo de 220VCA.</p> <p><strong>Detección de Falla: 1.2</strong> Midiendo la tensión en las terminales de entrada del convertidor L1, L2 y L3. Monitoreando la tensión de entrada a través del parámetro M009 en el KeyPad (HMI), Software RemoteDrive o en el Aplicativo VConnect.</p> <p><strong>Soluciones: 1.2</strong> Utilizar la alimentación trifásica a partir de otro punto de alimentación apropiado.</p> <p><strong>Causa: 1</strong> La tensión de la red eléctrica de alimentación del convertidor V317 está un 15% por debajo de 220VCA.</p> <p><strong>Detección de Falla: 1.3</strong> Midiendo la tensión en las terminales de entrada del convertidor L1, L2 y L3. Monitoreando la tensión de entrada a través del parámetro M009 en el KeyPad (HMI), Software RemoteDrive o en el Aplicativo VConnect.</p> <p><strong>Soluciones: 1.3</strong> Solucione inestabilidades de la tensión en la red eléctrica trifásica que alimenta al convertidor. </p> <p><strong>Causa: 2</strong> La tensión de la red eléctrica de alimentación del convertidor V317 está un 15% por debajo de 220VCA.</p> <p><strong>Detección de Falla: 2.1</strong> Midiendo la tensión en las terminales de entrada del convertidor L1, L2 y L3. Monitoreando la tensión de entrada a través del parámetro M009 en el KeyPad (HMI), Software RemoteDrive o en el Aplicativo VConnect.</p> <p><strong>Soluciones: 2.1</strong> Verifique su instalación eléctrica, el dimensionado y el estado de todos los cables y terminales, desde el origen hasta la alimentación trifásica del convertidor.</p> <p><strong>Causa: 2</strong> La tensión de la red eléctrica de alimentación del convertidor V317 está un 15% por debajo de 220VCA.</p> <p><strong>Detección de Falla: 2.2</strong> Midiendo la tensión en las terminales de entrada del convertidor L1, L2 y L3. Monitoreando la tensión de entrada a través del parámetro M009 en el KeyPad (HMI), Software RemoteDrive o en el Aplicativo VConnect.</p> <p><strong>Soluciones: 2.2</strong> Verifique si las otras cargas eléctricas conectadas a la misma instalación del convertidor pueden estar alterando los niveles de tensión de la alimentación sinusoidal trifásica del convertidor.</p><p><strong>¡OBSERVACIÓN!</strong><br> Esa alarma se inhibe en el convertidor V317 (C157 = 0). Siendo así, por estándar, el convertidor no presentará esa Falla. El auto reset de esta alarma ya está también configurado (C093 = 1).</p>",
+      "label": "Tensión de la red eléctrica insuficiente."
+    },
+    "A020": {
+      "description": "<p><strong>Causa: 1</strong> Micro llave (sensor) de freno abierto no está siendo usada, sin embargo, no ha sido realizada la conexión entre C1 y C3.</p> <p><strong>Detección de Falla: 1.1</strong> Luego de recibir comando de abrir Freno (Borne C2 = 24Vcc), el freno se cierra luego de tener lugar el tiempo de corriente de llamada.</p> <p><strong>Soluciones: 1.1</strong> Hacer una conexión (jump) entre los bornes C1 y C3 si la micro llave de freno abierto no estuviera siendo utilizada.</p> <p><strong>Causa: 2</strong> Configuración de corriente y tiempos, en el convertidor, insuficientes para la operación de abertura del Freno.</p> <p><strong>Detección de Falla: 2.1</strong> Luego de recibir comando de abrir Freno (Borne C2 = 24Vcc), el freno inicia abertura, sin embargo, cierra enseguida.</p> <p><strong>Soluciones: 2.1</strong> Verificar y corregir la programación de la corriente de llamada (C000) para atender a las características del Freno instalado.</p> <p><strong>Causa: 2</strong> Configuración de corriente y tiempos, en el convertidor, insuficientes para la operación de abertura del Freno.</p> <p><strong>Detección de Falla: 2.2</strong> Luego de recibir comando de abrir Freno (Borne C2 = 24Vcc), el freno inicia abertura, sin embargo, cierra enseguida.</p> <p><strong>Soluciones: 2.2</strong> Verificar y corregir la programación del tiempo de corriente de llamada (P171).</p> <p><strong>Causa: 2</strong> Configuración de corriente y tiempos, en el convertidor, insuficientes para la operación de abertura del Freno.</p> <p><strong>Detección de Falla: 2.3</strong> Luego de recibir comando de abrir Freno (Borne C2 = 24Vcc), el freno se cierra luego de tener lugar el tiempo de corriente de llamada.</p> <p><strong>Soluciones: 2.3</strong> Verificar y corregir la programación de la corriente de ahorro (P128).</p> <p><strong>Causa: 2</strong> Configuración de corriente y tiempos, en el convertidor, insuficientes para la operación de abertura del Freno.</p> <p><strong>Detección de Falla: 2.4</strong> Luego de recibir comando de abrir Freno (Borne C2 = 24Vcc), el freno cierra inmediatamente después de haber recibido comando para abrir.</p> <p><strong>Soluciones: 2.4</strong> Programar el parámetro P177 con valor poco mayor que P171 para garantizar que el convertidor reciba 24Vcc en so borne C3 (señal de Freno Abierto) antes que el convertidor entre en alarma A020.</p><p><strong>Causa: 3</strong> Juegos excesivos entre pastillas y disco/polea o Energía por sobre lo nominal regulado en el Freno.</p> <p><strong>Detección de Falla: 3.1</strong> Luego de recibir comando de abrir Freno (Borne C2 = 24Vcc), el freno inicia abertura, sin embargo, cierra enseguida.</p> <p><strong>Soluciones: 3.1</strong> Ajustar y garantizar los juegos nominales entre pastillas y disco o entre zapatas y polea.</p> <p><strong>Causa: 3</strong> Juegos excesivos entre pastillas y disco/polea o Energía por sobre lo nominal regulado en el Freno.</p> <p><strong>Detección de Falla: 3.2</strong> Luego de recibir comando de abrir Freno (Borne C2 = 24Vcc), el freno inicia abertura, sin embargo, cierra enseguida.</p> <p><strong>Soluciones: 3.2</strong> Verifique informaciones en el manual del freno.  Difícilmente se alteran esas energías.  Ajustar la energía para sus valores de proyecto, si fuera necesario.</p> <p><strong>Causa: 3</strong> Juegos excesivos entre pastillas y disco/polea o Energía por sobre lo nominal regulado en el Freno.</p> <p><strong>Detección de Falla: 3.3</strong> Luego de recibir comando de abrir Freno (Borne C2 = 24Vcc), el freno cierra luego del tiempo de corriente de llamada.</p> <p><strong>Soluciones: 3.3</strong> Garantizar que no haya suciedad de bloqueo mecánico en el entrehierro entre armadura y carcasa del Freno.</p> <p><strong>Causa: 3</strong> Juegos excesivos entre pastillas y disco/polea o Energía por sobre lo nominal regulado en el Freno.</p> <p><strong>Detección de Falla: 3.4</strong> Luego de recibir comando de abrir Freno (Borne C2 = 24Vcc), el freno cierra luego del tiempo de corriente de llamada.</p> <p><strong>Soluciones: 3.4</strong> Verifique informaciones en el manual del freno. Difícilmente se alteran esas energías. Ajustar la energía para sus valores de proyecto, si fuera necesario.</p><p><strong>Causa: 4</strong> Falla en la señalización realizada por la micro llave (Sensor de Freno Abierto).<br> <strong>Detección de Falla: 4.1</strong> La Micro llave o sensor instalado en el Freno falla e interrumpe el retorno de señal de 24Vcc al borne C3 del convertidor cuando el freno está abriendo (Borne C2 = 24Vcc) o luego de ter sido abierto.<br><strong> Soluciones: 4.1</strong> Realizar el regulado de la micro llave del Freno.</p> <p><strong>Causa: 4</strong> Falla en la señalización realizada por la micro llave (Sensor de Freno Abierto).<br> <strong>Detección de Falla: 4.2</strong> La Micro llave o sensor instalado en el Freno falla e interrumpe el retorno de señal de 24Vcc al borne C3 del convertidor cuando el freno está abriendo (Borne C2 = 24Vcc) o luego de ter sido abierto.<br> Soluciones: 4.2 Verifique si el sensor recibe alimentación 24 Vcc y si retorna esa señal al borne C3 cuando el freno está abierto.</p> <p><strong>Causa: 4</strong> Falla en la señalización realizada por la micro llave (Sensor de Freno Abierto).<br> <strong>Detección de Falla: 4.3</strong> La Micro llave o sensor instalado en el Freno falla e interrumpe el retorno de señal de 24Vcc al borne C3 del convertidor cuando el freno está abriendo (Borne C2 = 24Vcc) o luego de ter sido abierto.<br> <strong>Soluciones: 4.3</strong> Verifique la integridad de cables, conectores y conexiones instaladas entre la micro llave y el borne C3 de comando del convertidor.</p><p><strong>Causa: 5</strong> La Ocurrencia de otras Alarmas (A002, A003, A006, A007, A012, A013, A016 y A017) son comúnmente sobrepuestas por la alarma A020 y el freno no abre o el freno Cierra luego de abierto.</p> <p><strong>Detección de Falla: 5.1</strong> Luego de recibir comando de abrir Freno (Borne C2 = 24Vcc), el freno inicia abertura, sin embargo, cierra enseguida.</p> <p><strong>Soluciones: 5.1</strong> Hacer una conexión (jump) entre los bornes C1 y C3 temporaria con el objetivo de impedir la alarma A020.  (Borne C2 = 24Vcc), verificar la procedencia de otras alarmas. Proceder según las recomendaciones indicadas en este capítulo de fallas/alarmas (A002, A003, A006, A007, A012, A013, A016 y A017) y efectuar la debida corrección. Después de la solución encontrada, retire ese jump y retorne a la instalación en su modo original. </p> <p><strong>Causa: 5</strong> La Ocurrencia de otras Alarmas (A002, A003, A006, A007, A012, A013, A016 y A017) son comúnmente sobrepuestas por la alarma A020 y el freno no abre o el freno Cierra luego de abierto.</p> <p><strong>Detección de Falla: 5.2</strong> Luego de recibir comando de abrir Freno (Borne C2 = 24Vcc), el freno cierra inmediatamente después de haber recibido comando para abrir.</p> <p><strong>Soluciones: 5.2</strong> Hacer una conexión (jump) entre los bornes C1 y C3 temporaria con el objetivo de impedir la alarma A020. (Borne C2 = 24Vcc), verificar la procedencia de otras alarmas. Proceder según las recomendaciones indicadas en este capítulo de fallas/alarmas (A002, A003, A006, A007, A012, A013, A016 y A017) y efectuar la debida corrección.Después de la solución encontrada, retire ese jump y retorne a la instalación en su modo original.</p> <p><strong>¡OBSERVACIÓN!</strong><br>En algunos casos, para mejor detección de la causa de la Falla, podrá ser necesario desconectar la señal del sensor/micro llave del borne C3 del convertidor y hacer una conexión entre los bornes C1 y C3 para impedir la ocurrencia de la alarma A020 y facilitar las verificaciones de otros parámetros o regulados del Freno o su sensor/micro llave.  Luego de la resolución de la falla retorne a la conexión original.</p>",
+      "label": "Falla externa 1 (Falla en la Abertura del Freno)."
+    },
+    "A021": {
+      "description": "<p><strong>Causa: 1</strong> La cantidad de operaciones por hora o minutos del convertidor / freno ha sido excedida y la bobina del Freno puede estar recalentada. <br> <strong>Detección de Falla: 1.1</strong> Freno permanece cerrado y no abre más luego de una secuencia de operaciones.<br> <strong>Soluciones: 1.1</strong> Aguarde por un tiempo.  Apague el convertidor y enciéndalo nuevamente.</p> <p><strong>Causa: 1</strong> La cantidad de operaciones por hora o minutos del convertidor / freno ha sido excedida y la bobina del Freno puede estar recalentada. <br> <strong>Detección de Falla: 1.2</strong> Freno permanece cerrado y no abre más luego de una secuencia de operaciones.<br> <strong>Soluciones: 1.2</strong> El calor constante de corriente usada para esta alarma es insuficiente.  Incrementar el valor del parámetro C001.</p> <p><strong>Causa: 1</strong> La cantidad de operaciones por hora o minutos del convertidor / freno ha sido excedida y la bobina del Freno puede estar recalentada. <br> <strong>Detección de Falla: 1.3</strong> Freno permanece cerrado y no abre más luego de una secuencia de operaciones.<br> <strong>Soluciones: 1.3</strong> El valor de la constante de tiempo para esta alarma es insuficiente.  Incrementar el valor del parámetro C002.</p> <p><strong>Causa: 1</strong> La cantidad de operaciones por hora o minutos del convertidor / freno ha sido excedida y la bobina del Freno puede estar recalentada. <br> <strong>Detección de Falla: 1.4</strong> Freno permanece cerrado y no abre más luego de una secuencia de operaciones.<br> <strong>Soluciones: 1.4</strong> Reducir la cantidad de operaciones/hora u operaciones/minuto entre el convertidor y los Frenos.</p> <p><strong>Causa: 1</strong> La cantidad de operaciones por hora o minutos del convertidor / freno ha sido excedida y la bobina del Freno puede estar recalentada. <br> <strong>Detección de Falla: 1.5</strong> Freno permanece cerrado y no abre más luego de una secuencia de operaciones.<br> <strong>Soluciones: 1.5</strong> Deshabilitar la Alarma ingresando 0 en el parámetro C002.</p> <p><strong>¡OBSERVACIÓN!</strong><br> Esa alarma normalmente es inhibida en el convertidor V317 (C002 = 0). Siendo así, por estándar, el convertidor no presentará esa Falla. <br> É possível ativar esse Monitoramento/Alarme configurando:<br> a)\tParámetro C001 = Valor % promedio de corriente (calculado a través de tiempo inactivo + tiempo activo del convertidor con sus respectivas corrientes de llamada y ahorro).<br> b)\tParámetro C002 = Tiempo estimado para una falla de calentamiento excesivo de la bobina del Freno.</p>",
+      "label": "Disparo de I2t del Freno."
+    },
+    "A024": {
+      "description": "<p><strong>Causa: 1</strong> EEPROM de la placa madre está ausente o no está programada.</p> <p><strong>Detección de Falla: 1.1</strong> El convertidor deja de operar y no realiza el comando de abertura del Freno.</p> <p><strong>Soluciones: 1.1</strong> Sustituir el convertidor.</p>",
+      "label": "EEPROM ausente o sin programación."
+    },
+    "A025": {
+      "description": "<p><strong>Causa: 1</strong> El contenido de alguna parte del escritorio de EEPROM se encuentra alterado.</p> <p><strong>Detección de Falla: 1.1</strong> El freno permanece cerrado y no abre porque el convertidor está en alarma o advertencia. La alarma A025 se está mostrando porque partes del contenido de los datos del Escritorio de EEPROM han cambiado. Tras el reconocimiento, esta alarma debe ser reiniciada (cancelada). Como consecuencia del reinicio, se mostrará una advertencia W006 o W008.</p> <p><strong>Soluciones: 1.1</strong> Restablezca esta Alarma con un pulso de 24Vcc, cerrando un contacto entre los terminales C1 y C5, ubicados en el convertidor V317. Consulte la descripción de las advertencias W006 y W008 en la que se explica cómo proceder si se producen. Véase también el capítulo Copia de Parámetros (Parameter copy).</p> <p>Veja também o capítulo Cópia de Parâmetros (Parameter copy).</p>",
+      "label": "Parámetros erróneos de EEPROM en el escritorio."
+    },
+    "A026": {
+      "description": "<p><strong>Causa: 1</strong> El contenido de alguna parte del escritorio de EEPROM se encuentra alterado.</p> <p><strong>Detección de Falla: 1.1</strong> El freno permanece cerrado y no abre porque el convertidor está en alarma o advertencia. Se muestra la alarma A026 porque partes del contenido de los datos en el Área de Backup de EEPROM han cambiado. Esta alarma debe restablecerse (cancelarse) inmediatamente después de su reconocimiento. Como consecuencia del reinicio, se mostrará una advertencia W007 o W009.</p> <p><strong>Soluciones: 1.1</strong> Restablezca esta Alarma con un pulso de 24Vcc, cerrando un contacto entre los terminales C1 y C5, ubicados en el convertidor V317.  Consulte la descripción de las advertencias W007 y W009 donde se explica cómo proceder si se producen. Véase también el capítulo Copia de Parámetros (Parameter copy).</p>",
+      "label": "EEPROM con error de parámetros en la copia de seguridad."
+    },
+    "A029": {
+      "description": "<p><strong>Causa: 1</strong> El Relé de detección de desgaste de pastillas (CDPG) no está siendo utilizado.</p> <p><strong>Detección de Falla: 1.1</strong> Freno permanece cerrado y no abre, sin embargo las pastillas del Freno están en condiciones de utilización.</p> <p><strong>Soluciones: 1.1</strong> Hacer una conexión (jump) entre los bornes C1 y C4.</p> <p><strong>Causa: 2</strong>El Relé de detección de desgaste de pastillas (CDPG) indica desgastes de pastillas del Freno.</p> <p><strong>Detección de Falla: 2.1</strong> Las pastillas del Freno desgastadas y sus sensores indicaron que es el momento para la sustitución.</p> <p><strong>Soluciones: 2.2</strong> Sustituir las pastillas del Freno y llevar a cabo el reset del relé CDPG.</p> <p><strong>Causa: 3</strong> El Relé de detección de desgaste de pastillas (CDPG) instalado no está alimentado o está con su alarma activa o está averiado.</p> <p><strong>Detección de Falla: 3.1</strong> Freno permanece cerrado y no abre, sin embargo las pastillas del Freno están en condiciones de utilización.</p> <p><strong>Soluciones: 3.1</strong> Resolver fallas relacionadas al relé de detección de desgaste de pastillas (CDPG).  Sustituir el CDPG si fuera necesario.</p>",
+      "label": "Falla externa 2 (Sustituir Pastillas del Freno)."
+    },
+    "A031": {
+      "description": "<p><strong>Causa: 1</strong> Falla interna en EEPROM.</p> <p><strong>Detección de Falla: 1.1</strong> El convertidor deja de operar y no realiza el comando de apertura del freno. Se produce cuando el convertidor se enciende y los datos contenidos en el escritorio de EEPROM no son accesibles para el usuario y están alterados. Esta alarma no tiene reinicio. Véase también el capítulo Copia de Parámetros (Parameter copy).</p> <p><strong>Soluciones: 1.1</strong> Reemplace el convertidor V317.</p>",
+      "label": "datos internos del escritorio de EEPROM modificados."
+    },
+    "A032": {
+      "description": "<p><strong>Causa: 1</strong> El microcontrolador puede haber sido reiniciado debido a una perturbación electromagnética.</p> <p><strong>Detección de Falla: 1.1</strong> El convertidor deja de operar y realizar el comando de abertura del Freno.</p> <p><strong>Soluciones: 1.1</strong> Apagar y encender el convertidor.</p> <p><strong>Causa: 1</strong> El microcontrolador puede haber sido reiniciado debido a una perturbación electromagnética.</p> <p><strong>Detección de Falla: 1.2</strong> El convertidor deja de operar y realizar el comando de abertura del Freno.</p> <p><strong>Soluciones: 1.2</strong> Sustituir el convertidor.</p>",
+      "label": "Micro controlador reiniciado"
+    },
+    "A033": {
+      "description": "<p><strong>Causa: 1</strong> Excepcionalmente, en otras fallas y causas.</p> <p><strong>Detección de Falla: 1.1</strong> El convertidor deja de operar y realizar el comando de abertura del Freno.</p> <p><strong>Soluciones: 1.1</strong> Sustituir el convertidor.</p> <br> <p><strong>¡ATENCIÓN!</strong> Si se produce una alarma que no se ha presentado en esta sección, póngase en contacto con la asistencia técnica de Vulkan, como se indica en la sección 1.8 de este manual.</p>",
+      "label": "Falla desconocida"
+    },
+    "W004": {
+      "description": "<p><strong>Causa: 1</strong> - Una configuración de seguridad está desactivando la salida de corriente continua (DC) en el convertidor V317 y está impidiendo la apertura del freno.</p> <p><strong>Detección de Falla: 1.1</strong> - El comando abrir Freno permanece habilitado (Borne C2 = 24Vcc) durante un evento de energización o reenergización del convertidor V317.</p> <p><strong>Soluciones: 1.1</strong> - Garantizar la desactivación del comando de abrir freno, abriendo el contacto entre C1 y C2 (Borne C2 = 0Vcc) antes de que el convertidor V317 reciba o vuelva a recibir energía eléctrica. Ordenar la apertura del freno cerrando el contacto entre C1 y C2 (o C2 = 24Vcc) sólo después de energizar o volver a energizar al convertidor, asegurándose también de que no haya ninguna otra alarma.</p> <p><strong>Causa: 1</strong> - Una configuración de seguridad está desactivando la salida de corriente continua (DC) en el convertidor V317 e impidiendo la apertura del freno.</p> <p><strong>Detección de Falla: 1.2</strong>- El comando de abrir Freno permanece activado (Borne C2 = 24Vcc) después de un evento de alarma y/o seguido de la tecla reset (entre los bornes C1 y C5).</p> <p>Soluciones: 1.2 - Garantizar la desactivación del comando de abrir freno, abriendo el contacto entre C1 y C2 (Borne C2 = 0Vcc) antes de que el convertidor V317 reciba o vuelva a recibir energía eléctrica. Ordenar la apertura del freno, cerrando el contacto entre C1 y C2 (o C2 = 24Vcc) sólo después de que se resuelva la alarma y se pulse reset.</p>",
+      "label": "Reinicio seguro tras la energización o la alarma en el convertidor V317"
+    },
+    "W006": {
+      "description": "<p><strong>Causa: 1</strong> - Esta advertencia W006 puede activarse (visualizarse) después de cancelar (reset) una alarma A025 (falla en el Escritorio de EEPROM).</p> <p><strong>Detección de Falla: 1.1</strong> - El freno permanece cerrado y no abre porque el convertidor está en alarma o advertencia. El convertidor V317 permanece en Advertencia indicando que los valores de los parámetros de backup acaban de ser cargados en la memoria RAM.  Requiere la atención del usuario para corregir los parámetros del escritorio de EEPROM.</p> <p><strong>Soluciones: 1.1</strong> - Si está seguro de que ha realizado un backup de los parámetros configurados, antes de esta alarma: Ejecute el parámetro P002 = 3: Backup Restore. Asegúrese de que el escritorio y el área de backup de EEPROM tienen los mismos datos al ejecutar el parámetro P002 = 2:WorkAreaBackup. Véase también el capítulo Copia de Parámetros (Parameter copy).</p> <p><strong>Causa: 2</strong> - Esta advertencia W006 puede activarse (visualizarse) después de cancelar (reset) una alarma A025 (falla en el Escritorio de EEPROM).</p> <p><strong>Detección de Falla: 2.2</strong> - El freno permanece cerrado y no abre porque el convertidor está en alarma o advertencia. El convertidor V317 permanece en Advertencia indicando que los valores de los parámetros de backup acaban de ser cargados en la memoria RAM.  Requiere la atención del usuario para corregir los parámetros del escritorio de EEPROM.</p> <p><strong>Soluciones: 2.2</strong> - Si no está seguro o no ha hecho un backup de los parámetros configurados, antes de esta alarma: Ejecute el parámetro P002 = 1: DefaultRestore para restaurar los parámetros de fábrica. A continuación, vuelva a configurar los parámetros correctos para su Freno. Posteriormente, asegúrese de que el Escritorio y el Área de Backup de EEPROM tienen los mismos datos al ejecutar el parámetro P002 = 2:WorkAreaBackup. Véase también el capítulo Copia de Parámetros (Parameter copy).</p>",
+      "label": "valores de backup almacenados en la RAM"
+    },
+    "W007": {
+      "description": "<p>Causa 1: Esta advertencia W007 puede activarse (visualizarse) después de cancelar (reset) una alarma A025 (falla en el área de Backup de EEPROM).</p> <p>Detección de Falla 1.1: El freno permanece cerrado y no abre porque el conversor está en alarma o advertencia. El Conversor permanece en Advertencia indicando que los parámetros por Detección de Falla (default) acaban de ser cargados en la memoria RAM. Requiere la atención del usuario para rehacer los ajustes de los parámetros de trabajo, además de almacenarlos en el escritorio y en el área de backup de EEPROM</p> <p>Solución 1.1.a: Recomendamos reescribir el escritorio de EEPROM con los datos de fábrica (Default). Ejecute el comando P002 seleccionando P002 = 1: DefaultRestore. A continuación, vuelva a realizar la parametrización del Freno conectado. Posteriormente, asegúrese de que el Escritorio y el Área de Backup tienen los mismos datos al ejecutar el parámetro P002 = 2:WorkAreaBackup. Véase también el capítulo Copia de Parámetros (Parameter copy).</p>",
+      "label": "Valores por Detección de Falla almacenados en la RAM"
+    },
+    "W008": {
+      "description": "<p><strong>Causa: 1</strong> - Esta advertência W008 pode ser disparada (mostrada) após cancelamento (reset) de um alarme A025 (falha na Área de Trabalho da EEPROM).</p> <p><strong>Detección de Falla: 1.1</strong> - O Freio permanece fechado e não abre porque o convertidor está em alarme ou advertência. O convertidor V317 permanece em Advertência indicando que a cópia da área de trabalho para a área de trabalho da EEPROM falhou devido a alterações dos valores da área de trabalho. Requer atenção do usuário para correção dos parâmetros da área de trabalho da EEPROM.</p> <p><strong>Soluciones: 1.1</strong> - Recomendamos reescrever a área de trabalho da EEPROM com os dados de fábrica (Default). Execute o comando P002 selecionando P002 = 1: DefaultRestore. Em seguida refaça a configuração dos parâmetros para o Freio conectado. Logo a seguir, garanta que às áreas de trabalho e de Backup possuam os mesmos dados ao executar o comando P002 = 2:WorkAreaBackup. Veja também o capítulo Cópia de Parâmetros (Parameter copy).</p>",
+      "label": "Parámetros erróneos de EEPROM en el escritorio"
+    },
+    "W009": {
+      "description": "<p><strong>Causa: 1</strong> - Esta advertencia W009 puede activarse (visualizarse) después de cancelar (reset) una alarma A026 (falla en el área de Backup de EEPROM).</p> <p><strong>Detección de Falla: 1.1</strong> - El freno permanece cerrado y no abre porque el convertidor está en alarma o advertencia. El convertidor permanece en Advertencia indicando que la copia del escritorio al escritorio de EEPROM falló debido a los cambios de los valores del escritorio. Requiere la atención del usuario para rehacer los ajustes de los parámetros de trabajo, además de almacenarlos en el escritorio y en el área de backup de EEPROM.</p> <p><strong>Soluciones: 1.1</strong> - Recomendamos reescribir el escritorio de EEPROM con los datos de fábrica (Default). Ejecute el comando P002 seleccionando P002 = 1: DefaultRestore. A continuación, vuelva a realizar la parametrización del Freno conectado. Posteriormente, asegúrese de que el Escritorio y el Área de Backup tienen los mismos datos al ejecutar el comando P002 = 2:WorkAreaBackup. Véase también el capítulo Copia de Parámetros (Parameter copy).</p>",
+      "label": "Error de parámetros en el área de trabajo de EEPROM"
+    }
+  },
+  "pt": {
+    "A002": {
+      "description": "<p><strong>Causa: 1</strong> O conversor identificou sobre temperatura em seu dissipador de calor e seu o interruptor térmico está com o contato aberto.</p><p><strong>Defeito: 1.1</strong> O conversor está fornecendo mais corrente DC do que a necessária à operação do Freio.</p><p><strong>Solução: 1.1</strong> Verificar no conversor, se a programação de correntes do Freio está correta (parâmetros C000, P128 e P171).<hr><p><strong>Causa: 1</strong> O conversor identificou sobre temperatura em seu dissipador de calor e seu o interruptor térmico está com o contato aberto.</p> <p><strong>Defeito: 1.2</strong> A quantidade de operações do freio está acima do máximo permitido para o conjunto (conversor e freio).</p> <p><strong>Solução: 1.2</strong> Controlar a frequência de manobras do conversor/Freios que pode estar acima do permitido.</p> <hr><p><strong>Causa: 1</strong> O conversor identificou sobre temperatura em seu dissipador de calor e seu o interruptor térmico está com o contato aberto.</p> <p><strong>Defeito: 1.3</strong> Fios rompidos ou mau contato no interruptor térmico conectado aos terminais CN22 da placa de controle do retificador de potência.</p> <p><strong>Solução: 1.3</strong> Substituir o conversor se não for possível reparar os fios rompidos ou o mau contatos nos terminais do interruptor.</p>",
+      "label": " Sobre Temperatura no dissipador de calor"
+    },
+    "A003": {
+      "description": "<p> <strong>Causa: 1</strong> - O valor instantâneo (de pico) da corrente de saída do conversor (observado em M004) excedeu 200% da corrente máxima do conversor.</p> <p><strong>Defeito: 1.1</strong> - Utilização de bobina de Freio errada.</p> <p><strong>Solução: 1.1</strong> - Identificar o freio utilizado e a resistência nominal de sua bobina. Configurar parâmetros (C000, P128 e P171) adequados à operação da bobina utilizada.</p> <p><strong>Causa: 1</strong> - O valor instantâneo (de pico) da corrente de saída do conversor (observado em M004) excedeu 200% da corrente máxima do conversor.</p> <p><strong>Defeito: 1.2</strong> - Bobina do freio danificada ou resistência elétrica muito baixa (incompatível com valores nominais indicado nos manuais do freio).</p> <p><strong>Solução: 1.2</strong> - Substituir o Freio. Comprar o reparo da Vulkan.</p> <p><strong>Causa: 2</strong> - O valor instantâneo (de pico) da corrente de saída do conversor (observado em M004) excedeu 200% da corrente máxima do conversor.</p> <p><strong>Defeito: 2.1</strong> - Baixa Isolação elétrica na bobina do Freio.</p> <p><strong>Solução: 2.1</strong> - Substituir o Freio. Comprar o reparo da Vulkan.</p> <p><strong>Causa: 2</strong> - O valor instantâneo (de pico) da corrente de saída do conversor (observado em M004) excedeu 200% da corrente máxima do conversor.</p> <p><strong>Defeito: 2.2</strong> - Cabos de alimentação entre conversor e bobina em curto-circuito. Baixa impedância conectada à saída do conversor.</p> <p><strong>Solução: 2.2</strong> - Substituir cabos danificados que estão alimentando a bobina do Freio.</p>",
+      "label": "Sobrecorrente de saída."
+    },
+    "A006": {
+      "description": "<p><strong>Causa: 1</strong> - A frequência da rede elétrica varia mais do que o valor máximo permitido, que é igual a 500µs entre dois períodos da rede elétrica.</p> <p><strong>Defeito: 1.1</strong> - Oscilação na Tensão de alimentação trifásica de entrada do conversor. Mau contato nos terminais de alimentação na rede trifásica.</p> <p><strong>Solução: 1.1</strong> - Verificar em sua instalação elétrica, o estado de todos os cabos e terminais desde a origem até alimentação trifásica do conversor.</p> <p><strong>Causa: 1</strong> - A frequência da rede elétrica varia mais do que o valor máximo permitido, que é igual a 500µs entre dois períodos da rede elétrica.</p> <p><strong>Defeito: 1.2</strong> - A frequência da rede de alimentação elétrica trifásica pode estar variando.</p> <p><strong>Solução: 1.2</strong> - Verificar se outras cargas, elétricas ligadas a mesma, rede do conversor podem estar afetando a alimentação senoidal trifásica do conversor.</p> <p><strong>OBSERVAÇÃO!</strong><br>Esse alarme é inibido no conversor V317 (C153 = 0) sendo assim, por padrão, o conversor não apresentará essa Falha. O auto reset deste alarme também já está configurado (C093 = 1).</p>",
+      "label": "Frequência da rede elétrica instável."
+    },
+    "A007": {
+      "description": "<p><strong>Causa: 1</strong> - Falha em uma ou mais fases na rede elétrica de alimentação do conversor V317.</p> <p><strong>Defeito: 1.1</strong> - Oscilação na Tensão de alimentação trifásica de entrada do conversor, ou falta de fase(s) ou mau contato nos terminais de alimentação na rede trifásica.</p> <p><strong>Solução: 1.1</strong> - Verificar em sua instalação elétrica, o estado de todos os cabos e terminais desde a origem até alimentação trifásica do conversor.</p> <p><strong>OBSERVAÇÃO!</strong> Esse alarme é inibido no conversor V317 (C153 = 0) sendo assim, por padrão, o conversor não apresentará essa Falha. O auto reset deste alarme também já está configurado (C093 = 1).</p>",
+      "label": "Falha na alimentação da rede elétrica."
+    },
+    "A012": {
+      "description": "<p><strong>Causa: 1</strong> - A frequência (M008 – Mfreq) da rede elétrica está acima de 70Hz ou abaixo de 40Hz.</p> <p><strong>Defeito: 1.1</strong> - A rede de alimentação trifásica do conversor está com sua frequência fora do range nominal estabelecido.</p> <p><strong>Solução: 1.1</strong> - Verificar se a alimentação trifásica conectada à entrada do conversor se enquadra ao seu range nominal de frequência.</p> <p><strong>Causa: 1</strong> - A frequência (M008 – Mfreq) da rede elétrica está acima de 70Hz ou abaixo de 40Hz.</p> <p><strong>Defeito: 1.2</strong> - A alimentação trifásica do conversor não é proveniente de uma fonte senoidal trifásica.</p> <p><strong>Solução: 1.2</strong> - Utilizar a alimentação trifásica a partir de outro ponto de alimentação apropriado. Reduza oscilações na tensão da rede causadas por outras cargas não lineares.</p> <p><strong>OBSERVAÇÃO!</strong></p> <p>O auto reset deste alarme também já está configurado (C093 = 1).</p>",
+      "label": "Frequência da rede elétrica fora da faixa."
+    },
+    "A013": {
+      "description": "<p><strong>Causa: 1</strong> - Falha dos circuitos que fornecem os sinais de sincronização da tensão trifásica da rede elétrica no conversor.</p> <p><strong>Defeito: 1.1</strong> - Placas internas do conversor não identificam a sequência de fases da Rede elétrica.</p> <p><strong>Solução: 1.1</strong> - Verificar a Ligação elétrica, garantir que os bornes L1, L2 e L3 do conversor, recebem as fases correspondentes a R, S, T. Desligar e ligar o conversor. Substituir o conversor.</p> <p><strong>OBSERVAÇÃO!</strong> O auto reset deste alarme também já está configurado (C093 = 1).</p>",
+      "label": "Falta de sincronização."
+    },
+    "A016": {
+      "description": "<p><strong>Causa: 1</strong> A tensão da rede elétrica de alimentação do conversor V317 excedeu 15% de 480VCA.</p> <p><strong>Defeito: 1.1</strong> Medindo a tensão nos terminais de entrada do conversor L1, L2 e L3. Monitorando a tensão de entrada através do parâmetro M009 no KeyPad (HMI), Software RemoteDrive ou no Aplicativo VConnect.</p> <p><strong>Solução: 1.1</strong> Corrigir a alimentação trifásica conectada à entrada do conversor.</p> <p><strong>Causa: 1</strong> A tensão da rede elétrica de alimentação do conversor V317 excedeu 15% de 480VCA.</p> <p>Defeito: 1.2 Medindo a tensão nos terminais de entrada do conversor L1, L2 e L3. Monitorando a tensão de entrada através do parâmetro M009 no KeyPad (HMI), Software RemoteDrive ou no Aplicativo VConnect.</p> <p><strong>Solução: 1.2</strong> Utilizar a alimentação trifásica a partir de outro ponto de alimentação apropriado.</p> <p><strong>Causa: 1</strong> A tensão da rede elétrica de alimentação do conversor V317 excedeu 15% de 480VCA.</p> <p><strong>Defeito: 1.3</strong> Medindo a tensão nos terminais de entrada do conversor L1, L2 e L3. Monitorando a tensão de entrada através do parâmetro M009 no KeyPad (HMI), Software RemoteDrive ou no Aplicativo VConnect.</p> <p><strong>Solução: 1.3</strong> Verifique se outras cargas elétricas ligadas a mesma instalação do conversor podem estar alterando os níveis de tensão da alimentação senoidal trifásica do conversor.</p> <p><strong>OBSERVAÇÃO!</strong><br> Esse alarme é inibido no conversor V317 (C157 = 0) Sendo assim, por padrão, o conversor não apresentará essa Falha. O auto reset deste alarme também já está configurado (C093 = 1).</p>",
+      "label": "Sobre tensão da rede elétrica."
+    },
+    "A017": {
+      "description": "<p><strong>Causa: 1</strong> A tensão da rede elétrica de alimentação do conversor V317 excedeu 15% de 480VCA.</p> <p><strong>Defeito: 1.1</strong> Medindo a tensão nos terminais de entrada do conversor L1, L2 e L3. Monitorando a tensão de entrada através do parâmetro M009 no KeyPad (HMI), Software RemoteDrive ou no Aplicativo VConnect.</p> <p><strong>Solução: 1.1</strong> Corrigir a alimentação trifásica conectada à entrada do conversor.</p> <p><strong>Causa: 1</strong> A tensão da rede elétrica de alimentação do conversor V317 excedeu 15% de 480VCA.</p> <p><strong>Defeito: 1.2</strong> Medindo a tensão nos terminais de entrada do conversor L1, L2 e L3. Monitorando a tensão de entrada através do parâmetro M009 no KeyPad (HMI), Software RemoteDrive ou no Aplicativo VConnect.</p> <p><strong>Solução: 1.2</strong> Utilizar a alimentação trifásica a partir de outro ponto de alimentação apropriado.</p> <p><strong>Causa: 1</strong> A tensão da rede elétrica de alimentação do conversor V317 excedeu 15% de 480VCA.</p> <p><strong>Defeito: 1.3</strong> Medindo a tensão nos terminais de entrada do conversor L1, L2 e L3. Monitorando a tensão de entrada através do parâmetro M009 no KeyPad (HMI), Software RemoteDrive ou no Aplicativo VConnect.</p> <p><strong>Solução: 1.3</strong> Verifique se outras cargas elétricas ligadas a mesma instalação do conversor podem estar alterando os níveis de tensão da alimentação senoidal trifásica do conversor.</p> <p><strong>OBSERVAÇÃO!</strong><br> Esse alarme é inibido no conversor V317 (C157 = 0) Sendo assim, por padrão, o conversor não apresentará essa Falha. O auto reset deste alarme também já está configurado (C093 = 1).</p>",
+      "label": "Tensão da rede elétrica insuficiente."
+    },
+    "A020": {
+      "description": "<p><strong>Causa: 1</strong> Microchave (sensor) de freio aberto não está sendo usada, porém não foi realizado a ligação entre Causa: 2 e Causa: 3.</p> <p><strong>Defeito: 1.1</strong> Após receber comando de abrir Freio (Borne Causa: 2 = 24Vcc), o freio fecha após ocorrer o tempo de corrente de chamada.</p> <p><strong>Solução: 1.1</strong> Fazer uma ligação (jump) entre os bornes Causa: 2 e Causa: 3 se a microchave de freio aberto não estiver sendo utilizada.</p> <p><strong>Causa: 2</strong> Configuração de corrente e tempos, no conversor, insuficientes para a operação de abertura do Freio.</p> <p><strong>Defeito: 2.1</strong> Após receber comando de abrir Freio (Borne Causa: 2 = 24Vcc), o freio inicia abertura, porém fecha em seguida.</p> <p><strong>Solução: 2.1</strong> Verificar e corrigir a programação da corrente de chamada (C000) para atender as características do Freio instalado.</p> <p><strong>Causa: 2</strong> Configuração de corrente e tempos, no conversor, insuficientes para a operação de abertura do Freio.</p> <p><strong>Defeito: 2.2</strong> Após receber comando de abrir Freio (Borne Causa: 2 = 24Vcc), o freio inicia abertura, porém fecha em seguida.</p> <p><strong>Solução: 2.2</strong> Verificar e corrigir a programação do tempo de corrente de chamada(P171).</p> <p><strong>Causa: 2</strong> Configuração de corrente e tempos, no conversor, insuficientes para a operação de abertura do Freio.</p> <p><strong>Defeito: 2.3</strong> Após receber comando de abrir Freio (Borne Causa: 2 = 24Vcc), o freio fecha após ocorrer o tempo de corrente de chamada.</p> <p><strong>Solução: 2.3</strong> Verificar e corrigir a programação da corrente de economia (P128).</p> <p><strong>Causa: 2</strong> Configuração de corrente e tempos, no conversor, insuficientes para a operação de abertura do Freio.</p> <p><strong>Defeito: 2.4</strong> Após receber comando de abrir Freio (Borne Causa: 2 = 24Vcc), o freio fecha logo depois de ter recebido comando para abrir.</p> <p><strong>Solução: 2.4</strong> Programar o parâmetro P177 com valor pouco maior que P171 para garantir que o conversor receba 24Vcc no seu borne Causa: 3 (sinal de Freio Aberto) antes que o conversor entre em alarme A020.</p><p><strong>Causa: 3</strong> Folgas excessiva entre pastilhas e disco/polia ou Força acima da nominal regulada no Freio.</p> <p><strong>Defeito: 3.1</strong> Após receber comando de abrir Freio (Borne C2 = 24Vcc), o freio inicia abertura, porém fecha em seguida.</p> <p><strong>Solução: 3.1</strong> Ajustar e garantir as folgas nominais entre pastilhas e disco ou entre sapatas e polia.</p> <p><strong>Causa: 3</strong> Folgas excessiva entre pastilhas e disco/polia ou Força acima da nominal regulada no Freio.</p> <p><strong>Defeito: 3.2</strong> Após receber comando de abrir Freio (Borne C2 = 24Vcc), o freio inicia abertura, porém fecha em seguida.</p> <p><strong>Solução: 3.2</strong> Verifique informações manual do freio. Dificilmente são alteradas essas forças. Ajustar a força para seus valores de projeto se necessário.</p> <p><strong>Causa: 3</strong> Folgas excessiva entre pastilhas e disco/polia ou Força acima da nominal regulada no Freio.</p> <p><strong>Defeito: 3.3</strong> Após receber comando de abrir Freio (Borne C2 = 24Vcc), o freio fecha após tempo de corrente de chamada</p> <p><strong>Solução: 3.3</strong> Garantir que não haja sujeira ou bloqueio mecânico no entreferro entre armadura e carcaça do Freio.</p> <p><strong>Causa: 3</strong> Folgas excessiva entre pastilhas e disco/polia ou Força acima da nominal regulada no Freio.</p> <p><strong>Defeito: 3.4</strong> Após receber comando de abrir Freio (Borne C2 = 24Vcc), o freio fecha após tempo de corrente de chamada</p> <p><strong>Solução: 3.4</strong> Verifique informações manual do freio. Dificilmente são alteradas essas forças. Ajustar a força para seus valores de projeto se necessário.</p><p><strong>Causa: 4</strong> Falha na sinalização realizada pela microchave (Sensor de Freio Aberto).<br> <strong>Defeito: 4.1</strong> A Microchave ou sensor instalado no Freio falha e interrompe o retorno de sinal 24Vcc ao borne C3 do conversor quando o freio está abrindo (Borne C2 = 24Vcc) ou após ter sido aberto.<br><strong> Solução: 4.1</strong> Realizar a regulagem da microchave do Freio.</p> <p><strong>Causa: 4</strong> Falha na sinalização realizada pela microchave (Sensor de Freio Aberto).<br> <strong>Defeito: 4.2</strong> A Microchave ou sensor instalado no Freio falha e interrompe o retorno de sinal 24Vcc ao borne Causa: 1 do conversor quando o freio está abrindo (Borne Causa: 2 = 24Vcc) ou após ter sido aberto.<br> Solução: 4.2 Verifique se o sensor recebe alimentação 24Vcc e se retorna esse sinal ao borne Causa: 1 quando o freio está aberto.</p> <p><strong>Causa: 4</strong> Falha na sinalização realizada pela microchave (Sensor de Freio Aberto).<br> <strong>Defeito: 4.3</strong> A Microchave ou sensor instalado no Freio falha e interrompe o retorno de sinal 24Vcc ao borne Causa: 1 do conversor quando o freio está abrindo (Borne Causa: 2 = 24Vcc) ou após ter sido aberto.<br> <strong>Solução: 4.3</strong> Verifique a integridade de cabos, conectores e conexões instaladas entre a microchave e o borne Causa: 1 de comando do conversor.</p><p><strong>Causa: 5</strong> Ocorrência de outros Alarmes (A002, A003, A006, A007, A012, A013, A016 e A017) são comummente sobrepostos pelo alarme A020 e o freio não abre ou o freio Fecha depois de aberto.</p> <p><strong>Defeito: 5.1</strong> Após receber comando de abrir Freio (Borne Causa: 2 = 24Vcc), o freio inicia abertura, porém fecha em seguida.</p> <p><strong>Solução: 5.1</strong> Fazer uma ligação (jump) entre os bornes Causa: 1 e Causa: 3 temporário com objetivo de impedir o alarme A020. (Borne Causa: 2 = 24Vcc), verificar a procedência de outros alarmes, Proceder conforme as recomendações indicadas neste capítulo de falhas/alarmes (A002, A003, A006, A007, A012, A013, A016 e A017) e efetuar a devida correção. Depois da solução encontrada, retire esse jump e retorne à instalação ao seu modo original.</p> <p><strong>Causa: 5</strong> Ocorrência de outros Alarmes (A002, A003, A006, A007, A012, A013, A016 e A017) são comummente sobrepostos pelo alarme A020 e o freio não abre ou o freio Fecha depois de aberto.</p> <p><strong>Defeito: 5.2</strong> Após receber comando de abrir Freio (Borne Causa: 2 = 24Vcc), o freio fecha logo depois de ter recebido comando para abrir.</p> <p><strong>Solução: 5.2</strong> Fazer uma ligação (jump) entre os bornes Causa: 1 e Causa: 3 temporário com objetivo de impedir o alarme A020. (Borne Causa: 2 = 24Vcc), verificar a procedência de outros alarmes, Proceder conforme as recomendações indicadas neste capítulo de falhas/alarmes (A002, A003, A006, A007, A012, A013, A016 e A017) e efetuar a devida correção. Depois da solução encontrada, retire esse jump e retorne à instalação ao seu modo original.</p> <p><strong>OBSERVAÇÃO!</strong><br>Em alguns casos, para melhor detecção da causa da Falha, poderá ser necessário desconectar o sinal do sensor/microchave do borne C3 do conversor e fazer uma ligação entre os bornes C1 e C3 para impedir a ocorrência do alarme A020 e facilitar as verificações de outros parâmetros ou regulagens do Freio ou seu sensor/microchave. Após resolução da falha retorne à ligação original.</p>",
+      "label": "Falha externa 1 (Falha na Abertura do Freio)."
+    },
+    "A021": {
+      "description": "<p><strong>Causa: 1</strong> A Quantidade de operações por hora ou minutos do conversor / freio foi excedida e a bobina do Freio pode estar superaquecida.<br> <strong>Defeito: 1.1</strong> Freio permanece fechado e não abre mais após uma sequência de operações.<br> <strong>Solução: 1.1</strong> Aguarde um tempo. Desligue o conversor e ligue-o novamente.</p> <p><strong>Causa: 1</strong> A Quantidade de operações por hora ou minutos do conversor / freio foi excedida e a bobina do Freio pode estar superaquecida.<br> <strong>Defeito: 1.2</strong> Freio permanece fechado e não abre mais após uma sequência de operações.<br> <strong>Solução: 1.2</strong> O valor da constante de corrente usada para este alarme é insuficiente. Incrementar o valor do parâmetro C001.</p> <p><strong>Causa: 1</strong> A Quantidade de operações por hora ou minutos do conversor / freio foi excedida e a bobina do Freio pode estar superaquecida.<br> <strong>Defeito: 1.3</strong> Freio permanece fechado e não abre mais após uma sequência de operações.<br> <strong>Solução: 1.3</strong> O valor da constante de tempo usada para este alarme é insuficiente. Incrementar o valor do parâmetro C002.</p> <p><strong>Causa: 1</strong> A Quantidade de operações por hora ou minutos do conversor / freio foi excedida e a bobina do Freio pode estar superaquecida.<br> <strong>Defeito: 1.4</strong> Freio permanece fechado e não abre mais após uma sequência de operações.<br> <strong>Solução: 1.4</strong> Reduzir a quantidade de operações/ hora ou operações/minuto entre o conversor e Freios</p> <p><strong>Causa: 1</strong> A Quantidade de operações por hora ou minutos do conversor / freio foi excedida e a bobina do Freio pode estar superaquecida.<br> <strong>Defeito: 1.5</strong> Freio permanece fechado e não abre mais após uma sequência de operações.<br> <strong>Solução: 1.5</strong> Desabilitar o Alarme inserindo 0 no parâmetro C002.</p> <p><strong>OBSERVAÇÃO!</strong><br> Esse alarme normalmente é inibido no conversor V317 (C002 = 0) Sendo assim, por padrão, o conversor não apresentará essa Falha. <br> É possível ativar esse Monitoramento/Alarme configurando:<br> a)\tParâmetro C001 = Valor % médio de corrente (calculado através tempo inativo + tempo ativo do conversor com suas respectivas correntes de chamada e economia).<br> b)\tParâmetro C002 = Tempo estimado para uma falha de aquecimento excessivo da bobina do Freio.</p>",
+      "label": "Disparo de I2t do Freio."
+    },
+    "A024": {
+      "description": "<p><strong>Causa: 1</strong> EEPROM da placa mãe está ausente ou não está programada.</p>  <p><strong>Defeito: 1.1</strong> O Conversor deixa de operar e não realiza o comando de abertura do Freio.</p> <p><strong>Solução: 1.1</strong> Substituir o conversor.</p>",
+      "label": "EEPROM ausente ou sem programação."
+    },
+    "A025": {
+      "description": "<p><strong>Causa: 1</strong> O conteúdo de alguma parte na área de trabalho da EEPROM está alterado.</p> <p><strong>Defeito: 1.1</strong> O Freio permanece fechado e não abre porque o conversor está em alarme ou advertência. O Alarme A025 está sendo mostrado devido a alteração em partes do conteúdo dos dados na Área de Trabalho da EEPROM. Após reconhecimento, este alarme deve ser resetado (cancelado). Como consequência do reset, uma advertência W006 ou W008 será mostrada.</p> <p><strong>Solução: 1.1</strong> Faça o reset deste Alarme com um pulso de 24Vcc, fechando um contato entre o borne C1 e o borne C5, localizados no conversor V317. Consulte o descritivo das advertências W006 e W008 onde é explicado como proceder caso ocorram.</p> <p>Veja também o capítulo Cópia de Parâmetros (Parameter copy).</p>",
+      "label": "EEPROM parâmetros errados na área de trabalho"
+    },
+    "A026": {
+      "description": "<p><strong>Causa: 1</strong> O conteúdo de alguma parte na área de trabalho da EEPROM está alterado.</p> <p><strong>Defeito: 1.1</strong> O Freio permanece fechado e não abre porque o conversor está em alarme ou advertência. O Alarme A026 está sendo mostrado devido a alteração em partes do conteúdo dos dados na Área de Backup da EEPROM. Este alarme deve ser resetado (cancelado) logo após seu reconhecimento. Como consequência do reset, uma advertência W007 ou W009 será mostrada.</p> <p><strong>Solução: 1.1</strong> Faça o reset deste Alarme com um pulso de 24Vcc, fechando um contato entre o borne C1 e o borne C5, localizados no conversor V317. Consulte o descritivo das advertências W007 e W009 onde é explicado como proceder caso ocorram. Veja também o capítulo Cópia de Parâmetros (Parameter copy).</p>",
+      "label": "EEPROM com erro de parâmetros na cópia de segurança"
+    },
+    "A029": {
+      "description": "<p><strong>Causa: 1</strong> O Relé de detecção de desgaste de pastilhas (CDPG) não está sendo utilizado.</p> <p><strong>Defeito: 1.1</strong> Freio permanece fechado e não abre, porém as pastilhas do Freio estão em condições de utilização.</p> <p><strong>Solução: 1.1</strong> Fazer uma ligação (jump) entre os bornes C1 e C4.</p> <p><strong>Causa: 2</strong>O Relé de detecção de desgaste de pastilhas (CDPG) indica desgaste de pastilhas do Freio</p> <p><strong>Defeito: 2.1</strong> As pastilhas do Freio desgastadas e seus sensores indicaram que é momento para substituição.</p> <p><strong>Solução: 2.2</strong> Substituir as pastilhas do Freio e realizar o reset do relé CDPG.</p> <p><strong>Causa: 3</strong> O Relé de detecção de desgaste de pastilhas (CDPG) instalado não está alimentado ou está com seu alarme ativo ou está danificado.</p> <p><strong>Defeito: 3.1</strong> Freio permanece fechado e não abre, porém as pastilhas do Freio estão em condições de utilização.</p> <p><strong>Solução: 3.1</strong> Resolver falhas relacionadas ao relé de detecção de desgaste de pastilhas (CDPG). Substituir o CDPG se necessário.</p>",
+      "label": "Falha externa 2 (Substituir Pastilhas do Freio)."
+    },
+    "A031": {
+      "description": "<p><strong>Causa: 1</strong> O Falha interna na EEPROM.</p> <p><strong>Defeito: 1.1</strong> O Conversor deixa de operar e não realiza o comando de abertura do Freio. Ocorre quando o Conversor é ligado e os dados contidos na área de trabalho da EEPROM não estão acessíveis para o usuário e estão alterados. Este alarme não possui reset. Veja também o capítulo Cópia de Parâmetros (Parameter copy).</p> <p><strong>Solução: 1.1</strong> Substitua o conversor V317.</p>",
+      "label": "dados internos da área de trabalho da EEPROM alterados"
+    },
+    "A032": {
+      "description": "<p><strong>Causa: 1</strong> O microcontrolador pode ter sido reiniciado devido a uma perturbação eletromagnética.</p> <p><strong>Defeito: 1.1</strong> O Conversor deixa de operar e realizar o comando de abertura do Freio.</p> <p><strong>Solução: 1.1</strong> Desligar e ligar o conversor.</p> <p><strong>Causa: 1</strong> O microcontrolador pode ter sido reiniciado devido a uma perturbação eletromagnética.</p> <p><strong>Defeito: 1.2</strong> O Conversor deixa de operar e realizar o comando de abertura do Freio.</p> <p><strong>Solução: 1.2</strong> Substituir o conversor.</p>",
+      "label": "Microcontrolador reinicializado"
+    },
+    "A033": {
+      "description": "<p><strong>Causa: 1</strong> Excepcionalmente, em outras falhas e causas.</p> <p><strong>Defeito: 1.1</strong> O Conversor deixa de operar e realizar o comando de abertura do Freio.</p> <p><strong>Solução: 1.1</strong> Substituir o conversor.</p>",
+      "label": "Outras falhas."
+    },
+    "W004": {
+      "description": "<p><strong>Causa: 1</strong> - Uma configuração de segurança está desabilitando a saída de corrente DC no conversor V317 e está impedindo a abertura do freio.</p> <p><strong>Defeito: 1.1</strong> - O comando de abrir Freio permanece ativado (Borne C2 = 24Vcc) durante um evento de energização ou reenergização do conversor V317.</p> <p><strong>Solução: 1.1</strong> - Garantir a desativação do comando de abrir Freio, abrindo o contato entre C1 e C2 (Borne C2 = 0Vcc) antes da energização ou reenergização do conversor V317. Comandar a abertura do freio, fechando o contato entre C1 e C2 (ou C2 = 24Vcc) somente após energizar ou reenergizar o conversor, garantindo também que não há nenhum outro alarme.</p> <p><strong>Causa: 1</strong> - Uma configuração de segurança está desabilitando a saída de corrente DC no conversor V317 e está impedindo a abertura do freio.</p> <p><strong>Defeito: 1.2</strong>- O comando de abrir Freio permanece ativado (Borne C2 = 24Vcc) após um evento de alarme e/ou seguido de um pulso de reset (entre os bornes C1 e C5).</p> <p>Solução: 1.2 - Garantir a desativação do comando de abrir Freio, abrindo o contato entre C1 e C2 (Borne C2 = 0Vcc) antes da energização ou reenergização do conversor V317. Comandar a abertura do freio, fechando contato entre C1 e C2 (ou C2 = 24Vcc) somente após solucionar o alarme e realizar seu reset.</p>",
+      "label": "Reinicialização segura após energização ou Alarme no Conversor V317"
+    },
+    "W006": {
+      "description": "<p><strong>Causa: 1</strong> - Esta advertência W006 pode ser disparada (mostrada) após cancelamento (reset) de um alarme A025 (falha na Área de Trabalho da EEPROM).</p> <p><strong>Defeito: 1.1</strong> - O Freio permanece fechado e não abre porque o conversor está em alarme ou advertência. O conversor V317 permanece em Advertência indicando que os valores dos parâmetros de backup acabaram de ser carregados na memória RAM. Requer atenção do usuário para correção dos parâmetros da área de trabalho da EEPROM.</p> <p><strong>Solução: 1.1</strong> - Se você tiver certeza de que já realizou um backup dos parâmetros configurados, anteriormente a este alarme: Execute o parâmetro P002 = 3: Backup Restore. Garanta que as áreas de Trabalho e Backup da EEPROM possuem os mesmos dados executando o parâmetro P002 = 2:WorkAreaBackup. Veja também o capítulo Cópia de Parâmetros (Parameter copy).</p> <p><strong>Causa: 2</strong> - Esta advertência W006 pode ser disparada (mostrada) após cancelamento (reset) de um alarme A025 (falha na Área de Trabalho da EEPROM).</p> <p><strong>Defeito: 2.2</strong> - O Freio permanece fechado e não abre porque o conversor está em alarme ou advertência. O conversor V317 permanece em Advertência indicando que os valores dos parâmetros de backup acabaram de ser carregados na memória RAM. Requer atenção do usuário para correção dos parâmetros da área de trabalho da EEPROM.</p> <p><strong>Solução: 2.2</strong> - Se você não tiver certeza ou não realizou um backup dos parâmetros configurados, anteriormente a este alarme: Execute o parâmetro P002 = 1: DefaultRestore para restaurar parâmetros de Fábrica. Em seguida realize novamente a configuração dos parâmetros corretos para o seu Freio. Logo a seguir, garanta que as áreas de Trabalho e Backup da EEPROM possuem os mesmos dados executando o parâmetro P002 = 2:WorkAreaBackup. Veja também o capítulo Cópia de Parâmetros (Parameter copy).</p>",
+      "label": "Valores do backup armazenados na RAM"
+    },
+    "W007": {
+      "description": "<p><strong>Causa: 1</strong> - Esta advertência W007 pode ser disparada (mostrada) após cancelamento (reset) de um alarme A026 (falha na área de Backup da EEPROM).</p> <p><strong>Defeito: 1.1</strong> - O Freio permanece fechado e não abre porque o conversor está em alarme ou advertência. O Conversor permanece em Advertência indicando que os parâmetros predefinidos (default) acabaram de ser carregados na memória RAM. Requer atenção do usuário para refazer a configuração dos parâmetros de trabalho além de armazená-los nas áreas de trabalho e backup da EEPROM.</p> <p><strong>Solução: 1.1</strong> - Recomendamos reescrever a área de trabalho da EEPROM com os dados de fábrica (Default).  Execute o comando P002 selecionando P002 = 1: DefaultRestore.  Em seguida refaça a configuração dos parâmetros para o Freio conectado.  Logo a seguir, garanta que às áreas de trabalho e de Backup possuam os mesmos dados ao executar o comando P002 = 2:WorkAreaBackup.</p>",
+      "label": "Valores predefinidos armazenados na RAM"
+    },
+    "W008": {
+      "description": "<p><strong>Causa: 1</strong> - Esta advertência W008 pode ser disparada (mostrada) após cancelamento (reset) de um alarme A025 (falha na Área de Trabalho da EEPROM).</p> <p><strong>Defeito: 1.1</strong> - O Freio permanece fechado e não abre porque o conversor está em alarme ou advertência. O conversor V317 permanece em Advertência indicando que a cópia da área de trabalho para a área de trabalho da EEPROM falhou devido a alterações dos valores da área de trabalho. Requer atenção do usuário para correção dos parâmetros da área de trabalho da EEPROM.</p> <p><strong>Solução: 1.1</strong> - Recomendamos reescrever a área de trabalho da EEPROM com os dados de fábrica (Default). Execute o comando P002 selecionando P002 = 1: DefaultRestore. Em seguida refaça a configuração dos parâmetros para o Freio conectado. Logo a seguir, garanta que às áreas de trabalho e de Backup possuam os mesmos dados ao executar o comando P002 = 2:WorkAreaBackup. Veja também o capítulo Cópia de Parâmetros (Parameter copy).</p>",
+      "label": "EEPROM parâmetros errados na área de trabalho"
+    },
+    "W009": {
+      "description": "<p><strong>Causa: 1</strong> - Esta advertência W009 pode ser disparada (mostrada) após cancelamento (reset) de um alarme A026 (falha na área de Backup da EEPROM).</p> <p><strong>Defeito: 1.1</strong> - O Freio permanece fechado e não abre porque o conversor está em alarme ou advertência. O conversor permanece em advertência indicando que a cópia da área de trabalho para a área de trabalho da EEPROM falhou devido a alterações dos valores da área de trabalho. Requer atenção do usuário para refazer a configuração dos parâmetros de trabalho além de armazená-los nas áreas de trabalho e backup da EEPROM.</p> <p><strong>Solução: 1.1</strong> - Recomendamos reescrever a área de trabalho da EEPROM com os dados de fábrica (Default). Execute o comando P002 selecionando P002 = 1: DefaultRestore.  Em seguida refaça a configuração dos parâmetros para o Freio conectado. Logo a seguir, garanta, que às áreas de trabalho e de Backup possuam os mesmos dados ao executar o comando P002 = 2:WorkAreaBackup.  Veja também o capítulo Cópia de Parâmetros (Parameter copy).</p>",
+      "label": "Erro de parâmetros na área de trabalho da EEPROM"
+    }
+  }
 }
