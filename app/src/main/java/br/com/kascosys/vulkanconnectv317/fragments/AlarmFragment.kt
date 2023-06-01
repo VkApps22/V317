@@ -2,7 +2,6 @@ package br.com.kascosys.vulkanconnectv317.fragments
 
 import android.app.SearchManager
 import android.content.BroadcastReceiver
-import android.content.Context
 import android.content.Intent
 import android.content.IntentFilter
 import android.net.ConnectivityManager
@@ -44,7 +43,8 @@ import kotlinx.android.synthetic.main.fragment_alarms.view.*
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
 import java.util.*
-
+import android.content.Context
+import android.widget.Toast
 class AlarmFragment : Fragment(), OnHeaderClick {
 
     private lateinit var activeSsId: String
@@ -110,13 +110,8 @@ class AlarmFragment : Fragment(), OnHeaderClick {
                     }
                 }catch (error : java.lang.Exception){
 
-                    val builder = AlertDialog.Builder(context!!)
-                    builder.setTitle(R.string.dialog_alarm_title)
-                    builder.setMessage(R.string.dialog_alarm_description)
-                    builder.setPositiveButton(android.R.string.ok) { dialog, _ ->
-                        dialog.dismiss()
-                    }
-                    builder.show()
+                    val toast = Toast.makeText(context, R.string.dialog_alarm_description, Toast.LENGTH_LONG)
+                    toast.show()
 
                     val json = AlertsFirebaseRepository.getJsonDataFromAsset(context!!, R.raw.alerts_default)
                     if (json != null && json.isNotEmpty()){
@@ -839,4 +834,5 @@ class AlarmFragment : Fragment(), OnHeaderClick {
 
         Lingver.getInstance().setLocale(context!!, Locale.getDefault())
     }
+
 }
